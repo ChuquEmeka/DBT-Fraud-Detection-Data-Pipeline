@@ -1,0 +1,59 @@
+
+
+# dbt_project.yml
+
+name: 'my_fraud_detection_project'  
+version: '1.0.0'
+profile: 'my_fraud_detection_project'  # This refers to the profile name in your profiles.yml
+
+# The directory where dbt will look for models
+model-paths: ['my_fraud_detection_project/models']
+
+# Configuring the marts folder and default materialization
+models:
+  my_fraud_detection_project:  # The name of your project must match the 'name' above
+  
+    bronze:
+      +materialized: view  # You can change this to 'table' if you'd prefer tables
+      br_fraud_detection_raw_data_historical:
+        +materialized: table  # Fact table should be a table for performance reasons
+
+    silver:
+      +materialized: view
+      si_transactions_fact:
+        +materialized: table
+      si_users_dimension:
+        +materialized: view
+      si_devices_dimension:
+        +materialized: view
+
+    gold:
+      +materialized: view
+      go_user_behavior_metrics:
+        +materialized: view
+      go_merchant_risk_assessment:
+        +materialized: view
+      go_real_time_fraud_detection:
+        +materialized: view
+      go_predictive_model_features:
+        +materialized: view
+
+
+# Specify the folder where dbt should write test and documentation files (optional)
+target-path: "target"
+
+
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+# Path to compiled models (optional)
+clean-targets:
+  - "target"
+  - "dbt_modules"
+
+# Define packages if using external packages (optional)
+# packages:
+#   - package: fishtown-analytics/dbt_utils
+#     version: 0.7.0
