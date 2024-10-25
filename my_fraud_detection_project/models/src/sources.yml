@@ -1,20 +1,10 @@
 
-# version: 2
-
-# sources:
-#   - name: fraud_detection  # Source name used in dbt model
-#     database: EMEKA_FRAUD_DETECTION_DATABASE  # Database name in Snowflake
-#     schema: PUBLIC  # Schema where the data is stored
-
-#     tables:
-#       - name: transactions_staging  # The name of the table containing the raw data
-#         description: "Raw transactions data from S3."
 
 version: 2
 
 sources:
   - name: fraud_detection
-    database: "{{ target.database }}"  # Use the database dynamically based on the active target
+    database: "{{ target.database }}"  # Using the database dynamically based on the active target
     schema: PUBLIC
 
     tables:

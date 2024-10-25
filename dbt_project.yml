@@ -4,19 +4,18 @@
 
 name: 'my_fraud_detection_project'  
 version: '1.0.0'
-profile: 'my_fraud_detection_project'  # This refers to the profile name in your profiles.yml
+profile: 'my_fraud_detection_project'  # This refers to the profile name in my profiles.yml
 
 # The directory where dbt will look for models
 model-paths: ['my_fraud_detection_project/models']
 
-# Configuring the marts folder and default materialization
 models:
-  my_fraud_detection_project:  # The name of your project must match the 'name' above
+  my_fraud_detection_project:  # The name of my project must match the 'name' above
   
     bronze:
-      +materialized: view  # You can change this to 'table' if you'd prefer tables
+      +materialized: view  # One can change this to 'table' if you'd prefer tables
       br_fraud_detection_raw_data_historical:
-        +materialized: table  # Fact table should be a table for performance reasons
+        +materialized: table  
 
     silver:
       +materialized: view
@@ -55,7 +54,4 @@ clean-targets:
   - "target"
   - "dbt_modules"
 
-# Define packages if using external packages (optional)
-# packages:
-#   - package: fishtown-analytics/dbt_utils
-#     version: 0.7.0
+
