@@ -8,7 +8,7 @@ with all_values as (
         AccountStatus as value_field,
         count(*) as n_records
 
-    from EMEKA_FRAUD_DETECTION_DATABASE.PUBLIC.si_users_dimension
+    from DEV_EMEKA_FRAUD_DETECTION.PUBLIC.si_users_dimension
     group by AccountStatus
 
 )

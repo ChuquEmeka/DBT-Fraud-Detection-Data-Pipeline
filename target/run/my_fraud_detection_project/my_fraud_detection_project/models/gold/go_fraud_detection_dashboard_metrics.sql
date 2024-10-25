@@ -2,7 +2,7 @@
   
     
 
-        create or replace transient table DEV_EMEKA_FRAUD_DETECTION.PUBLIC.go_fraud_detection_dashboard_metrics
+        create or replace transient table PROD_EMEKA_FRAUD_DETECTION2.PUBLIC.go_fraud_detection_dashboard_metrics
          as
         (
 
@@ -15,7 +15,7 @@ WITH fraud_detection_dashboard_metrics AS (
         COUNT(DISTINCT MerchantID) AS unique_merchants,
         AVG(AnomalyScore) AS avg_anomaly_score,
         MAX(TransactionDate) AS last_transaction_date
-    FROM DEV_EMEKA_FRAUD_DETECTION.PUBLIC.si_transactions_fact  -- Correct reference to your transactions fact table
+    FROM PROD_EMEKA_FRAUD_DETECTION2.PUBLIC.si_transactions_fact  -- Correct reference to your transactions fact table
 )
 
 SELECT DISTINCT * FROM fraud_detection_dashboard_metrics

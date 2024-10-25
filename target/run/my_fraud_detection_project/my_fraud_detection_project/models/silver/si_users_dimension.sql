@@ -2,7 +2,7 @@
   
     
 
-        create or replace transient table DEV_EMEKA_FRAUD_DETECTION.PUBLIC.si_users_dimension
+        create or replace transient table PROD_EMEKA_FRAUD_DETECTION2.PUBLIC.si_users_dimension
          as
         (
 
@@ -16,7 +16,7 @@ WITH users_dimension AS (
         FIRST_VALUE(UserProfileCompleteness) OVER (PARTITION BY UserID ORDER BY TransactionDate) AS UserProfileCompleteness,
         FIRST_VALUE(PreviousFraudAttempts) OVER (PARTITION BY UserID ORDER BY TransactionDate) AS PreviousFraudAttempts,
         FIRST_VALUE(Location) OVER (PARTITION BY UserID ORDER BY TransactionDate) AS UserLocation
-    FROM DEV_EMEKA_FRAUD_DETECTION.PUBLIC.br_fraud_detection_raw_data_historical
+    FROM PROD_EMEKA_FRAUD_DETECTION2.PUBLIC.br_fraud_detection_raw_data_historical
     
 )
 

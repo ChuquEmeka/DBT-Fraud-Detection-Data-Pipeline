@@ -2,7 +2,7 @@
   
     
 
-        create or replace transient table DEV_EMEKA_FRAUD_DETECTION.PUBLIC.go_merchant_risk_assessment
+        create or replace transient table PROD_EMEKA_FRAUD_DETECTION2.PUBLIC.go_merchant_risk_assessment
          as
         (
 
@@ -14,7 +14,7 @@ WITH merchant_risk_assessment AS (
         SUM(CASE WHEN IsFraud = 1 THEN TransactionAmount ELSE 0 END) AS total_fraudulent_amount,
         AVG(AnomalyScore) AS avg_anomaly_score,
         COUNT(DISTINCT UserID) AS unique_users
-    FROM DEV_EMEKA_FRAUD_DETECTION.PUBLIC.si_transactions_fact
+    FROM PROD_EMEKA_FRAUD_DETECTION2.PUBLIC.si_transactions_fact
     GROUP BY MerchantID
 )
 
