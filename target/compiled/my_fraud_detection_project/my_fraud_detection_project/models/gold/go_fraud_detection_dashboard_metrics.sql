@@ -9,7 +9,7 @@ WITH fraud_detection_dashboard_metrics AS (
         COUNT(DISTINCT MerchantID) AS unique_merchants,
         AVG(AnomalyScore) AS avg_anomaly_score,
         MAX(TransactionDate) AS last_transaction_date
-    FROM EMEKA_FRAUD_DETECTION_DATABASE.PUBLIC.si_transactions_fact  -- Correctly referencing the transactions fact model
+    FROM DEV_EMEKA_FRAUD_DETECTION.PUBLIC.si_transactions_fact  -- Correct reference to your transactions fact table
 )
 
 SELECT DISTINCT * FROM fraud_detection_dashboard_metrics

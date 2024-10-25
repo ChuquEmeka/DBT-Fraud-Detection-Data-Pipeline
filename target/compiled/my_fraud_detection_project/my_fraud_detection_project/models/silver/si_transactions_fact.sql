@@ -2,9 +2,7 @@
 
 WITH transactions_fact AS (
     SELECT *
-    FROM EMEKA_FRAUD_DETECTION_DATABASE.PUBLIC.br_fraud_detection_raw_data_historical
-    
-        WHERE TransactionID > (SELECT MAX(TransactionID) FROM EMEKA_FRAUD_DETECTION_DATABASE.PUBLIC.si_transactions_fact)
+    FROM DEV_EMEKA_FRAUD_DETECTION.PUBLIC.br_fraud_detection_raw_data_historical
     
 )
 

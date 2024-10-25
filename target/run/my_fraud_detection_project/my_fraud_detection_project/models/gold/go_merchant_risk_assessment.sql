@@ -1,30 +1,24 @@
--- back compat for old kwarg name
+
   
-  begin;
-    
-        
-            
-            
-        
     
 
-    
+        create or replace transient table DEV_EMEKA_FRAUD_DETECTION.PUBLIC.go_merchant_risk_assessment
+         as
+        (
 
-    merge into EMEKA_FRAUD_DETECTION_DATABASE.PUBLIC.go_merchant_risk_assessment as DBT_INTERNAL_DEST
-        using EMEKA_FRAUD_DETECTION_DATABASE.PUBLIC.go_merchant_risk_assessment__dbt_tmp as DBT_INTERNAL_SOURCE
-        on (
-                DBT_INTERNAL_SOURCE.MerchantID = DBT_INTERNAL_DEST.MerchantID
-            )
+WITH merchant_risk_assessment AS (
+    SELECT
+        MerchantID,
+        COUNT(TransactionID) AS total_transactions,
+        COUNT(CASE WHEN IsFraud = 1 THEN 1 END) AS total_fraud_transactions,
+        SUM(CASE WHEN IsFraud = 1 THEN TransactionAmount ELSE 0 END) AS total_fraudulent_amount,
+        AVG(AnomalyScore) AS avg_anomaly_score,
+        COUNT(DISTINCT UserID) AS unique_users
+    FROM DEV_EMEKA_FRAUD_DETECTION.PUBLIC.si_transactions_fact
+    GROUP BY MerchantID
+)
 
-    
-    when matched then update set
-        "MERCHANTID" = DBT_INTERNAL_SOURCE."MERCHANTID","TOTAL_TRANSACTIONS" = DBT_INTERNAL_SOURCE."TOTAL_TRANSACTIONS","TOTAL_FRAUD_TRANSACTIONS" = DBT_INTERNAL_SOURCE."TOTAL_FRAUD_TRANSACTIONS","TOTAL_FRAUDULENT_AMOUNT" = DBT_INTERNAL_SOURCE."TOTAL_FRAUDULENT_AMOUNT","AVG_ANOMALY_SCORE" = DBT_INTERNAL_SOURCE."AVG_ANOMALY_SCORE","UNIQUE_USERS" = DBT_INTERNAL_SOURCE."UNIQUE_USERS"
-    
-
-    when not matched then insert
-        ("MERCHANTID", "TOTAL_TRANSACTIONS", "TOTAL_FRAUD_TRANSACTIONS", "TOTAL_FRAUDULENT_AMOUNT", "AVG_ANOMALY_SCORE", "UNIQUE_USERS")
-    values
-        ("MERCHANTID", "TOTAL_TRANSACTIONS", "TOTAL_FRAUD_TRANSACTIONS", "TOTAL_FRAUDULENT_AMOUNT", "AVG_ANOMALY_SCORE", "UNIQUE_USERS")
-
-;
-    commit;
+SELECT DISTINCT * FROM merchant_risk_assessment
+        );
+      
+  

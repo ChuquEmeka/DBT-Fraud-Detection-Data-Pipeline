@@ -1,13 +1,13 @@
 
 
 WITH transactions_fact AS (
-    SELECT * FROM EMEKA_FRAUD_DETECTION_DATABASE.PUBLIC.si_transactions_fact
+    SELECT * FROM DEV_EMEKA_FRAUD_DETECTION.PUBLIC.si_transactions_fact
 ),
 user_behavior_metrics AS (
-    SELECT * FROM EMEKA_FRAUD_DETECTION_DATABASE.PUBLIC.go_user_behavior_metrics
+    SELECT * FROM DEV_EMEKA_FRAUD_DETECTION.PUBLIC.go_user_behavior_metrics
 ),
 merchant_risk_assessment AS (
-    SELECT * FROM EMEKA_FRAUD_DETECTION_DATABASE.PUBLIC.go_merchant_risk_assessment
+    SELECT * FROM DEV_EMEKA_FRAUD_DETECTION.PUBLIC.go_merchant_risk_assessment
 )
 
 SELECT
@@ -24,5 +24,3 @@ SELECT
 FROM transactions_fact tf
 JOIN user_behavior_metrics ubm ON tf.UserID = ubm.UserID
 JOIN merchant_risk_assessment mra ON tf.MerchantID = mra.MerchantID
-
-    WHERE tf.TransactionID > (SELECT MAX(TransactionID) FROM EMEKA_FRAUD_DETECTION_DATABASE.PUBLIC.go_predictive_model_features)

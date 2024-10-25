@@ -1,30 +1,24 @@
--- back compat for old kwarg name
+
   
-  begin;
-    
-        
-            
-            
-        
     
 
-    
+        create or replace transient table DEV_EMEKA_FRAUD_DETECTION.PUBLIC.go_fraud_detection_dashboard_metrics
+         as
+        (
 
-    merge into EMEKA_FRAUD_DETECTION_DATABASE.PUBLIC.go_fraud_detection_dashboard_metrics as DBT_INTERNAL_DEST
-        using EMEKA_FRAUD_DETECTION_DATABASE.PUBLIC.go_fraud_detection_dashboard_metrics__dbt_tmp as DBT_INTERNAL_SOURCE
-        on (
-                DBT_INTERNAL_SOURCE.TransactionID = DBT_INTERNAL_DEST.TransactionID
-            )
+WITH fraud_detection_dashboard_metrics AS (
+    SELECT
+        COUNT(TransactionID) AS total_transactions,
+        SUM(CASE WHEN IsFraud = 1 THEN 1 ELSE 0 END) AS total_fraud_transactions,
+        SUM(CASE WHEN IsFraud = 1 THEN TransactionAmount ELSE 0 END) AS total_fraudulent_amount,
+        COUNT(DISTINCT UserID) AS unique_users,
+        COUNT(DISTINCT MerchantID) AS unique_merchants,
+        AVG(AnomalyScore) AS avg_anomaly_score,
+        MAX(TransactionDate) AS last_transaction_date
+    FROM DEV_EMEKA_FRAUD_DETECTION.PUBLIC.si_transactions_fact  -- Correct reference to your transactions fact table
+)
 
-    
-    when matched then update set
-        "TOTAL_TRANSACTIONS" = DBT_INTERNAL_SOURCE."TOTAL_TRANSACTIONS","TOTAL_FRAUD_TRANSACTIONS" = DBT_INTERNAL_SOURCE."TOTAL_FRAUD_TRANSACTIONS","TOTAL_FRAUDULENT_AMOUNT" = DBT_INTERNAL_SOURCE."TOTAL_FRAUDULENT_AMOUNT","UNIQUE_USERS" = DBT_INTERNAL_SOURCE."UNIQUE_USERS","UNIQUE_MERCHANTS" = DBT_INTERNAL_SOURCE."UNIQUE_MERCHANTS","AVG_ANOMALY_SCORE" = DBT_INTERNAL_SOURCE."AVG_ANOMALY_SCORE","LAST_TRANSACTION_DATE" = DBT_INTERNAL_SOURCE."LAST_TRANSACTION_DATE"
-    
-
-    when not matched then insert
-        ("TOTAL_TRANSACTIONS", "TOTAL_FRAUD_TRANSACTIONS", "TOTAL_FRAUDULENT_AMOUNT", "UNIQUE_USERS", "UNIQUE_MERCHANTS", "AVG_ANOMALY_SCORE", "LAST_TRANSACTION_DATE")
-    values
-        ("TOTAL_TRANSACTIONS", "TOTAL_FRAUD_TRANSACTIONS", "TOTAL_FRAUDULENT_AMOUNT", "UNIQUE_USERS", "UNIQUE_MERCHANTS", "AVG_ANOMALY_SCORE", "LAST_TRANSACTION_DATE")
-
-;
-    commit;
+SELECT DISTINCT * FROM fraud_detection_dashboard_metrics
+        );
+      
+  

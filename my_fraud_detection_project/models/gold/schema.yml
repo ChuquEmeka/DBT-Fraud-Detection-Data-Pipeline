@@ -1,0 +1,56 @@
+version: 2
+
+models:
+  - name: go_fraud_detection_dashboard_metrics
+    description: "Metrics table for fraud detection dashboard"
+    columns:
+      - name: total_transactions
+        tests:
+          - not_null
+
+      - name: total_fraud_transactions
+        tests:
+          - not_null
+
+  - name: go_user_behavior_metrics
+    description: "Aggregated user behavior metrics"
+    columns:
+      - name: UserID
+        tests:
+          - not_null
+
+      - name: total_transactions
+        tests:
+          - not_null
+
+      - name: total_fraud_transactions
+        tests:
+          - not_null
+
+  - name: go_merchant_risk_assessment
+    description: "Merchant risk assessment metrics"
+    columns:
+      - name: MerchantID
+        tests:
+          - not_null
+
+      - name: total_transactions
+        tests:
+          - not_null
+
+      - name: total_fraud_transactions
+        tests:
+          - not_null
+
+  - name: go_real_time_fraud_detection
+    description: "Real-time fraud detection"
+    columns:
+      - name: TransactionID
+        tests:
+          - not_null
+
+      - name: AnomalyScore
+        tests:
+          - not_null
+
+

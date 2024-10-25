@@ -17,8 +17,8 @@ WITH raw_data AS (
         IP_Address::string AS IP_Address,
         PaymentMethod::string AS PaymentMethod,
         LocationCoordinates::string AS LocationCoordinates,
-        SuspiciousFlag::boolean AS SuspiciousFlag,
-        IsFraud::boolean AS IsFraud,
+        CAST(SuspiciousFlag AS int) AS SuspiciousFlag,  -- Convert boolean to int
+        CAST(IsFraud AS int) AS IsFraud,
         ReviewStatus::string AS ReviewStatus,
         AnomalyScore::float AS AnomalyScore,
         TransactionTime::string AS TransactionTime,

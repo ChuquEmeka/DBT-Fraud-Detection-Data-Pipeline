@@ -1,30 +1,36 @@
--- back compat for old kwarg name
+
   
-  begin;
-    
-        
-            
-            
-        
     
 
-    
+        create or replace transient table DEV_EMEKA_FRAUD_DETECTION.PUBLIC.go_predictive_model_features
+         as
+        (
 
-    merge into EMEKA_FRAUD_DETECTION_DATABASE.PUBLIC.go_predictive_model_features as DBT_INTERNAL_DEST
-        using EMEKA_FRAUD_DETECTION_DATABASE.PUBLIC.go_predictive_model_features__dbt_tmp as DBT_INTERNAL_SOURCE
-        on (
-                DBT_INTERNAL_SOURCE.TransactionID = DBT_INTERNAL_DEST.TransactionID
-            )
+WITH transactions_fact AS (
+    SELECT * FROM DEV_EMEKA_FRAUD_DETECTION.PUBLIC.si_transactions_fact
+),
+user_behavior_metrics AS (
+    SELECT * FROM DEV_EMEKA_FRAUD_DETECTION.PUBLIC.go_user_behavior_metrics
+),
+merchant_risk_assessment AS (
+    SELECT * FROM DEV_EMEKA_FRAUD_DETECTION.PUBLIC.go_merchant_risk_assessment
+)
 
-    
-    when matched then update set
-        "TRANSACTIONID" = DBT_INTERNAL_SOURCE."TRANSACTIONID","TRANSACTIONAMOUNT" = DBT_INTERNAL_SOURCE."TRANSACTIONAMOUNT","TRANSACTIONTYPE" = DBT_INTERNAL_SOURCE."TRANSACTIONTYPE","ANOMALYSCORE" = DBT_INTERNAL_SOURCE."ANOMALYSCORE","USER_TOTAL_TRANSACTIONS" = DBT_INTERNAL_SOURCE."USER_TOTAL_TRANSACTIONS","USER_AVG_TRANSACTION_AMOUNT" = DBT_INTERNAL_SOURCE."USER_AVG_TRANSACTION_AMOUNT","USER_FRAUD_TRANSACTIONS" = DBT_INTERNAL_SOURCE."USER_FRAUD_TRANSACTIONS","MERCHANT_FRAUD_TRANSACTIONS" = DBT_INTERNAL_SOURCE."MERCHANT_FRAUD_TRANSACTIONS","MERCHANT_AVG_ANOMALY_SCORE" = DBT_INTERNAL_SOURCE."MERCHANT_AVG_ANOMALY_SCORE","ISFRAUD" = DBT_INTERNAL_SOURCE."ISFRAUD"
-    
+SELECT
+    tf.TransactionID,
+    tf.TransactionAmount,
+    tf.TransactionType,
+    tf.AnomalyScore,
+    ubm.total_transactions AS user_total_transactions,
+    ubm.avg_transaction_amount AS user_avg_transaction_amount,
+    ubm.total_fraud_transactions AS user_fraud_transactions,
+    mra.total_fraud_transactions AS merchant_fraud_transactions,
+    mra.avg_anomaly_score AS merchant_avg_anomaly_score,
+    tf.IsFraud
+FROM transactions_fact tf
+JOIN user_behavior_metrics ubm ON tf.UserID = ubm.UserID
+JOIN merchant_risk_assessment mra ON tf.MerchantID = mra.MerchantID
 
-    when not matched then insert
-        ("TRANSACTIONID", "TRANSACTIONAMOUNT", "TRANSACTIONTYPE", "ANOMALYSCORE", "USER_TOTAL_TRANSACTIONS", "USER_AVG_TRANSACTION_AMOUNT", "USER_FRAUD_TRANSACTIONS", "MERCHANT_FRAUD_TRANSACTIONS", "MERCHANT_AVG_ANOMALY_SCORE", "ISFRAUD")
-    values
-        ("TRANSACTIONID", "TRANSACTIONAMOUNT", "TRANSACTIONTYPE", "ANOMALYSCORE", "USER_TOTAL_TRANSACTIONS", "USER_AVG_TRANSACTION_AMOUNT", "USER_FRAUD_TRANSACTIONS", "MERCHANT_FRAUD_TRANSACTIONS", "MERCHANT_AVG_ANOMALY_SCORE", "ISFRAUD")
-
-;
-    commit;
+        );
+      
+  

@@ -1,0 +1,40 @@
+version: 2
+
+models:
+  - name: br_fraud_detection_raw_data_historical
+    description: "Raw fraud detection data ingested from S3"
+    columns:
+      - name: TransactionID
+        tests:
+          - unique
+          - not_null
+
+      - name: UserID
+        tests:
+          - not_null
+
+      - name: TransactionAmount
+        tests:
+          - not_null
+
+      - name: TransactionDate
+        tests:
+          - not_null
+
+      - name: MerchantID
+        tests:
+          - not_null
+
+      - name: Currency
+        tests:
+          - not_null
+
+      - name: IsFraud
+        tests:
+          - accepted_values:
+              values: [0, 1]  # Values are 0 (not fraud) and 1 (fraud)
+
+      - name: SuspiciousFlag
+        tests:
+          - accepted_values:
+              values: [0, 1]  # Values are 0 (not suspicious) and 1 (suspicious)

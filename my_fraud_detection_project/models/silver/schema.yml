@@ -1,0 +1,75 @@
+version: 2
+
+models:
+  - name: si_transactions_fact
+    description: "Fact table storing cleaned transaction data"
+    columns:
+      - name: TransactionID
+        tests:
+          - unique
+          - not_null
+
+      - name: UserID
+        tests:
+          - not_null
+
+      - name: TransactionAmount
+        tests:
+          - not_null
+
+      - name: TransactionDate
+        tests:
+          - not_null
+
+      - name: MerchantID
+        tests:
+          - not_null
+
+      - name: Currency
+        tests:
+          - not_null
+
+      - name: IsFraud
+        tests:
+          - not_null
+          - accepted_values:
+              values: [0, 1]  # Values are 0 (not fraud) and 1 (fraud)
+
+      - name: SuspiciousFlag
+        tests:
+          - accepted_values:
+              values: [0, 1]  # Values are 0 (not suspicious) and 1 (suspicious)
+
+  - name: si_users_dimension
+    description: "User dimension table"
+    columns:
+      - name: UserID
+        tests:
+          - unique
+          - not_null
+
+      - name: Age
+        tests:
+          - not_null
+
+      - name: AccountStatus
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['Active', 'Suspended', 'Closed']
+
+  - name: si_devices_dimension
+    description: "Device dimension table"
+    columns:
+      - name: DeviceID
+        tests:
+          - unique
+          - not_null
+
+      - name: DeviceType
+        tests:
+          - not_null
+
+      - name: IP_Address
+        tests:
+          - not_null

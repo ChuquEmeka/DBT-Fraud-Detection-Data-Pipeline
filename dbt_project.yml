@@ -37,6 +37,8 @@ models:
         +materialized: view
       go_predictive_model_features:
         +materialized: view
+      go_fraud_detection_dashboard_metrics:
+        +materialized: view
 
 
 # Specify the folder where dbt should write test and documentation files (optional)
