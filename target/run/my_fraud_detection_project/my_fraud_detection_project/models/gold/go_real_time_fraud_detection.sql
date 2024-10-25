@@ -2,7 +2,7 @@
   
     
 
-        create or replace transient table DEV_EMEKA_FRAUD_DETECTION.PUBLIC.go_real_time_fraud_detection
+        create or replace transient table PROD_EMEKA_FRAUD_DETECTION2.PUBLIC.go_real_time_fraud_detection
          as
         (
 
@@ -23,7 +23,7 @@ WITH real_time_fraud_detection AS (
             WHEN AnomalyScore > 0.5 THEN 'Moderate Risk'
             ELSE 'Low Risk'
         END AS fraud_risk_level
-    FROM DEV_EMEKA_FRAUD_DETECTION.PUBLIC.si_transactions_fact
+    FROM PROD_EMEKA_FRAUD_DETECTION2.PUBLIC.si_transactions_fact
     WHERE AnomalyScore > 0.5 OR IsFraud = 1
 )
 

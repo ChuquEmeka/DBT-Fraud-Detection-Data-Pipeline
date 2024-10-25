@@ -13,7 +13,7 @@ with all_values as (
         IsFraud as value_field,
         count(*) as n_records
 
-    from EMEKA_FRAUD_DETECTION_DATABASE.PUBLIC.si_transactions_fact
+    from DEV_EMEKA_FRAUD_DETECTION.PUBLIC.si_transactions_fact
     group by IsFraud
 
 )

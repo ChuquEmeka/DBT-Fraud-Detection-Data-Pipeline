@@ -2,13 +2,13 @@
   
     
 
-        create or replace transient table DEV_EMEKA_FRAUD_DETECTION.PUBLIC.si_transactions_fact
+        create or replace transient table PROD_EMEKA_FRAUD_DETECTION2.PUBLIC.si_transactions_fact
          as
         (
 
 WITH transactions_fact AS (
     SELECT *
-    FROM DEV_EMEKA_FRAUD_DETECTION.PUBLIC.br_fraud_detection_raw_data_historical
+    FROM PROD_EMEKA_FRAUD_DETECTION2.PUBLIC.br_fraud_detection_raw_data_historical
     
 )
 

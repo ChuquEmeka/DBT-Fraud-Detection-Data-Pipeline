@@ -27,7 +27,7 @@ WITH raw_data AS (
         DeviceID::string AS DeviceID,
         UserProfileCompleteness::float AS UserProfileCompleteness,
         PreviousFraudAttempts::int AS PreviousFraudAttempts
-    FROM DEV_EMEKA_FRAUD_DETECTION.PUBLIC.transactions_staging
+    FROM PROD_EMEKA_FRAUD_DETECTION2.PUBLIC.transactions_staging
     
 )
 

@@ -10,7 +10,7 @@ select
 
 
 select MerchantID
-from EMEKA_FRAUD_DETECTION_DATABASE.PUBLIC.si_transactions_fact
+from DEV_EMEKA_FRAUD_DETECTION.PUBLIC.si_transactions_fact
 where MerchantID is null
 
 

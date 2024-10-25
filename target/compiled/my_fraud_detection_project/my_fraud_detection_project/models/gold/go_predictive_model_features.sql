@@ -1,13 +1,13 @@
 
 
 WITH transactions_fact AS (
-    SELECT * FROM DEV_EMEKA_FRAUD_DETECTION.PUBLIC.si_transactions_fact
+    SELECT * FROM PROD_EMEKA_FRAUD_DETECTION2.PUBLIC.si_transactions_fact
 ),
 user_behavior_metrics AS (
-    SELECT * FROM DEV_EMEKA_FRAUD_DETECTION.PUBLIC.go_user_behavior_metrics
+    SELECT * FROM PROD_EMEKA_FRAUD_DETECTION2.PUBLIC.go_user_behavior_metrics
 ),
 merchant_risk_assessment AS (
-    SELECT * FROM DEV_EMEKA_FRAUD_DETECTION.PUBLIC.go_merchant_risk_assessment
+    SELECT * FROM PROD_EMEKA_FRAUD_DETECTION2.PUBLIC.go_merchant_risk_assessment
 )
 
 SELECT

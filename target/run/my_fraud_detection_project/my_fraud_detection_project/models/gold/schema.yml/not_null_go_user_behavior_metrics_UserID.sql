@@ -10,7 +10,7 @@ select
 
 
 select UserID
-from EMEKA_FRAUD_DETECTION_DATABASE.PUBLIC.go_user_behavior_metrics
+from DEV_EMEKA_FRAUD_DETECTION.PUBLIC.go_user_behavior_metrics
 where UserID is null
 
 

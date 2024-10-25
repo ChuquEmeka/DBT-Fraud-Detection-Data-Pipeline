@@ -28517,3 +28517,1827 @@ drop view if exists DEV_EMEKA_FRAUD_DETECTION.PUBLIC.go_predictive_model_feature
 [0m14:13:29.623828 [debug] [MainThread]: Command `dbt run` succeeded at 14:13:29.623828 after 12.17 seconds
 [0m14:13:29.623828 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000195858CC3D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019588259120>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019588F51330>]}
 [0m14:13:29.624828 [debug] [MainThread]: Flushing usage events
+[0m14:28:54.170872 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DD3EE3C3D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DD41809BD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DD41809DB0>]}
+
+
+============================== 14:28:54.175906 | 5fd00626-74c6-49f8-b54a-5c6ca3ab922c ==============================
+[0m14:28:54.175906 [info ] [MainThread]: Running with dbt=1.8.8
+[0m14:28:54.176902 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'version_check': 'True', 'log_path': 'C:\\Users\\User\\Desktop\\Projects\\DBT-Fraud-Detection-Data-Pipeline\\logs', 'profiles_dir': 'C:\\Users\\User\\.dbt', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'log_format': 'default', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt run --target prod', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m14:28:54.696308 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '5fd00626-74c6-49f8-b54a-5c6ca3ab922c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DD41809B10>]}
+[0m14:28:54.758857 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '5fd00626-74c6-49f8-b54a-5c6ca3ab922c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DD417CD120>]}
+[0m14:28:54.760859 [info ] [MainThread]: Registered adapter: snowflake=1.8.4
+[0m14:28:54.769856 [debug] [MainThread]: checksum: dbfb813e9dbf08a0f983a8b86150e9e8be8f6dbbfbc1375a143fdaccdd421855, vars: {}, profile: , target: prod, version: 1.8.8
+[0m14:28:54.906702 [info ] [MainThread]: Unable to do partial parsing because config vars, config profile, or config target have changed
+[0m14:28:54.907703 [debug] [MainThread]: previous checksum: dbfb813e9dbf08a0f983a8b86150e9e8be8f6dbbfbc1375a143fdaccdd421855, current checksum: ec53e341a936509427e16df1c646386a84befec52c1957e3f4359fbc36fc93f5
+[0m14:28:54.908705 [info ] [MainThread]: Unable to do partial parsing because profile has changed
+[0m14:28:54.908705 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '5fd00626-74c6-49f8-b54a-5c6ca3ab922c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DD40D81090>]}
+[0m14:28:55.946535 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+The `tests` config has been renamed to `data_tests`. Please see
+https://docs.getdbt.com/docs/build/data-tests#new-data_tests-syntax for more
+information.
+[0m14:28:55.947741 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '5fd00626-74c6-49f8-b54a-5c6ca3ab922c', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DD42538190>]}
+[0m14:28:56.301213 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '5fd00626-74c6-49f8-b54a-5c6ca3ab922c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DD43B400D0>]}
+[0m14:28:56.475028 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '5fd00626-74c6-49f8-b54a-5c6ca3ab922c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DD4266CC10>]}
+[0m14:28:56.476063 [info ] [MainThread]: Found 9 models, 38 data tests, 1 source, 454 macros
+[0m14:28:56.477029 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '5fd00626-74c6-49f8-b54a-5c6ca3ab922c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DD4266C4F0>]}
+[0m14:28:56.480048 [info ] [MainThread]: 
+[0m14:28:56.482033 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m14:28:56.488027 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_PROD_EMEKA_FRAUD_DETECTION2'
+[0m14:28:56.505255 [debug] [ThreadPool]: Using snowflake connection "list_PROD_EMEKA_FRAUD_DETECTION2"
+[0m14:28:56.505255 [debug] [ThreadPool]: On list_PROD_EMEKA_FRAUD_DETECTION2: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "my_fraud_detection_project", "target_name": "prod", "connection_name": "list_PROD_EMEKA_FRAUD_DETECTION2"} */
+show terse schemas in database PROD_EMEKA_FRAUD_DETECTION2
+    limit 10000
+[0m14:28:56.506349 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:28:57.296505 [debug] [ThreadPool]: SQL status: SUCCESS 2 in 0.791 seconds
+[0m14:28:57.298510 [debug] [ThreadPool]: On list_PROD_EMEKA_FRAUD_DETECTION2: Close
+[0m14:28:57.445733 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_PROD_EMEKA_FRAUD_DETECTION2_PUBLIC'
+[0m14:28:57.454695 [debug] [ThreadPool]: Using snowflake connection "list_PROD_EMEKA_FRAUD_DETECTION2_PUBLIC"
+[0m14:28:57.455692 [debug] [ThreadPool]: On list_PROD_EMEKA_FRAUD_DETECTION2_PUBLIC: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "my_fraud_detection_project", "target_name": "prod", "connection_name": "list_PROD_EMEKA_FRAUD_DETECTION2_PUBLIC"} */
+show objects in PROD_EMEKA_FRAUD_DETECTION2.PUBLIC limit 10000
+[0m14:28:57.455692 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:28:58.160385 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.704 seconds
+[0m14:28:58.162394 [debug] [ThreadPool]: On list_PROD_EMEKA_FRAUD_DETECTION2_PUBLIC: Close
+[0m14:28:58.264635 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '5fd00626-74c6-49f8-b54a-5c6ca3ab922c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DD3DB06D40>]}
+[0m14:28:58.265638 [info ] [MainThread]: Concurrency: 2 threads (target='prod')
+[0m14:28:58.267656 [info ] [MainThread]: 
+[0m14:28:58.272762 [debug] [Thread-1 (]: Began running node model.my_fraud_detection_project.br_fraud_detection_raw_data_historical
+[0m14:28:58.273787 [info ] [Thread-1 (]: 1 of 9 START sql incremental model PUBLIC.br_fraud_detection_raw_data_historical  [RUN]
+[0m14:28:58.275855 [debug] [Thread-1 (]: Acquiring new snowflake connection 'model.my_fraud_detection_project.br_fraud_detection_raw_data_historical'
+[0m14:28:58.276868 [debug] [Thread-1 (]: Began compiling node model.my_fraud_detection_project.br_fraud_detection_raw_data_historical
+[0m14:28:58.287857 [debug] [Thread-1 (]: Writing injected SQL for node "model.my_fraud_detection_project.br_fraud_detection_raw_data_historical"
+[0m14:28:58.289934 [debug] [Thread-1 (]: Began executing node model.my_fraud_detection_project.br_fraud_detection_raw_data_historical
+[0m14:28:58.349491 [debug] [Thread-1 (]: Writing runtime sql for node "model.my_fraud_detection_project.br_fraud_detection_raw_data_historical"
+[0m14:28:58.352490 [debug] [Thread-1 (]: Using snowflake connection "model.my_fraud_detection_project.br_fraud_detection_raw_data_historical"
+[0m14:28:58.353579 [debug] [Thread-1 (]: On model.my_fraud_detection_project.br_fraud_detection_raw_data_historical: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "my_fraud_detection_project", "target_name": "prod", "node_id": "model.my_fraud_detection_project.br_fraud_detection_raw_data_historical"} */
+create or replace transient table PROD_EMEKA_FRAUD_DETECTION2.PUBLIC.br_fraud_detection_raw_data_historical
+         as
+        (
+
+WITH raw_data AS (
+    SELECT
+        TransactionID::string AS TransactionID,
+        UserID::string AS UserID,
+        TransactionDate::timestamp AS TransactionDate,
+        TransactionAmount::float AS TransactionAmount,
+        TransactionType::string AS TransactionType,
+        MerchantID::string AS MerchantID,
+        Currency::string AS Currency,
+        TransactionStatus::string AS TransactionStatus,
+        DeviceType::string AS DeviceType,
+        IP_Address::string AS IP_Address,
+        PaymentMethod::string AS PaymentMethod,
+        LocationCoordinates::string AS LocationCoordinates,
+        CAST(SuspiciousFlag AS int) AS SuspiciousFlag,  -- Convert boolean to int
+        CAST(IsFraud AS int) AS IsFraud,
+        ReviewStatus::string AS ReviewStatus,
+        AnomalyScore::float AS AnomalyScore,
+        TransactionTime::string AS TransactionTime,
+        Age::int AS Age,
+        Gender::string AS Gender,
+        AccountCreationDate::timestamp AS AccountCreationDate,
+        Location::string AS Location,
+        AccountStatus::string AS AccountStatus,
+        DeviceID::string AS DeviceID,
+        UserProfileCompleteness::float AS UserProfileCompleteness,
+        PreviousFraudAttempts::int AS PreviousFraudAttempts
+    FROM PROD_EMEKA_FRAUD_DETECTION2.PUBLIC.transactions_staging
+    
+)
+
+-- Deduplicate by TransactionID
+SELECT DISTINCT * FROM raw_data
+        );
+[0m14:28:58.354530 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m14:29:00.528743 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 2.175 seconds
+[0m14:29:00.540756 [debug] [Thread-1 (]: Applying DROP to: PROD_EMEKA_FRAUD_DETECTION2.PUBLIC.br_fraud_detection_raw_data_historical__dbt_tmp
+[0m14:29:00.547753 [debug] [Thread-1 (]: Using snowflake connection "model.my_fraud_detection_project.br_fraud_detection_raw_data_historical"
+[0m14:29:00.548756 [debug] [Thread-1 (]: On model.my_fraud_detection_project.br_fraud_detection_raw_data_historical: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "my_fraud_detection_project", "target_name": "prod", "node_id": "model.my_fraud_detection_project.br_fraud_detection_raw_data_historical"} */
+drop view if exists PROD_EMEKA_FRAUD_DETECTION2.PUBLIC.br_fraud_detection_raw_data_historical__dbt_tmp cascade
+[0m14:29:00.626565 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.077 seconds
+[0m14:29:00.645592 [debug] [Thread-1 (]: On model.my_fraud_detection_project.br_fraud_detection_raw_data_historical: Close
+[0m14:29:00.784647 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '5fd00626-74c6-49f8-b54a-5c6ca3ab922c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DD4243E980>]}
+[0m14:29:00.785646 [info ] [Thread-1 (]: 1 of 9 OK created sql incremental model PUBLIC.br_fraud_detection_raw_data_historical  [[32mSUCCESS 1[0m in 2.51s]
+[0m14:29:00.787650 [debug] [Thread-1 (]: Finished running node model.my_fraud_detection_project.br_fraud_detection_raw_data_historical
+[0m14:29:00.789647 [debug] [Thread-2 (]: Began running node model.my_fraud_detection_project.si_devices_dimension
+[0m14:29:00.789647 [debug] [Thread-1 (]: Began running node model.my_fraud_detection_project.si_transactions_fact
+[0m14:29:00.791047 [info ] [Thread-2 (]: 2 of 9 START sql incremental model PUBLIC.si_devices_dimension ................. [RUN]
+[0m14:29:00.792737 [debug] [Thread-2 (]: Acquiring new snowflake connection 'model.my_fraud_detection_project.si_devices_dimension'
+[0m14:29:00.791729 [info ] [Thread-1 (]: 3 of 9 START sql incremental model PUBLIC.si_transactions_fact ................. [RUN]
+[0m14:29:00.793753 [debug] [Thread-2 (]: Began compiling node model.my_fraud_detection_project.si_devices_dimension
+[0m14:29:00.794740 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.my_fraud_detection_project.br_fraud_detection_raw_data_historical, now model.my_fraud_detection_project.si_transactions_fact)
+[0m14:29:00.798826 [debug] [Thread-2 (]: Writing injected SQL for node "model.my_fraud_detection_project.si_devices_dimension"
+[0m14:29:00.799742 [debug] [Thread-1 (]: Began compiling node model.my_fraud_detection_project.si_transactions_fact
+[0m14:29:00.807737 [debug] [Thread-1 (]: Writing injected SQL for node "model.my_fraud_detection_project.si_transactions_fact"
+[0m14:29:00.808738 [debug] [Thread-2 (]: Began executing node model.my_fraud_detection_project.si_devices_dimension
+[0m14:29:00.809737 [debug] [Thread-1 (]: Began executing node model.my_fraud_detection_project.si_transactions_fact
+[0m14:29:00.817211 [debug] [Thread-2 (]: Writing runtime sql for node "model.my_fraud_detection_project.si_devices_dimension"
+[0m14:29:00.822570 [debug] [Thread-1 (]: Writing runtime sql for node "model.my_fraud_detection_project.si_transactions_fact"
+[0m14:29:00.825587 [debug] [Thread-2 (]: Using snowflake connection "model.my_fraud_detection_project.si_devices_dimension"
+[0m14:29:00.826577 [debug] [Thread-2 (]: On model.my_fraud_detection_project.si_devices_dimension: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "my_fraud_detection_project", "target_name": "prod", "node_id": "model.my_fraud_detection_project.si_devices_dimension"} */
+create or replace transient table PROD_EMEKA_FRAUD_DETECTION2.PUBLIC.si_devices_dimension
+         as
+        (
+
+WITH devices_dimension AS (
+    SELECT
+        DeviceID,
+        FIRST_VALUE(DeviceType) OVER (PARTITION BY DeviceID ORDER BY TransactionDate) AS DeviceType,
+        FIRST_VALUE(IP_Address) OVER (PARTITION BY DeviceID ORDER BY TransactionDate) AS IP_Address
+    FROM PROD_EMEKA_FRAUD_DETECTION2.PUBLIC.br_fraud_detection_raw_data_historical
+    
+)
+
+SELECT DISTINCT * FROM devices_dimension
+        );
+[0m14:29:00.828567 [debug] [Thread-1 (]: Using snowflake connection "model.my_fraud_detection_project.si_transactions_fact"
+[0m14:29:00.830971 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m14:29:00.831992 [debug] [Thread-1 (]: On model.my_fraud_detection_project.si_transactions_fact: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "my_fraud_detection_project", "target_name": "prod", "node_id": "model.my_fraud_detection_project.si_transactions_fact"} */
+create or replace transient table PROD_EMEKA_FRAUD_DETECTION2.PUBLIC.si_transactions_fact
+         as
+        (
+
+WITH transactions_fact AS (
+    SELECT *
+    FROM PROD_EMEKA_FRAUD_DETECTION2.PUBLIC.br_fraud_detection_raw_data_historical
+    
+)
+
+SELECT DISTINCT
+    TransactionID,
+    UserID,
+    TransactionDate,
+    TransactionAmount,
+    TransactionType,
+    MerchantID,
+    Currency,
+    TransactionStatus,
+    DeviceType,
+    IP_Address,
+    PaymentMethod,
+    SuspiciousFlag,
+    IsFraud,
+    AnomalyScore,
+    Age,
+    Gender,
+    AccountCreationDate,
+    Location,
+    LocationCoordinates,
+    AccountStatus,
+    DeviceID,
+    UserProfileCompleteness,
+    PreviousFraudAttempts
+FROM transactions_fact
+        );
+[0m14:29:00.834972 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:29:02.185422 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 1.355 seconds
+[0m14:29:02.190421 [debug] [Thread-2 (]: Applying DROP to: PROD_EMEKA_FRAUD_DETECTION2.PUBLIC.si_devices_dimension__dbt_tmp
+[0m14:29:02.192420 [debug] [Thread-2 (]: Using snowflake connection "model.my_fraud_detection_project.si_devices_dimension"
+[0m14:29:02.193424 [debug] [Thread-2 (]: On model.my_fraud_detection_project.si_devices_dimension: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "my_fraud_detection_project", "target_name": "prod", "node_id": "model.my_fraud_detection_project.si_devices_dimension"} */
+drop view if exists PROD_EMEKA_FRAUD_DETECTION2.PUBLIC.si_devices_dimension__dbt_tmp cascade
+[0m14:29:02.290720 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.096 seconds
+[0m14:29:02.296757 [debug] [Thread-2 (]: On model.my_fraud_detection_project.si_devices_dimension: Close
+[0m14:29:02.420242 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '5fd00626-74c6-49f8-b54a-5c6ca3ab922c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DD43D8CAC0>]}
+[0m14:29:02.422340 [info ] [Thread-2 (]: 2 of 9 OK created sql incremental model PUBLIC.si_devices_dimension ............ [[32mSUCCESS 1[0m in 1.63s]
+[0m14:29:02.425247 [debug] [Thread-2 (]: Finished running node model.my_fraud_detection_project.si_devices_dimension
+[0m14:29:02.426319 [debug] [Thread-2 (]: Began running node model.my_fraud_detection_project.si_users_dimension
+[0m14:29:02.427238 [info ] [Thread-2 (]: 4 of 9 START sql incremental model PUBLIC.si_users_dimension ................... [RUN]
+[0m14:29:02.428525 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.my_fraud_detection_project.si_devices_dimension, now model.my_fraud_detection_project.si_users_dimension)
+[0m14:29:02.429534 [debug] [Thread-2 (]: Began compiling node model.my_fraud_detection_project.si_users_dimension
+[0m14:29:02.434046 [debug] [Thread-2 (]: Writing injected SQL for node "model.my_fraud_detection_project.si_users_dimension"
+[0m14:29:02.436046 [debug] [Thread-2 (]: Began executing node model.my_fraud_detection_project.si_users_dimension
+[0m14:29:02.441066 [debug] [Thread-2 (]: Writing runtime sql for node "model.my_fraud_detection_project.si_users_dimension"
+[0m14:29:02.444053 [debug] [Thread-2 (]: Using snowflake connection "model.my_fraud_detection_project.si_users_dimension"
+[0m14:29:02.445137 [debug] [Thread-2 (]: On model.my_fraud_detection_project.si_users_dimension: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "my_fraud_detection_project", "target_name": "prod", "node_id": "model.my_fraud_detection_project.si_users_dimension"} */
+create or replace transient table PROD_EMEKA_FRAUD_DETECTION2.PUBLIC.si_users_dimension
+         as
+        (
+
+WITH users_dimension AS (
+    SELECT
+        UserID,
+        FIRST_VALUE(Age) OVER (PARTITION BY UserID ORDER BY TransactionDate) AS Age,
+        FIRST_VALUE(Gender) OVER (PARTITION BY UserID ORDER BY TransactionDate) AS Gender,
+        FIRST_VALUE(AccountCreationDate) OVER (PARTITION BY UserID ORDER BY TransactionDate) AS AccountCreationDate,
+        FIRST_VALUE(AccountStatus) OVER (PARTITION BY UserID ORDER BY TransactionDate) AS AccountStatus,
+        FIRST_VALUE(UserProfileCompleteness) OVER (PARTITION BY UserID ORDER BY TransactionDate) AS UserProfileCompleteness,
+        FIRST_VALUE(PreviousFraudAttempts) OVER (PARTITION BY UserID ORDER BY TransactionDate) AS PreviousFraudAttempts,
+        FIRST_VALUE(Location) OVER (PARTITION BY UserID ORDER BY TransactionDate) AS UserLocation
+    FROM PROD_EMEKA_FRAUD_DETECTION2.PUBLIC.br_fraud_detection_raw_data_historical
+    
+)
+
+SELECT DISTINCT * FROM users_dimension
+        );
+[0m14:29:02.445137 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m14:29:02.524016 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 1.689 seconds
+[0m14:29:02.529027 [debug] [Thread-1 (]: Applying DROP to: PROD_EMEKA_FRAUD_DETECTION2.PUBLIC.si_transactions_fact__dbt_tmp
+[0m14:29:02.531563 [debug] [Thread-1 (]: Using snowflake connection "model.my_fraud_detection_project.si_transactions_fact"
+[0m14:29:02.532649 [debug] [Thread-1 (]: On model.my_fraud_detection_project.si_transactions_fact: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "my_fraud_detection_project", "target_name": "prod", "node_id": "model.my_fraud_detection_project.si_transactions_fact"} */
+drop view if exists PROD_EMEKA_FRAUD_DETECTION2.PUBLIC.si_transactions_fact__dbt_tmp cascade
+[0m14:29:02.619823 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.087 seconds
+[0m14:29:02.623656 [debug] [Thread-1 (]: On model.my_fraud_detection_project.si_transactions_fact: Close
+[0m14:29:02.733040 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '5fd00626-74c6-49f8-b54a-5c6ca3ab922c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DD43D8E8F0>]}
+[0m14:29:02.733939 [info ] [Thread-1 (]: 3 of 9 OK created sql incremental model PUBLIC.si_transactions_fact ............ [[32mSUCCESS 1[0m in 1.94s]
+[0m14:29:02.735944 [debug] [Thread-1 (]: Finished running node model.my_fraud_detection_project.si_transactions_fact
+[0m14:29:02.737437 [debug] [Thread-1 (]: Began running node model.my_fraud_detection_project.go_fraud_detection_dashboard_metrics
+[0m14:29:02.738445 [info ] [Thread-1 (]: 5 of 9 START sql table model PUBLIC.go_fraud_detection_dashboard_metrics ....... [RUN]
+[0m14:29:02.739031 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.my_fraud_detection_project.si_transactions_fact, now model.my_fraud_detection_project.go_fraud_detection_dashboard_metrics)
+[0m14:29:02.740038 [debug] [Thread-1 (]: Began compiling node model.my_fraud_detection_project.go_fraud_detection_dashboard_metrics
+[0m14:29:02.743038 [debug] [Thread-1 (]: Writing injected SQL for node "model.my_fraud_detection_project.go_fraud_detection_dashboard_metrics"
+[0m14:29:02.744044 [debug] [Thread-1 (]: Began executing node model.my_fraud_detection_project.go_fraud_detection_dashboard_metrics
+[0m14:29:02.757038 [debug] [Thread-1 (]: Writing runtime sql for node "model.my_fraud_detection_project.go_fraud_detection_dashboard_metrics"
+[0m14:29:02.759063 [debug] [Thread-1 (]: Using snowflake connection "model.my_fraud_detection_project.go_fraud_detection_dashboard_metrics"
+[0m14:29:02.760037 [debug] [Thread-1 (]: On model.my_fraud_detection_project.go_fraud_detection_dashboard_metrics: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "my_fraud_detection_project", "target_name": "prod", "node_id": "model.my_fraud_detection_project.go_fraud_detection_dashboard_metrics"} */
+create or replace transient table PROD_EMEKA_FRAUD_DETECTION2.PUBLIC.go_fraud_detection_dashboard_metrics
+         as
+        (
+
+WITH fraud_detection_dashboard_metrics AS (
+    SELECT
+        COUNT(TransactionID) AS total_transactions,
+        SUM(CASE WHEN IsFraud = 1 THEN 1 ELSE 0 END) AS total_fraud_transactions,
+        SUM(CASE WHEN IsFraud = 1 THEN TransactionAmount ELSE 0 END) AS total_fraudulent_amount,
+        COUNT(DISTINCT UserID) AS unique_users,
+        COUNT(DISTINCT MerchantID) AS unique_merchants,
+        AVG(AnomalyScore) AS avg_anomaly_score,
+        MAX(TransactionDate) AS last_transaction_date
+    FROM PROD_EMEKA_FRAUD_DETECTION2.PUBLIC.si_transactions_fact  -- Correct reference to your transactions fact table
+)
+
+SELECT DISTINCT * FROM fraud_detection_dashboard_metrics
+        );
+[0m14:29:02.760037 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:29:03.483000 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 1.037 seconds
+[0m14:29:03.485998 [debug] [Thread-2 (]: Applying DROP to: PROD_EMEKA_FRAUD_DETECTION2.PUBLIC.si_users_dimension__dbt_tmp
+[0m14:29:03.487999 [debug] [Thread-2 (]: Using snowflake connection "model.my_fraud_detection_project.si_users_dimension"
+[0m14:29:03.487999 [debug] [Thread-2 (]: On model.my_fraud_detection_project.si_users_dimension: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "my_fraud_detection_project", "target_name": "prod", "node_id": "model.my_fraud_detection_project.si_users_dimension"} */
+drop view if exists PROD_EMEKA_FRAUD_DETECTION2.PUBLIC.si_users_dimension__dbt_tmp cascade
+[0m14:29:03.565413 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.077 seconds
+[0m14:29:03.568409 [debug] [Thread-2 (]: On model.my_fraud_detection_project.si_users_dimension: Close
+[0m14:29:03.710118 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '5fd00626-74c6-49f8-b54a-5c6ca3ab922c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DD4381D540>]}
+[0m14:29:03.711117 [info ] [Thread-2 (]: 4 of 9 OK created sql incremental model PUBLIC.si_users_dimension .............. [[32mSUCCESS 1[0m in 1.28s]
+[0m14:29:03.713116 [debug] [Thread-2 (]: Finished running node model.my_fraud_detection_project.si_users_dimension
+[0m14:29:03.714152 [debug] [Thread-2 (]: Began running node model.my_fraud_detection_project.go_merchant_risk_assessment
+[0m14:29:03.715144 [info ] [Thread-2 (]: 6 of 9 START sql incremental model PUBLIC.go_merchant_risk_assessment .......... [RUN]
+[0m14:29:03.716165 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.my_fraud_detection_project.si_users_dimension, now model.my_fraud_detection_project.go_merchant_risk_assessment)
+[0m14:29:03.717204 [debug] [Thread-2 (]: Began compiling node model.my_fraud_detection_project.go_merchant_risk_assessment
+[0m14:29:03.720296 [debug] [Thread-2 (]: Writing injected SQL for node "model.my_fraud_detection_project.go_merchant_risk_assessment"
+[0m14:29:03.722210 [debug] [Thread-2 (]: Began executing node model.my_fraud_detection_project.go_merchant_risk_assessment
+[0m14:29:03.727300 [debug] [Thread-2 (]: Writing runtime sql for node "model.my_fraud_detection_project.go_merchant_risk_assessment"
+[0m14:29:03.730210 [debug] [Thread-2 (]: Using snowflake connection "model.my_fraud_detection_project.go_merchant_risk_assessment"
+[0m14:29:03.730210 [debug] [Thread-2 (]: On model.my_fraud_detection_project.go_merchant_risk_assessment: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "my_fraud_detection_project", "target_name": "prod", "node_id": "model.my_fraud_detection_project.go_merchant_risk_assessment"} */
+create or replace transient table PROD_EMEKA_FRAUD_DETECTION2.PUBLIC.go_merchant_risk_assessment
+         as
+        (
+
+WITH merchant_risk_assessment AS (
+    SELECT
+        MerchantID,
+        COUNT(TransactionID) AS total_transactions,
+        COUNT(CASE WHEN IsFraud = 1 THEN 1 END) AS total_fraud_transactions,
+        SUM(CASE WHEN IsFraud = 1 THEN TransactionAmount ELSE 0 END) AS total_fraudulent_amount,
+        AVG(AnomalyScore) AS avg_anomaly_score,
+        COUNT(DISTINCT UserID) AS unique_users
+    FROM PROD_EMEKA_FRAUD_DETECTION2.PUBLIC.si_transactions_fact
+    GROUP BY MerchantID
+)
+
+SELECT DISTINCT * FROM merchant_risk_assessment
+        );
+[0m14:29:03.731258 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m14:29:03.775769 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 1.015 seconds
+[0m14:29:03.778779 [debug] [Thread-1 (]: On model.my_fraud_detection_project.go_fraud_detection_dashboard_metrics: Close
+[0m14:29:03.887648 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '5fd00626-74c6-49f8-b54a-5c6ca3ab922c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DD43E4D570>]}
+[0m14:29:03.888647 [info ] [Thread-1 (]: 5 of 9 OK created sql table model PUBLIC.go_fraud_detection_dashboard_metrics .. [[32mSUCCESS 1[0m in 1.15s]
+[0m14:29:03.889650 [debug] [Thread-1 (]: Finished running node model.my_fraud_detection_project.go_fraud_detection_dashboard_metrics
+[0m14:29:03.890728 [debug] [Thread-1 (]: Began running node model.my_fraud_detection_project.go_real_time_fraud_detection
+[0m14:29:03.891651 [info ] [Thread-1 (]: 7 of 9 START sql incremental model PUBLIC.go_real_time_fraud_detection ......... [RUN]
+[0m14:29:03.892661 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.my_fraud_detection_project.go_fraud_detection_dashboard_metrics, now model.my_fraud_detection_project.go_real_time_fraud_detection)
+[0m14:29:03.893649 [debug] [Thread-1 (]: Began compiling node model.my_fraud_detection_project.go_real_time_fraud_detection
+[0m14:29:03.897654 [debug] [Thread-1 (]: Writing injected SQL for node "model.my_fraud_detection_project.go_real_time_fraud_detection"
+[0m14:29:03.898648 [debug] [Thread-1 (]: Began executing node model.my_fraud_detection_project.go_real_time_fraud_detection
+[0m14:29:03.903750 [debug] [Thread-1 (]: Writing runtime sql for node "model.my_fraud_detection_project.go_real_time_fraud_detection"
+[0m14:29:03.906681 [debug] [Thread-1 (]: Using snowflake connection "model.my_fraud_detection_project.go_real_time_fraud_detection"
+[0m14:29:03.907654 [debug] [Thread-1 (]: On model.my_fraud_detection_project.go_real_time_fraud_detection: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "my_fraud_detection_project", "target_name": "prod", "node_id": "model.my_fraud_detection_project.go_real_time_fraud_detection"} */
+create or replace transient table PROD_EMEKA_FRAUD_DETECTION2.PUBLIC.go_real_time_fraud_detection
+         as
+        (
+
+WITH real_time_fraud_detection AS (
+    SELECT
+        TransactionID,
+        TransactionDate,
+        TransactionAmount,
+        TransactionType,
+        UserID,
+        MerchantID,
+        DeviceID,
+        IP_Address,
+        AnomalyScore,
+        IsFraud,
+        CASE
+            WHEN AnomalyScore > 0.8 THEN 'High Risk'
+            WHEN AnomalyScore > 0.5 THEN 'Moderate Risk'
+            ELSE 'Low Risk'
+        END AS fraud_risk_level
+    FROM PROD_EMEKA_FRAUD_DETECTION2.PUBLIC.si_transactions_fact
+    WHERE AnomalyScore > 0.5 OR IsFraud = 1
+)
+
+SELECT DISTINCT * FROM real_time_fraud_detection
+        );
+[0m14:29:03.908649 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:29:05.105390 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 1.374 seconds
+[0m14:29:05.110388 [debug] [Thread-2 (]: Applying DROP to: PROD_EMEKA_FRAUD_DETECTION2.PUBLIC.go_merchant_risk_assessment__dbt_tmp
+[0m14:29:05.111388 [debug] [Thread-2 (]: Using snowflake connection "model.my_fraud_detection_project.go_merchant_risk_assessment"
+[0m14:29:05.112389 [debug] [Thread-2 (]: On model.my_fraud_detection_project.go_merchant_risk_assessment: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "my_fraud_detection_project", "target_name": "prod", "node_id": "model.my_fraud_detection_project.go_merchant_risk_assessment"} */
+drop view if exists PROD_EMEKA_FRAUD_DETECTION2.PUBLIC.go_merchant_risk_assessment__dbt_tmp cascade
+[0m14:29:05.155436 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 1.247 seconds
+[0m14:29:05.161438 [debug] [Thread-1 (]: Applying DROP to: PROD_EMEKA_FRAUD_DETECTION2.PUBLIC.go_real_time_fraud_detection__dbt_tmp
+[0m14:29:05.164351 [debug] [Thread-1 (]: Using snowflake connection "model.my_fraud_detection_project.go_real_time_fraud_detection"
+[0m14:29:05.164351 [debug] [Thread-1 (]: On model.my_fraud_detection_project.go_real_time_fraud_detection: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "my_fraud_detection_project", "target_name": "prod", "node_id": "model.my_fraud_detection_project.go_real_time_fraud_detection"} */
+drop view if exists PROD_EMEKA_FRAUD_DETECTION2.PUBLIC.go_real_time_fraud_detection__dbt_tmp cascade
+[0m14:29:05.192291 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.079 seconds
+[0m14:29:05.195294 [debug] [Thread-2 (]: On model.my_fraud_detection_project.go_merchant_risk_assessment: Close
+[0m14:29:05.246613 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.081 seconds
+[0m14:29:05.253608 [debug] [Thread-1 (]: On model.my_fraud_detection_project.go_real_time_fraud_detection: Close
+[0m14:29:05.325622 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '5fd00626-74c6-49f8-b54a-5c6ca3ab922c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DD42485AB0>]}
+[0m14:29:05.327620 [info ] [Thread-2 (]: 6 of 9 OK created sql incremental model PUBLIC.go_merchant_risk_assessment ..... [[32mSUCCESS 1[0m in 1.61s]
+[0m14:29:05.329497 [debug] [Thread-2 (]: Finished running node model.my_fraud_detection_project.go_merchant_risk_assessment
+[0m14:29:05.330516 [debug] [Thread-2 (]: Began running node model.my_fraud_detection_project.go_user_behavior_metrics
+[0m14:29:05.331511 [info ] [Thread-2 (]: 8 of 9 START sql incremental model PUBLIC.go_user_behavior_metrics ............. [RUN]
+[0m14:29:05.332425 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.my_fraud_detection_project.go_merchant_risk_assessment, now model.my_fraud_detection_project.go_user_behavior_metrics)
+[0m14:29:05.333457 [debug] [Thread-2 (]: Began compiling node model.my_fraud_detection_project.go_user_behavior_metrics
+[0m14:29:05.337141 [debug] [Thread-2 (]: Writing injected SQL for node "model.my_fraud_detection_project.go_user_behavior_metrics"
+[0m14:29:05.338162 [debug] [Thread-2 (]: Began executing node model.my_fraud_detection_project.go_user_behavior_metrics
+[0m14:29:05.343099 [debug] [Thread-2 (]: Writing runtime sql for node "model.my_fraud_detection_project.go_user_behavior_metrics"
+[0m14:29:05.346073 [debug] [Thread-2 (]: Using snowflake connection "model.my_fraud_detection_project.go_user_behavior_metrics"
+[0m14:29:05.348055 [debug] [Thread-2 (]: On model.my_fraud_detection_project.go_user_behavior_metrics: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "my_fraud_detection_project", "target_name": "prod", "node_id": "model.my_fraud_detection_project.go_user_behavior_metrics"} */
+create or replace transient table PROD_EMEKA_FRAUD_DETECTION2.PUBLIC.go_user_behavior_metrics
+         as
+        (
+
+WITH user_behavior_metrics AS (
+    SELECT
+        UserID,
+        COUNT(TransactionID) AS total_transactions,
+        AVG(TransactionAmount) AS avg_transaction_amount,
+        COUNT(CASE WHEN IsFraud = 1 THEN 1 END) AS total_fraud_transactions,
+        COUNT(DISTINCT DeviceID) AS unique_devices,
+        MAX(TransactionDate) AS last_transaction_date,
+        MIN(TransactionDate) AS first_transaction_date
+    FROM PROD_EMEKA_FRAUD_DETECTION2.PUBLIC.si_transactions_fact
+    GROUP BY UserID
+)
+
+SELECT DISTINCT * FROM user_behavior_metrics
+        );
+[0m14:29:05.348055 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m14:29:05.392512 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '5fd00626-74c6-49f8-b54a-5c6ca3ab922c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DD43E4C580>]}
+[0m14:29:05.393533 [info ] [Thread-1 (]: 7 of 9 OK created sql incremental model PUBLIC.go_real_time_fraud_detection .... [[32mSUCCESS 1[0m in 1.50s]
+[0m14:29:05.395426 [debug] [Thread-1 (]: Finished running node model.my_fraud_detection_project.go_real_time_fraud_detection
+[0m14:29:06.439627 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 1.091 seconds
+[0m14:29:06.447617 [debug] [Thread-2 (]: Applying DROP to: PROD_EMEKA_FRAUD_DETECTION2.PUBLIC.go_user_behavior_metrics__dbt_tmp
+[0m14:29:06.449618 [debug] [Thread-2 (]: Using snowflake connection "model.my_fraud_detection_project.go_user_behavior_metrics"
+[0m14:29:06.450618 [debug] [Thread-2 (]: On model.my_fraud_detection_project.go_user_behavior_metrics: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "my_fraud_detection_project", "target_name": "prod", "node_id": "model.my_fraud_detection_project.go_user_behavior_metrics"} */
+drop view if exists PROD_EMEKA_FRAUD_DETECTION2.PUBLIC.go_user_behavior_metrics__dbt_tmp cascade
+[0m14:29:06.514378 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.063 seconds
+[0m14:29:06.517376 [debug] [Thread-2 (]: On model.my_fraud_detection_project.go_user_behavior_metrics: Close
+[0m14:29:06.636211 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '5fd00626-74c6-49f8-b54a-5c6ca3ab922c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DD43E59CF0>]}
+[0m14:29:06.638203 [info ] [Thread-2 (]: 8 of 9 OK created sql incremental model PUBLIC.go_user_behavior_metrics ........ [[32mSUCCESS 1[0m in 1.30s]
+[0m14:29:06.640725 [debug] [Thread-2 (]: Finished running node model.my_fraud_detection_project.go_user_behavior_metrics
+[0m14:29:06.642732 [debug] [Thread-1 (]: Began running node model.my_fraud_detection_project.go_predictive_model_features
+[0m14:29:06.644728 [info ] [Thread-1 (]: 9 of 9 START sql incremental model PUBLIC.go_predictive_model_features ......... [RUN]
+[0m14:29:06.646726 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.my_fraud_detection_project.go_real_time_fraud_detection, now model.my_fraud_detection_project.go_predictive_model_features)
+[0m14:29:06.647723 [debug] [Thread-1 (]: Began compiling node model.my_fraud_detection_project.go_predictive_model_features
+[0m14:29:06.654737 [debug] [Thread-1 (]: Writing injected SQL for node "model.my_fraud_detection_project.go_predictive_model_features"
+[0m14:29:06.656723 [debug] [Thread-1 (]: Began executing node model.my_fraud_detection_project.go_predictive_model_features
+[0m14:29:06.660826 [debug] [Thread-1 (]: Writing runtime sql for node "model.my_fraud_detection_project.go_predictive_model_features"
+[0m14:29:06.667341 [debug] [Thread-1 (]: Using snowflake connection "model.my_fraud_detection_project.go_predictive_model_features"
+[0m14:29:06.668360 [debug] [Thread-1 (]: On model.my_fraud_detection_project.go_predictive_model_features: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "my_fraud_detection_project", "target_name": "prod", "node_id": "model.my_fraud_detection_project.go_predictive_model_features"} */
+create or replace transient table PROD_EMEKA_FRAUD_DETECTION2.PUBLIC.go_predictive_model_features
+         as
+        (
+
+WITH transactions_fact AS (
+    SELECT * FROM PROD_EMEKA_FRAUD_DETECTION2.PUBLIC.si_transactions_fact
+),
+user_behavior_metrics AS (
+    SELECT * FROM PROD_EMEKA_FRAUD_DETECTION2.PUBLIC.go_user_behavior_metrics
+),
+merchant_risk_assessment AS (
+    SELECT * FROM PROD_EMEKA_FRAUD_DETECTION2.PUBLIC.go_merchant_risk_assessment
+)
+
+SELECT
+    tf.TransactionID,
+    tf.TransactionAmount,
+    tf.TransactionType,
+    tf.AnomalyScore,
+    ubm.total_transactions AS user_total_transactions,
+    ubm.avg_transaction_amount AS user_avg_transaction_amount,
+    ubm.total_fraud_transactions AS user_fraud_transactions,
+    mra.total_fraud_transactions AS merchant_fraud_transactions,
+    mra.avg_anomaly_score AS merchant_avg_anomaly_score,
+    tf.IsFraud
+FROM transactions_fact tf
+JOIN user_behavior_metrics ubm ON tf.UserID = ubm.UserID
+JOIN merchant_risk_assessment mra ON tf.MerchantID = mra.MerchantID
+
+        );
+[0m14:29:06.669364 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:29:08.186982 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 1.517 seconds
+[0m14:29:08.193974 [debug] [Thread-1 (]: Applying DROP to: PROD_EMEKA_FRAUD_DETECTION2.PUBLIC.go_predictive_model_features__dbt_tmp
+[0m14:29:08.195975 [debug] [Thread-1 (]: Using snowflake connection "model.my_fraud_detection_project.go_predictive_model_features"
+[0m14:29:08.196975 [debug] [Thread-1 (]: On model.my_fraud_detection_project.go_predictive_model_features: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "my_fraud_detection_project", "target_name": "prod", "node_id": "model.my_fraud_detection_project.go_predictive_model_features"} */
+drop view if exists PROD_EMEKA_FRAUD_DETECTION2.PUBLIC.go_predictive_model_features__dbt_tmp cascade
+[0m14:29:08.264215 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.067 seconds
+[0m14:29:08.267720 [debug] [Thread-1 (]: On model.my_fraud_detection_project.go_predictive_model_features: Close
+[0m14:29:08.384869 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '5fd00626-74c6-49f8-b54a-5c6ca3ab922c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DD42485AB0>]}
+[0m14:29:08.385869 [info ] [Thread-1 (]: 9 of 9 OK created sql incremental model PUBLIC.go_predictive_model_features .... [[32mSUCCESS 1[0m in 1.74s]
+[0m14:29:08.387871 [debug] [Thread-1 (]: Finished running node model.my_fraud_detection_project.go_predictive_model_features
+[0m14:29:08.388868 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m14:29:08.389870 [debug] [MainThread]: Connection 'list_PROD_EMEKA_FRAUD_DETECTION2' was properly closed.
+[0m14:29:08.390873 [debug] [MainThread]: Connection 'list_PROD_EMEKA_FRAUD_DETECTION2_PUBLIC' was properly closed.
+[0m14:29:08.390873 [debug] [MainThread]: Connection 'model.my_fraud_detection_project.go_predictive_model_features' was properly closed.
+[0m14:29:08.391868 [debug] [MainThread]: Connection 'model.my_fraud_detection_project.go_user_behavior_metrics' was properly closed.
+[0m14:29:08.392868 [info ] [MainThread]: 
+[0m14:29:08.393879 [info ] [MainThread]: Finished running 8 incremental models, 1 table model in 0 hours 0 minutes and 11.91 seconds (11.91s).
+[0m14:29:08.396868 [debug] [MainThread]: Command end result
+[0m14:29:08.442462 [info ] [MainThread]: 
+[0m14:29:08.443456 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m14:29:08.444459 [info ] [MainThread]: 
+[0m14:29:08.445459 [info ] [MainThread]: Done. PASS=9 WARN=0 ERROR=0 SKIP=0 TOTAL=9
+[0m14:29:08.447459 [debug] [MainThread]: Command `dbt run` succeeded at 14:29:08.447459 after 14.37 seconds
+[0m14:29:08.449461 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DD3EE3C3D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DD417CD120>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DD4265B280>]}
+[0m14:29:08.449461 [debug] [MainThread]: Flushing usage events
+[0m14:38:49.700717 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000225AC49C340>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000225AEE65F30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000225AEE66110>]}
+
+
+============================== 14:38:49.704763 | 84d0ccf1-ae51-4161-9b31-ded2080a2adc ==============================
+[0m14:38:49.704763 [info ] [MainThread]: Running with dbt=1.8.8
+[0m14:38:49.706668 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\User\\.dbt', 'debug': 'False', 'warn_error': 'None', 'log_path': 'C:\\Users\\User\\Desktop\\Projects\\DBT-Fraud-Detection-Data-Pipeline\\logs', 'fail_fast': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt test --target dev', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m14:38:50.194016 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '84d0ccf1-ae51-4161-9b31-ded2080a2adc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000225AFAC6D40>]}
+[0m14:38:50.242097 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '84d0ccf1-ae51-4161-9b31-ded2080a2adc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000225AFAC7E20>]}
+[0m14:38:50.244130 [info ] [MainThread]: Registered adapter: snowflake=1.8.4
+[0m14:38:50.253292 [debug] [MainThread]: checksum: 57c41580a38e89e4b05d375c1c5c6d10e12c61f686c39f659f6bca32dfc17a2b, vars: {}, profile: , target: dev, version: 1.8.8
+[0m14:38:50.377141 [info ] [MainThread]: Unable to do partial parsing because config vars, config profile, or config target have changed
+[0m14:38:50.378034 [debug] [MainThread]: previous checksum: 57c41580a38e89e4b05d375c1c5c6d10e12c61f686c39f659f6bca32dfc17a2b, current checksum: dbfb813e9dbf08a0f983a8b86150e9e8be8f6dbbfbc1375a143fdaccdd421855
+[0m14:38:50.379033 [info ] [MainThread]: Unable to do partial parsing because profile has changed
+[0m14:38:50.380033 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '84d0ccf1-ae51-4161-9b31-ded2080a2adc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000225AE3E1060>]}
+[0m14:38:51.418383 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+The `tests` config has been renamed to `data_tests`. Please see
+https://docs.getdbt.com/docs/build/data-tests#new-data_tests-syntax for more
+information.
+[0m14:38:51.420395 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '84d0ccf1-ae51-4161-9b31-ded2080a2adc', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000225B0DFB100>]}
+[0m14:38:51.771994 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '84d0ccf1-ae51-4161-9b31-ded2080a2adc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000225B11A0130>]}
+[0m14:38:51.957883 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '84d0ccf1-ae51-4161-9b31-ded2080a2adc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000225B11A32B0>]}
+[0m14:38:51.958980 [info ] [MainThread]: Found 9 models, 38 data tests, 1 source, 454 macros
+[0m14:38:51.959939 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '84d0ccf1-ae51-4161-9b31-ded2080a2adc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000225B0F3B850>]}
+[0m14:38:51.964973 [info ] [MainThread]: 
+[0m14:38:51.965802 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m14:38:51.973324 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_DEV_EMEKA_FRAUD_DETECTION_PUBLIC'
+[0m14:38:51.989416 [debug] [ThreadPool]: Using snowflake connection "list_DEV_EMEKA_FRAUD_DETECTION_PUBLIC"
+[0m14:38:51.990330 [debug] [ThreadPool]: On list_DEV_EMEKA_FRAUD_DETECTION_PUBLIC: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "my_fraud_detection_project", "target_name": "dev", "connection_name": "list_DEV_EMEKA_FRAUD_DETECTION_PUBLIC"} */
+show objects in DEV_EMEKA_FRAUD_DETECTION.PUBLIC limit 10000
+[0m14:38:51.990330 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:38:52.991430 [debug] [ThreadPool]: SQL status: SUCCESS 10 in 1.001 seconds
+[0m14:38:52.996340 [debug] [ThreadPool]: On list_DEV_EMEKA_FRAUD_DETECTION_PUBLIC: Close
+[0m14:38:53.142804 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '84d0ccf1-ae51-4161-9b31-ded2080a2adc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000225AC2DBA30>]}
+[0m14:38:53.143805 [info ] [MainThread]: Concurrency: 2 threads (target='dev')
+[0m14:38:53.144803 [info ] [MainThread]: 
+[0m14:38:53.150912 [debug] [Thread-1 (]: Began running node test.my_fraud_detection_project.accepted_values_br_fraud_detection_raw_data_historical_IsFraud__0__1.a202484024
+[0m14:38:53.151904 [debug] [Thread-2 (]: Began running node test.my_fraud_detection_project.accepted_values_br_fraud_detection_raw_data_historical_SuspiciousFlag__0__1.ab717c9346
+[0m14:38:53.152809 [info ] [Thread-1 (]: 1 of 38 START test accepted_values_br_fraud_detection_raw_data_historical_IsFraud__0__1  [RUN]
+[0m14:38:53.154809 [debug] [Thread-1 (]: Acquiring new snowflake connection 'test.my_fraud_detection_project.accepted_values_br_fraud_detection_raw_data_historical_IsFraud__0__1.a202484024'
+[0m14:38:53.153805 [info ] [Thread-2 (]: 2 of 38 START test accepted_values_br_fraud_detection_raw_data_historical_SuspiciousFlag__0__1  [RUN]
+[0m14:38:53.155806 [debug] [Thread-1 (]: Began compiling node test.my_fraud_detection_project.accepted_values_br_fraud_detection_raw_data_historical_IsFraud__0__1.a202484024
+[0m14:38:53.156804 [debug] [Thread-2 (]: Acquiring new snowflake connection 'test.my_fraud_detection_project.accepted_values_br_fraud_detection_raw_data_historical_SuspiciousFlag__0__1.ab717c9346'
+[0m14:38:53.165985 [debug] [Thread-1 (]: Writing injected SQL for node "test.my_fraud_detection_project.accepted_values_br_fraud_detection_raw_data_historical_IsFraud__0__1.a202484024"
+[0m14:38:53.167044 [debug] [Thread-2 (]: Began compiling node test.my_fraud_detection_project.accepted_values_br_fraud_detection_raw_data_historical_SuspiciousFlag__0__1.ab717c9346
+[0m14:38:53.171992 [debug] [Thread-2 (]: Writing injected SQL for node "test.my_fraud_detection_project.accepted_values_br_fraud_detection_raw_data_historical_SuspiciousFlag__0__1.ab717c9346"
+[0m14:38:53.172914 [debug] [Thread-2 (]: Began executing node test.my_fraud_detection_project.accepted_values_br_fraud_detection_raw_data_historical_SuspiciousFlag__0__1.ab717c9346
+[0m14:38:53.174430 [debug] [Thread-1 (]: Began executing node test.my_fraud_detection_project.accepted_values_br_fraud_detection_raw_data_historical_IsFraud__0__1.a202484024
+[0m14:38:53.211620 [debug] [Thread-2 (]: Writing runtime sql for node "test.my_fraud_detection_project.accepted_values_br_fraud_detection_raw_data_historical_SuspiciousFlag__0__1.ab717c9346"
+[0m14:38:53.223622 [debug] [Thread-2 (]: Using snowflake connection "test.my_fraud_detection_project.accepted_values_br_fraud_detection_raw_data_historical_SuspiciousFlag__0__1.ab717c9346"
+[0m14:38:53.224621 [debug] [Thread-2 (]: On test.my_fraud_detection_project.accepted_values_br_fraud_detection_raw_data_historical_SuspiciousFlag__0__1.ab717c9346: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "my_fraud_detection_project", "target_name": "dev", "node_id": "test.my_fraud_detection_project.accepted_values_br_fraud_detection_raw_data_historical_SuspiciousFlag__0__1.ab717c9346"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+with all_values as (
+
+    select
+        SuspiciousFlag as value_field,
+        count(*) as n_records
+
+    from DEV_EMEKA_FRAUD_DETECTION.PUBLIC.br_fraud_detection_raw_data_historical
+    group by SuspiciousFlag
+
+)
+
+select *
+from all_values
+where value_field not in (
+    '0','1'
+)
+
+
+
+      
+    ) dbt_internal_test
+[0m14:38:53.225623 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m14:38:53.220623 [debug] [Thread-1 (]: Writing runtime sql for node "test.my_fraud_detection_project.accepted_values_br_fraud_detection_raw_data_historical_IsFraud__0__1.a202484024"
+[0m14:38:53.233295 [debug] [Thread-1 (]: Using snowflake connection "test.my_fraud_detection_project.accepted_values_br_fraud_detection_raw_data_historical_IsFraud__0__1.a202484024"
+[0m14:38:53.234352 [debug] [Thread-1 (]: On test.my_fraud_detection_project.accepted_values_br_fraud_detection_raw_data_historical_IsFraud__0__1.a202484024: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "my_fraud_detection_project", "target_name": "dev", "node_id": "test.my_fraud_detection_project.accepted_values_br_fraud_detection_raw_data_historical_IsFraud__0__1.a202484024"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+with all_values as (
+
+    select
+        IsFraud as value_field,
+        count(*) as n_records
+
+    from DEV_EMEKA_FRAUD_DETECTION.PUBLIC.br_fraud_detection_raw_data_historical
+    group by IsFraud
+
+)
+
+select *
+from all_values
+where value_field not in (
+    '0','1'
+)
+
+
+
+      
+    ) dbt_internal_test
+[0m14:38:53.235303 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m14:38:54.427598 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 1.201 seconds
+[0m14:38:54.428600 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 1.193 seconds
+[0m14:38:54.442713 [debug] [Thread-2 (]: On test.my_fraud_detection_project.accepted_values_br_fraud_detection_raw_data_historical_SuspiciousFlag__0__1.ab717c9346: Close
+[0m14:38:54.445712 [debug] [Thread-1 (]: On test.my_fraud_detection_project.accepted_values_br_fraud_detection_raw_data_historical_IsFraud__0__1.a202484024: Close
+[0m14:38:54.567918 [info ] [Thread-1 (]: 1 of 38 PASS accepted_values_br_fraud_detection_raw_data_historical_IsFraud__0__1  [[32mPASS[0m in 1.41s]
+[0m14:38:54.569925 [debug] [Thread-1 (]: Finished running node test.my_fraud_detection_project.accepted_values_br_fraud_detection_raw_data_historical_IsFraud__0__1.a202484024
+[0m14:38:54.570922 [debug] [Thread-1 (]: Began running node test.my_fraud_detection_project.accepted_values_si_transactions_fact_IsFraud__0__1.7486fcede5
+[0m14:38:54.570922 [info ] [Thread-1 (]: 3 of 38 START test accepted_values_si_transactions_fact_IsFraud__0__1 .......... [RUN]
+[0m14:38:54.571918 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.my_fraud_detection_project.accepted_values_br_fraud_detection_raw_data_historical_IsFraud__0__1.a202484024, now test.my_fraud_detection_project.accepted_values_si_transactions_fact_IsFraud__0__1.7486fcede5)
+[0m14:38:54.572914 [debug] [Thread-1 (]: Began compiling node test.my_fraud_detection_project.accepted_values_si_transactions_fact_IsFraud__0__1.7486fcede5
+[0m14:38:54.577490 [debug] [Thread-1 (]: Writing injected SQL for node "test.my_fraud_detection_project.accepted_values_si_transactions_fact_IsFraud__0__1.7486fcede5"
+[0m14:38:54.579479 [debug] [Thread-1 (]: Began executing node test.my_fraud_detection_project.accepted_values_si_transactions_fact_IsFraud__0__1.7486fcede5
+[0m14:38:54.583470 [debug] [Thread-1 (]: Writing runtime sql for node "test.my_fraud_detection_project.accepted_values_si_transactions_fact_IsFraud__0__1.7486fcede5"
+[0m14:38:54.587477 [debug] [Thread-1 (]: Using snowflake connection "test.my_fraud_detection_project.accepted_values_si_transactions_fact_IsFraud__0__1.7486fcede5"
+[0m14:38:54.589499 [debug] [Thread-1 (]: On test.my_fraud_detection_project.accepted_values_si_transactions_fact_IsFraud__0__1.7486fcede5: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "my_fraud_detection_project", "target_name": "dev", "node_id": "test.my_fraud_detection_project.accepted_values_si_transactions_fact_IsFraud__0__1.7486fcede5"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+with all_values as (
+
+    select
+        IsFraud as value_field,
+        count(*) as n_records
+
+    from DEV_EMEKA_FRAUD_DETECTION.PUBLIC.si_transactions_fact
+    group by IsFraud
+
+)
+
+select *
+from all_values
+where value_field not in (
+    '0','1'
+)
+
+
+
+      
+    ) dbt_internal_test
+[0m14:38:54.588492 [info ] [Thread-2 (]: 2 of 38 PASS accepted_values_br_fraud_detection_raw_data_historical_SuspiciousFlag__0__1  [[32mPASS[0m in 1.43s]
+[0m14:38:54.590475 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:38:54.591470 [debug] [Thread-2 (]: Finished running node test.my_fraud_detection_project.accepted_values_br_fraud_detection_raw_data_historical_SuspiciousFlag__0__1.ab717c9346
+[0m14:38:54.596768 [debug] [Thread-2 (]: Began running node test.my_fraud_detection_project.accepted_values_si_transactions_fact_SuspiciousFlag__0__1.b57ac3bec9
+[0m14:38:54.598775 [info ] [Thread-2 (]: 4 of 38 START test accepted_values_si_transactions_fact_SuspiciousFlag__0__1 ... [RUN]
+[0m14:38:54.599775 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.my_fraud_detection_project.accepted_values_br_fraud_detection_raw_data_historical_SuspiciousFlag__0__1.ab717c9346, now test.my_fraud_detection_project.accepted_values_si_transactions_fact_SuspiciousFlag__0__1.b57ac3bec9)
+[0m14:38:54.600774 [debug] [Thread-2 (]: Began compiling node test.my_fraud_detection_project.accepted_values_si_transactions_fact_SuspiciousFlag__0__1.b57ac3bec9
+[0m14:38:54.606802 [debug] [Thread-2 (]: Writing injected SQL for node "test.my_fraud_detection_project.accepted_values_si_transactions_fact_SuspiciousFlag__0__1.b57ac3bec9"
+[0m14:38:54.608798 [debug] [Thread-2 (]: Began executing node test.my_fraud_detection_project.accepted_values_si_transactions_fact_SuspiciousFlag__0__1.b57ac3bec9
+[0m14:38:54.613798 [debug] [Thread-2 (]: Writing runtime sql for node "test.my_fraud_detection_project.accepted_values_si_transactions_fact_SuspiciousFlag__0__1.b57ac3bec9"
+[0m14:38:54.615783 [debug] [Thread-2 (]: Using snowflake connection "test.my_fraud_detection_project.accepted_values_si_transactions_fact_SuspiciousFlag__0__1.b57ac3bec9"
+[0m14:38:54.615783 [debug] [Thread-2 (]: On test.my_fraud_detection_project.accepted_values_si_transactions_fact_SuspiciousFlag__0__1.b57ac3bec9: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "my_fraud_detection_project", "target_name": "dev", "node_id": "test.my_fraud_detection_project.accepted_values_si_transactions_fact_SuspiciousFlag__0__1.b57ac3bec9"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+with all_values as (
+
+    select
+        SuspiciousFlag as value_field,
+        count(*) as n_records
+
+    from DEV_EMEKA_FRAUD_DETECTION.PUBLIC.si_transactions_fact
+    group by SuspiciousFlag
+
+)
+
+select *
+from all_values
+where value_field not in (
+    '0','1'
+)
+
+
+
+      
+    ) dbt_internal_test
+[0m14:38:54.616775 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m14:38:55.444013 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.854 seconds
+[0m14:38:55.447012 [debug] [Thread-1 (]: On test.my_fraud_detection_project.accepted_values_si_transactions_fact_IsFraud__0__1.7486fcede5: Close
+[0m14:38:55.493569 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.876 seconds
+[0m14:38:55.496570 [debug] [Thread-2 (]: On test.my_fraud_detection_project.accepted_values_si_transactions_fact_SuspiciousFlag__0__1.b57ac3bec9: Close
+[0m14:38:55.557066 [info ] [Thread-1 (]: 3 of 38 PASS accepted_values_si_transactions_fact_IsFraud__0__1 ................ [[32mPASS[0m in 0.99s]
+[0m14:38:55.559066 [debug] [Thread-1 (]: Finished running node test.my_fraud_detection_project.accepted_values_si_transactions_fact_IsFraud__0__1.7486fcede5
+[0m14:38:55.560072 [debug] [Thread-1 (]: Began running node test.my_fraud_detection_project.accepted_values_si_users_dimension_AccountStatus__Active__Suspended__Closed.3a74a40b75
+[0m14:38:55.560072 [info ] [Thread-1 (]: 5 of 38 START test accepted_values_si_users_dimension_AccountStatus__Active__Suspended__Closed  [RUN]
+[0m14:38:55.562069 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.my_fraud_detection_project.accepted_values_si_transactions_fact_IsFraud__0__1.7486fcede5, now test.my_fraud_detection_project.accepted_values_si_users_dimension_AccountStatus__Active__Suspended__Closed.3a74a40b75)
+[0m14:38:55.562069 [debug] [Thread-1 (]: Began compiling node test.my_fraud_detection_project.accepted_values_si_users_dimension_AccountStatus__Active__Suspended__Closed.3a74a40b75
+[0m14:38:55.569135 [debug] [Thread-1 (]: Writing injected SQL for node "test.my_fraud_detection_project.accepted_values_si_users_dimension_AccountStatus__Active__Suspended__Closed.3a74a40b75"
+[0m14:38:55.573202 [debug] [Thread-1 (]: Began executing node test.my_fraud_detection_project.accepted_values_si_users_dimension_AccountStatus__Active__Suspended__Closed.3a74a40b75
+[0m14:38:55.579783 [debug] [Thread-1 (]: Writing runtime sql for node "test.my_fraud_detection_project.accepted_values_si_users_dimension_AccountStatus__Active__Suspended__Closed.3a74a40b75"
+[0m14:38:55.582767 [debug] [Thread-1 (]: Using snowflake connection "test.my_fraud_detection_project.accepted_values_si_users_dimension_AccountStatus__Active__Suspended__Closed.3a74a40b75"
+[0m14:38:55.583776 [debug] [Thread-1 (]: On test.my_fraud_detection_project.accepted_values_si_users_dimension_AccountStatus__Active__Suspended__Closed.3a74a40b75: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "my_fraud_detection_project", "target_name": "dev", "node_id": "test.my_fraud_detection_project.accepted_values_si_users_dimension_AccountStatus__Active__Suspended__Closed.3a74a40b75"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+with all_values as (
+
+    select
+        AccountStatus as value_field,
+        count(*) as n_records
+
+    from DEV_EMEKA_FRAUD_DETECTION.PUBLIC.si_users_dimension
+    group by AccountStatus
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'Active','Suspended','Closed'
+)
+
+
+
+      
+    ) dbt_internal_test
+[0m14:38:55.584770 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:38:55.632485 [info ] [Thread-2 (]: 4 of 38 PASS accepted_values_si_transactions_fact_SuspiciousFlag__0__1 ......... [[32mPASS[0m in 1.03s]
+[0m14:38:55.634480 [debug] [Thread-2 (]: Finished running node test.my_fraud_detection_project.accepted_values_si_transactions_fact_SuspiciousFlag__0__1.b57ac3bec9
+[0m14:38:55.634480 [debug] [Thread-2 (]: Began running node test.my_fraud_detection_project.not_null_br_fraud_detection_raw_data_historical_Currency.b2938579ac
+[0m14:38:55.635479 [info ] [Thread-2 (]: 6 of 38 START test not_null_br_fraud_detection_raw_data_historical_Currency .... [RUN]
+[0m14:38:55.636482 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.my_fraud_detection_project.accepted_values_si_transactions_fact_SuspiciousFlag__0__1.b57ac3bec9, now test.my_fraud_detection_project.not_null_br_fraud_detection_raw_data_historical_Currency.b2938579ac)
+[0m14:38:55.636482 [debug] [Thread-2 (]: Began compiling node test.my_fraud_detection_project.not_null_br_fraud_detection_raw_data_historical_Currency.b2938579ac
+[0m14:38:55.646482 [debug] [Thread-2 (]: Writing injected SQL for node "test.my_fraud_detection_project.not_null_br_fraud_detection_raw_data_historical_Currency.b2938579ac"
+[0m14:38:55.648483 [debug] [Thread-2 (]: Began executing node test.my_fraud_detection_project.not_null_br_fraud_detection_raw_data_historical_Currency.b2938579ac
+[0m14:38:55.654005 [debug] [Thread-2 (]: Writing runtime sql for node "test.my_fraud_detection_project.not_null_br_fraud_detection_raw_data_historical_Currency.b2938579ac"
+[0m14:38:55.656988 [debug] [Thread-2 (]: Using snowflake connection "test.my_fraud_detection_project.not_null_br_fraud_detection_raw_data_historical_Currency.b2938579ac"
+[0m14:38:55.657986 [debug] [Thread-2 (]: On test.my_fraud_detection_project.not_null_br_fraud_detection_raw_data_historical_Currency.b2938579ac: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "my_fraud_detection_project", "target_name": "dev", "node_id": "test.my_fraud_detection_project.not_null_br_fraud_detection_raw_data_historical_Currency.b2938579ac"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select Currency
+from DEV_EMEKA_FRAUD_DETECTION.PUBLIC.br_fraud_detection_raw_data_historical
+where Currency is null
+
+
+
+      
+    ) dbt_internal_test
+[0m14:38:55.658991 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m14:38:56.777230 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 1.117 seconds
+[0m14:38:56.782765 [debug] [Thread-2 (]: On test.my_fraud_detection_project.not_null_br_fraud_detection_raw_data_historical_Currency.b2938579ac: Close
+[0m14:38:56.801276 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 1.216 seconds
+[0m14:38:56.803273 [debug] [Thread-1 (]: On test.my_fraud_detection_project.accepted_values_si_users_dimension_AccountStatus__Active__Suspended__Closed.3a74a40b75: Close
+[0m14:38:56.915136 [info ] [Thread-2 (]: 6 of 38 PASS not_null_br_fraud_detection_raw_data_historical_Currency .......... [[32mPASS[0m in 1.28s]
+[0m14:38:56.918126 [debug] [Thread-2 (]: Finished running node test.my_fraud_detection_project.not_null_br_fraud_detection_raw_data_historical_Currency.b2938579ac
+[0m14:38:56.919125 [debug] [Thread-2 (]: Began running node test.my_fraud_detection_project.not_null_br_fraud_detection_raw_data_historical_MerchantID.5faee685b7
+[0m14:38:56.920122 [info ] [Thread-2 (]: 7 of 38 START test not_null_br_fraud_detection_raw_data_historical_MerchantID .. [RUN]
+[0m14:38:56.922042 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.my_fraud_detection_project.not_null_br_fraud_detection_raw_data_historical_Currency.b2938579ac, now test.my_fraud_detection_project.not_null_br_fraud_detection_raw_data_historical_MerchantID.5faee685b7)
+[0m14:38:56.923118 [debug] [Thread-2 (]: Began compiling node test.my_fraud_detection_project.not_null_br_fraud_detection_raw_data_historical_MerchantID.5faee685b7
+[0m14:38:56.928142 [debug] [Thread-2 (]: Writing injected SQL for node "test.my_fraud_detection_project.not_null_br_fraud_detection_raw_data_historical_MerchantID.5faee685b7"
+[0m14:38:56.930055 [debug] [Thread-2 (]: Began executing node test.my_fraud_detection_project.not_null_br_fraud_detection_raw_data_historical_MerchantID.5faee685b7
+[0m14:38:56.934141 [debug] [Thread-2 (]: Writing runtime sql for node "test.my_fraud_detection_project.not_null_br_fraud_detection_raw_data_historical_MerchantID.5faee685b7"
+[0m14:38:56.931041 [info ] [Thread-1 (]: 5 of 38 PASS accepted_values_si_users_dimension_AccountStatus__Active__Suspended__Closed  [[32mPASS[0m in 1.37s]
+[0m14:38:56.936038 [debug] [Thread-1 (]: Finished running node test.my_fraud_detection_project.accepted_values_si_users_dimension_AccountStatus__Active__Suspended__Closed.3a74a40b75
+[0m14:38:56.937040 [debug] [Thread-1 (]: Began running node test.my_fraud_detection_project.not_null_br_fraud_detection_raw_data_historical_TransactionAmount.cfc887ace8
+[0m14:38:56.938042 [debug] [Thread-2 (]: Using snowflake connection "test.my_fraud_detection_project.not_null_br_fraud_detection_raw_data_historical_MerchantID.5faee685b7"
+[0m14:38:56.940040 [debug] [Thread-2 (]: On test.my_fraud_detection_project.not_null_br_fraud_detection_raw_data_historical_MerchantID.5faee685b7: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "my_fraud_detection_project", "target_name": "dev", "node_id": "test.my_fraud_detection_project.not_null_br_fraud_detection_raw_data_historical_MerchantID.5faee685b7"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select MerchantID
+from DEV_EMEKA_FRAUD_DETECTION.PUBLIC.br_fraud_detection_raw_data_historical
+where MerchantID is null
+
+
+
+      
+    ) dbt_internal_test
+[0m14:38:56.939124 [info ] [Thread-1 (]: 8 of 38 START test not_null_br_fraud_detection_raw_data_historical_TransactionAmount  [RUN]
+[0m14:38:56.941466 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m14:38:56.942488 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.my_fraud_detection_project.accepted_values_si_users_dimension_AccountStatus__Active__Suspended__Closed.3a74a40b75, now test.my_fraud_detection_project.not_null_br_fraud_detection_raw_data_historical_TransactionAmount.cfc887ace8)
+[0m14:38:56.947477 [debug] [Thread-1 (]: Began compiling node test.my_fraud_detection_project.not_null_br_fraud_detection_raw_data_historical_TransactionAmount.cfc887ace8
+[0m14:38:56.955477 [debug] [Thread-1 (]: Writing injected SQL for node "test.my_fraud_detection_project.not_null_br_fraud_detection_raw_data_historical_TransactionAmount.cfc887ace8"
+[0m14:38:56.957485 [debug] [Thread-1 (]: Began executing node test.my_fraud_detection_project.not_null_br_fraud_detection_raw_data_historical_TransactionAmount.cfc887ace8
+[0m14:38:56.960477 [debug] [Thread-1 (]: Writing runtime sql for node "test.my_fraud_detection_project.not_null_br_fraud_detection_raw_data_historical_TransactionAmount.cfc887ace8"
+[0m14:38:56.962477 [debug] [Thread-1 (]: Using snowflake connection "test.my_fraud_detection_project.not_null_br_fraud_detection_raw_data_historical_TransactionAmount.cfc887ace8"
+[0m14:38:56.963484 [debug] [Thread-1 (]: On test.my_fraud_detection_project.not_null_br_fraud_detection_raw_data_historical_TransactionAmount.cfc887ace8: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "my_fraud_detection_project", "target_name": "dev", "node_id": "test.my_fraud_detection_project.not_null_br_fraud_detection_raw_data_historical_TransactionAmount.cfc887ace8"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select TransactionAmount
+from DEV_EMEKA_FRAUD_DETECTION.PUBLIC.br_fraud_detection_raw_data_historical
+where TransactionAmount is null
+
+
+
+      
+    ) dbt_internal_test
+[0m14:38:56.964473 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:38:57.685568 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.721 seconds
+[0m14:38:57.687670 [debug] [Thread-1 (]: On test.my_fraud_detection_project.not_null_br_fraud_detection_raw_data_historical_TransactionAmount.cfc887ace8: Close
+[0m14:38:57.695672 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.755 seconds
+[0m14:38:57.697670 [debug] [Thread-2 (]: On test.my_fraud_detection_project.not_null_br_fraud_detection_raw_data_historical_MerchantID.5faee685b7: Close
+[0m14:38:57.829201 [info ] [Thread-2 (]: 7 of 38 PASS not_null_br_fraud_detection_raw_data_historical_MerchantID ........ [[32mPASS[0m in 0.91s]
+[0m14:38:57.830201 [info ] [Thread-1 (]: 8 of 38 PASS not_null_br_fraud_detection_raw_data_historical_TransactionAmount . [[32mPASS[0m in 0.89s]
+[0m14:38:57.831201 [debug] [Thread-2 (]: Finished running node test.my_fraud_detection_project.not_null_br_fraud_detection_raw_data_historical_MerchantID.5faee685b7
+[0m14:38:57.832201 [debug] [Thread-1 (]: Finished running node test.my_fraud_detection_project.not_null_br_fraud_detection_raw_data_historical_TransactionAmount.cfc887ace8
+[0m14:38:57.832201 [debug] [Thread-2 (]: Began running node test.my_fraud_detection_project.not_null_br_fraud_detection_raw_data_historical_TransactionDate.67574b8909
+[0m14:38:57.833202 [debug] [Thread-1 (]: Began running node test.my_fraud_detection_project.not_null_br_fraud_detection_raw_data_historical_TransactionID.38dbce4d83
+[0m14:38:57.834215 [info ] [Thread-2 (]: 9 of 38 START test not_null_br_fraud_detection_raw_data_historical_TransactionDate  [RUN]
+[0m14:38:57.835205 [info ] [Thread-1 (]: 10 of 38 START test not_null_br_fraud_detection_raw_data_historical_TransactionID  [RUN]
+[0m14:38:57.835205 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.my_fraud_detection_project.not_null_br_fraud_detection_raw_data_historical_MerchantID.5faee685b7, now test.my_fraud_detection_project.not_null_br_fraud_detection_raw_data_historical_TransactionDate.67574b8909)
+[0m14:38:57.836205 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.my_fraud_detection_project.not_null_br_fraud_detection_raw_data_historical_TransactionAmount.cfc887ace8, now test.my_fraud_detection_project.not_null_br_fraud_detection_raw_data_historical_TransactionID.38dbce4d83)
+[0m14:38:57.837204 [debug] [Thread-2 (]: Began compiling node test.my_fraud_detection_project.not_null_br_fraud_detection_raw_data_historical_TransactionDate.67574b8909
+[0m14:38:57.837204 [debug] [Thread-1 (]: Began compiling node test.my_fraud_detection_project.not_null_br_fraud_detection_raw_data_historical_TransactionID.38dbce4d83
+[0m14:38:57.847567 [debug] [Thread-2 (]: Writing injected SQL for node "test.my_fraud_detection_project.not_null_br_fraud_detection_raw_data_historical_TransactionDate.67574b8909"
+[0m14:38:57.852561 [debug] [Thread-1 (]: Writing injected SQL for node "test.my_fraud_detection_project.not_null_br_fraud_detection_raw_data_historical_TransactionID.38dbce4d83"
+[0m14:38:57.854560 [debug] [Thread-2 (]: Began executing node test.my_fraud_detection_project.not_null_br_fraud_detection_raw_data_historical_TransactionDate.67574b8909
+[0m14:38:57.860562 [debug] [Thread-2 (]: Writing runtime sql for node "test.my_fraud_detection_project.not_null_br_fraud_detection_raw_data_historical_TransactionDate.67574b8909"
+[0m14:38:57.861558 [debug] [Thread-1 (]: Began executing node test.my_fraud_detection_project.not_null_br_fraud_detection_raw_data_historical_TransactionID.38dbce4d83
+[0m14:38:57.868577 [debug] [Thread-1 (]: Writing runtime sql for node "test.my_fraud_detection_project.not_null_br_fraud_detection_raw_data_historical_TransactionID.38dbce4d83"
+[0m14:38:57.869572 [debug] [Thread-2 (]: Using snowflake connection "test.my_fraud_detection_project.not_null_br_fraud_detection_raw_data_historical_TransactionDate.67574b8909"
+[0m14:38:57.871846 [debug] [Thread-2 (]: On test.my_fraud_detection_project.not_null_br_fraud_detection_raw_data_historical_TransactionDate.67574b8909: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "my_fraud_detection_project", "target_name": "dev", "node_id": "test.my_fraud_detection_project.not_null_br_fraud_detection_raw_data_historical_TransactionDate.67574b8909"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select TransactionDate
+from DEV_EMEKA_FRAUD_DETECTION.PUBLIC.br_fraud_detection_raw_data_historical
+where TransactionDate is null
+
+
+
+      
+    ) dbt_internal_test
+[0m14:38:57.873829 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m14:38:57.875253 [debug] [Thread-1 (]: Using snowflake connection "test.my_fraud_detection_project.not_null_br_fraud_detection_raw_data_historical_TransactionID.38dbce4d83"
+[0m14:38:57.877269 [debug] [Thread-1 (]: On test.my_fraud_detection_project.not_null_br_fraud_detection_raw_data_historical_TransactionID.38dbce4d83: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "my_fraud_detection_project", "target_name": "dev", "node_id": "test.my_fraud_detection_project.not_null_br_fraud_detection_raw_data_historical_TransactionID.38dbce4d83"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select TransactionID
+from DEV_EMEKA_FRAUD_DETECTION.PUBLIC.br_fraud_detection_raw_data_historical
+where TransactionID is null
+
+
+
+      
+    ) dbt_internal_test
+[0m14:38:57.879267 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:38:58.779972 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.905 seconds
+[0m14:38:58.782365 [debug] [Thread-2 (]: On test.my_fraud_detection_project.not_null_br_fraud_detection_raw_data_historical_TransactionDate.67574b8909: Close
+[0m14:38:58.792374 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.913 seconds
+[0m14:38:58.794373 [debug] [Thread-1 (]: On test.my_fraud_detection_project.not_null_br_fraud_detection_raw_data_historical_TransactionID.38dbce4d83: Close
+[0m14:38:58.901650 [info ] [Thread-1 (]: 10 of 38 PASS not_null_br_fraud_detection_raw_data_historical_TransactionID .... [[32mPASS[0m in 1.06s]
+[0m14:38:58.903743 [debug] [Thread-1 (]: Finished running node test.my_fraud_detection_project.not_null_br_fraud_detection_raw_data_historical_TransactionID.38dbce4d83
+[0m14:38:58.904644 [debug] [Thread-1 (]: Began running node test.my_fraud_detection_project.not_null_br_fraud_detection_raw_data_historical_UserID.ee36a3cf3e
+[0m14:38:58.905644 [info ] [Thread-1 (]: 11 of 38 START test not_null_br_fraud_detection_raw_data_historical_UserID ..... [RUN]
+[0m14:38:58.906670 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.my_fraud_detection_project.not_null_br_fraud_detection_raw_data_historical_TransactionID.38dbce4d83, now test.my_fraud_detection_project.not_null_br_fraud_detection_raw_data_historical_UserID.ee36a3cf3e)
+[0m14:38:58.907777 [debug] [Thread-1 (]: Began compiling node test.my_fraud_detection_project.not_null_br_fraud_detection_raw_data_historical_UserID.ee36a3cf3e
+[0m14:38:58.911764 [debug] [Thread-1 (]: Writing injected SQL for node "test.my_fraud_detection_project.not_null_br_fraud_detection_raw_data_historical_UserID.ee36a3cf3e"
+[0m14:38:58.913692 [debug] [Thread-1 (]: Began executing node test.my_fraud_detection_project.not_null_br_fraud_detection_raw_data_historical_UserID.ee36a3cf3e
+[0m14:38:58.916781 [debug] [Thread-1 (]: Writing runtime sql for node "test.my_fraud_detection_project.not_null_br_fraud_detection_raw_data_historical_UserID.ee36a3cf3e"
+[0m14:38:58.918684 [debug] [Thread-1 (]: Using snowflake connection "test.my_fraud_detection_project.not_null_br_fraud_detection_raw_data_historical_UserID.ee36a3cf3e"
+[0m14:38:58.919771 [debug] [Thread-1 (]: On test.my_fraud_detection_project.not_null_br_fraud_detection_raw_data_historical_UserID.ee36a3cf3e: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "my_fraud_detection_project", "target_name": "dev", "node_id": "test.my_fraud_detection_project.not_null_br_fraud_detection_raw_data_historical_UserID.ee36a3cf3e"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select UserID
+from DEV_EMEKA_FRAUD_DETECTION.PUBLIC.br_fraud_detection_raw_data_historical
+where UserID is null
+
+
+
+      
+    ) dbt_internal_test
+[0m14:38:58.919771 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:38:58.926689 [info ] [Thread-2 (]: 9 of 38 PASS not_null_br_fraud_detection_raw_data_historical_TransactionDate ... [[32mPASS[0m in 1.09s]
+[0m14:38:58.927678 [debug] [Thread-2 (]: Finished running node test.my_fraud_detection_project.not_null_br_fraud_detection_raw_data_historical_TransactionDate.67574b8909
+[0m14:38:58.928789 [debug] [Thread-2 (]: Began running node test.my_fraud_detection_project.not_null_go_fraud_detection_dashboard_metrics_total_fraud_transactions.6e332b98c3
+[0m14:38:58.929679 [info ] [Thread-2 (]: 12 of 38 START test not_null_go_fraud_detection_dashboard_metrics_total_fraud_transactions  [RUN]
+[0m14:38:58.931709 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.my_fraud_detection_project.not_null_br_fraud_detection_raw_data_historical_TransactionDate.67574b8909, now test.my_fraud_detection_project.not_null_go_fraud_detection_dashboard_metrics_total_fraud_transactions.6e332b98c3)
+[0m14:38:58.932678 [debug] [Thread-2 (]: Began compiling node test.my_fraud_detection_project.not_null_go_fraud_detection_dashboard_metrics_total_fraud_transactions.6e332b98c3
+[0m14:38:58.938785 [debug] [Thread-2 (]: Writing injected SQL for node "test.my_fraud_detection_project.not_null_go_fraud_detection_dashboard_metrics_total_fraud_transactions.6e332b98c3"
+[0m14:38:58.939681 [debug] [Thread-2 (]: Began executing node test.my_fraud_detection_project.not_null_go_fraud_detection_dashboard_metrics_total_fraud_transactions.6e332b98c3
+[0m14:38:58.943681 [debug] [Thread-2 (]: Writing runtime sql for node "test.my_fraud_detection_project.not_null_go_fraud_detection_dashboard_metrics_total_fraud_transactions.6e332b98c3"
+[0m14:38:58.944682 [debug] [Thread-2 (]: Using snowflake connection "test.my_fraud_detection_project.not_null_go_fraud_detection_dashboard_metrics_total_fraud_transactions.6e332b98c3"
+[0m14:38:58.945682 [debug] [Thread-2 (]: On test.my_fraud_detection_project.not_null_go_fraud_detection_dashboard_metrics_total_fraud_transactions.6e332b98c3: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "my_fraud_detection_project", "target_name": "dev", "node_id": "test.my_fraud_detection_project.not_null_go_fraud_detection_dashboard_metrics_total_fraud_transactions.6e332b98c3"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select total_fraud_transactions
+from DEV_EMEKA_FRAUD_DETECTION.PUBLIC.go_fraud_detection_dashboard_metrics
+where total_fraud_transactions is null
+
+
+
+      
+    ) dbt_internal_test
+[0m14:38:58.946693 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m14:38:59.678536 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.758 seconds
+[0m14:38:59.681518 [debug] [Thread-1 (]: On test.my_fraud_detection_project.not_null_br_fraud_detection_raw_data_historical_UserID.ee36a3cf3e: Close
+[0m14:38:59.721953 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.775 seconds
+[0m14:38:59.726258 [debug] [Thread-2 (]: On test.my_fraud_detection_project.not_null_go_fraud_detection_dashboard_metrics_total_fraud_transactions.6e332b98c3: Close
+[0m14:38:59.825015 [info ] [Thread-1 (]: 11 of 38 PASS not_null_br_fraud_detection_raw_data_historical_UserID ........... [[32mPASS[0m in 0.92s]
+[0m14:38:59.827009 [debug] [Thread-1 (]: Finished running node test.my_fraud_detection_project.not_null_br_fraud_detection_raw_data_historical_UserID.ee36a3cf3e
+[0m14:38:59.828022 [debug] [Thread-1 (]: Began running node test.my_fraud_detection_project.not_null_go_fraud_detection_dashboard_metrics_total_transactions.4b7d45e49c
+[0m14:38:59.829016 [info ] [Thread-1 (]: 13 of 38 START test not_null_go_fraud_detection_dashboard_metrics_total_transactions  [RUN]
+[0m14:38:59.830260 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.my_fraud_detection_project.not_null_br_fraud_detection_raw_data_historical_UserID.ee36a3cf3e, now test.my_fraud_detection_project.not_null_go_fraud_detection_dashboard_metrics_total_transactions.4b7d45e49c)
+[0m14:38:59.830260 [debug] [Thread-1 (]: Began compiling node test.my_fraud_detection_project.not_null_go_fraud_detection_dashboard_metrics_total_transactions.4b7d45e49c
+[0m14:38:59.840140 [debug] [Thread-1 (]: Writing injected SQL for node "test.my_fraud_detection_project.not_null_go_fraud_detection_dashboard_metrics_total_transactions.4b7d45e49c"
+[0m14:38:59.841150 [info ] [Thread-2 (]: 12 of 38 PASS not_null_go_fraud_detection_dashboard_metrics_total_fraud_transactions  [[32mPASS[0m in 0.91s]
+[0m14:38:59.844666 [debug] [Thread-2 (]: Finished running node test.my_fraud_detection_project.not_null_go_fraud_detection_dashboard_metrics_total_fraud_transactions.6e332b98c3
+[0m14:38:59.846678 [debug] [Thread-2 (]: Began running node test.my_fraud_detection_project.not_null_go_merchant_risk_assessment_MerchantID.352a0b3fbb
+[0m14:38:59.848669 [debug] [Thread-1 (]: Began executing node test.my_fraud_detection_project.not_null_go_fraud_detection_dashboard_metrics_total_transactions.4b7d45e49c
+[0m14:38:59.849667 [info ] [Thread-2 (]: 14 of 38 START test not_null_go_merchant_risk_assessment_MerchantID ............ [RUN]
+[0m14:38:59.856296 [debug] [Thread-1 (]: Writing runtime sql for node "test.my_fraud_detection_project.not_null_go_fraud_detection_dashboard_metrics_total_transactions.4b7d45e49c"
+[0m14:38:59.859317 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.my_fraud_detection_project.not_null_go_fraud_detection_dashboard_metrics_total_fraud_transactions.6e332b98c3, now test.my_fraud_detection_project.not_null_go_merchant_risk_assessment_MerchantID.352a0b3fbb)
+[0m14:38:59.860316 [debug] [Thread-2 (]: Began compiling node test.my_fraud_detection_project.not_null_go_merchant_risk_assessment_MerchantID.352a0b3fbb
+[0m14:38:59.862799 [debug] [Thread-1 (]: Using snowflake connection "test.my_fraud_detection_project.not_null_go_fraud_detection_dashboard_metrics_total_transactions.4b7d45e49c"
+[0m14:38:59.870860 [debug] [Thread-2 (]: Writing injected SQL for node "test.my_fraud_detection_project.not_null_go_merchant_risk_assessment_MerchantID.352a0b3fbb"
+[0m14:38:59.872861 [debug] [Thread-1 (]: On test.my_fraud_detection_project.not_null_go_fraud_detection_dashboard_metrics_total_transactions.4b7d45e49c: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "my_fraud_detection_project", "target_name": "dev", "node_id": "test.my_fraud_detection_project.not_null_go_fraud_detection_dashboard_metrics_total_transactions.4b7d45e49c"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select total_transactions
+from DEV_EMEKA_FRAUD_DETECTION.PUBLIC.go_fraud_detection_dashboard_metrics
+where total_transactions is null
+
+
+
+      
+    ) dbt_internal_test
+[0m14:38:59.874867 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:38:59.876864 [debug] [Thread-2 (]: Began executing node test.my_fraud_detection_project.not_null_go_merchant_risk_assessment_MerchantID.352a0b3fbb
+[0m14:38:59.885520 [debug] [Thread-2 (]: Writing runtime sql for node "test.my_fraud_detection_project.not_null_go_merchant_risk_assessment_MerchantID.352a0b3fbb"
+[0m14:38:59.889519 [debug] [Thread-2 (]: Using snowflake connection "test.my_fraud_detection_project.not_null_go_merchant_risk_assessment_MerchantID.352a0b3fbb"
+[0m14:38:59.890533 [debug] [Thread-2 (]: On test.my_fraud_detection_project.not_null_go_merchant_risk_assessment_MerchantID.352a0b3fbb: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "my_fraud_detection_project", "target_name": "dev", "node_id": "test.my_fraud_detection_project.not_null_go_merchant_risk_assessment_MerchantID.352a0b3fbb"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select MerchantID
+from DEV_EMEKA_FRAUD_DETECTION.PUBLIC.go_merchant_risk_assessment
+where MerchantID is null
+
+
+
+      
+    ) dbt_internal_test
+[0m14:38:59.891851 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m14:39:00.742873 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.851 seconds
+[0m14:39:00.745820 [debug] [Thread-2 (]: On test.my_fraud_detection_project.not_null_go_merchant_risk_assessment_MerchantID.352a0b3fbb: Close
+[0m14:39:00.756777 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.882 seconds
+[0m14:39:00.758872 [debug] [Thread-1 (]: On test.my_fraud_detection_project.not_null_go_fraud_detection_dashboard_metrics_total_transactions.4b7d45e49c: Close
+[0m14:39:00.877528 [info ] [Thread-1 (]: 13 of 38 PASS not_null_go_fraud_detection_dashboard_metrics_total_transactions . [[32mPASS[0m in 1.05s]
+[0m14:39:00.880533 [debug] [Thread-1 (]: Finished running node test.my_fraud_detection_project.not_null_go_fraud_detection_dashboard_metrics_total_transactions.4b7d45e49c
+[0m14:39:00.879536 [info ] [Thread-2 (]: 14 of 38 PASS not_null_go_merchant_risk_assessment_MerchantID .................. [[32mPASS[0m in 1.02s]
+[0m14:39:00.882334 [debug] [Thread-1 (]: Began running node test.my_fraud_detection_project.not_null_go_merchant_risk_assessment_total_fraud_transactions.164f1571ff
+[0m14:39:00.883350 [debug] [Thread-2 (]: Finished running node test.my_fraud_detection_project.not_null_go_merchant_risk_assessment_MerchantID.352a0b3fbb
+[0m14:39:00.884341 [info ] [Thread-1 (]: 15 of 38 START test not_null_go_merchant_risk_assessment_total_fraud_transactions  [RUN]
+[0m14:39:00.884848 [debug] [Thread-2 (]: Began running node test.my_fraud_detection_project.not_null_go_merchant_risk_assessment_total_transactions.a46a941912
+[0m14:39:00.885900 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.my_fraud_detection_project.not_null_go_fraud_detection_dashboard_metrics_total_transactions.4b7d45e49c, now test.my_fraud_detection_project.not_null_go_merchant_risk_assessment_total_fraud_transactions.164f1571ff)
+[0m14:39:00.886865 [info ] [Thread-2 (]: 16 of 38 START test not_null_go_merchant_risk_assessment_total_transactions .... [RUN]
+[0m14:39:00.887859 [debug] [Thread-1 (]: Began compiling node test.my_fraud_detection_project.not_null_go_merchant_risk_assessment_total_fraud_transactions.164f1571ff
+[0m14:39:00.888966 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.my_fraud_detection_project.not_null_go_merchant_risk_assessment_MerchantID.352a0b3fbb, now test.my_fraud_detection_project.not_null_go_merchant_risk_assessment_total_transactions.a46a941912)
+[0m14:39:00.896958 [debug] [Thread-1 (]: Writing injected SQL for node "test.my_fraud_detection_project.not_null_go_merchant_risk_assessment_total_fraud_transactions.164f1571ff"
+[0m14:39:00.898876 [debug] [Thread-2 (]: Began compiling node test.my_fraud_detection_project.not_null_go_merchant_risk_assessment_total_transactions.a46a941912
+[0m14:39:00.906946 [debug] [Thread-2 (]: Writing injected SQL for node "test.my_fraud_detection_project.not_null_go_merchant_risk_assessment_total_transactions.a46a941912"
+[0m14:39:00.907943 [debug] [Thread-1 (]: Began executing node test.my_fraud_detection_project.not_null_go_merchant_risk_assessment_total_fraud_transactions.164f1571ff
+[0m14:39:00.911861 [debug] [Thread-1 (]: Writing runtime sql for node "test.my_fraud_detection_project.not_null_go_merchant_risk_assessment_total_fraud_transactions.164f1571ff"
+[0m14:39:00.912861 [debug] [Thread-2 (]: Began executing node test.my_fraud_detection_project.not_null_go_merchant_risk_assessment_total_transactions.a46a941912
+[0m14:39:00.920865 [debug] [Thread-2 (]: Writing runtime sql for node "test.my_fraud_detection_project.not_null_go_merchant_risk_assessment_total_transactions.a46a941912"
+[0m14:39:00.923855 [debug] [Thread-1 (]: Using snowflake connection "test.my_fraud_detection_project.not_null_go_merchant_risk_assessment_total_fraud_transactions.164f1571ff"
+[0m14:39:00.924858 [debug] [Thread-1 (]: On test.my_fraud_detection_project.not_null_go_merchant_risk_assessment_total_fraud_transactions.164f1571ff: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "my_fraud_detection_project", "target_name": "dev", "node_id": "test.my_fraud_detection_project.not_null_go_merchant_risk_assessment_total_fraud_transactions.164f1571ff"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select total_fraud_transactions
+from DEV_EMEKA_FRAUD_DETECTION.PUBLIC.go_merchant_risk_assessment
+where total_fraud_transactions is null
+
+
+
+      
+    ) dbt_internal_test
+[0m14:39:00.926857 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:39:00.927861 [debug] [Thread-2 (]: Using snowflake connection "test.my_fraud_detection_project.not_null_go_merchant_risk_assessment_total_transactions.a46a941912"
+[0m14:39:00.930858 [debug] [Thread-2 (]: On test.my_fraud_detection_project.not_null_go_merchant_risk_assessment_total_transactions.a46a941912: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "my_fraud_detection_project", "target_name": "dev", "node_id": "test.my_fraud_detection_project.not_null_go_merchant_risk_assessment_total_transactions.a46a941912"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select total_transactions
+from DEV_EMEKA_FRAUD_DETECTION.PUBLIC.go_merchant_risk_assessment
+where total_transactions is null
+
+
+
+      
+    ) dbt_internal_test
+[0m14:39:00.931930 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m14:39:01.835039 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.908 seconds
+[0m14:39:01.837113 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.905 seconds
+[0m14:39:01.841125 [debug] [Thread-1 (]: On test.my_fraud_detection_project.not_null_go_merchant_risk_assessment_total_fraud_transactions.164f1571ff: Close
+[0m14:39:01.843036 [debug] [Thread-2 (]: On test.my_fraud_detection_project.not_null_go_merchant_risk_assessment_total_transactions.a46a941912: Close
+[0m14:39:01.986355 [info ] [Thread-1 (]: 15 of 38 PASS not_null_go_merchant_risk_assessment_total_fraud_transactions .... [[32mPASS[0m in 1.10s]
+[0m14:39:01.989097 [debug] [Thread-1 (]: Finished running node test.my_fraud_detection_project.not_null_go_merchant_risk_assessment_total_fraud_transactions.164f1571ff
+[0m14:39:01.987077 [info ] [Thread-2 (]: 16 of 38 PASS not_null_go_merchant_risk_assessment_total_transactions .......... [[32mPASS[0m in 1.10s]
+[0m14:39:01.991093 [debug] [Thread-1 (]: Began running node test.my_fraud_detection_project.not_null_go_real_time_fraud_detection_AnomalyScore.e846dc175a
+[0m14:39:01.992100 [debug] [Thread-2 (]: Finished running node test.my_fraud_detection_project.not_null_go_merchant_risk_assessment_total_transactions.a46a941912
+[0m14:39:01.994103 [debug] [Thread-2 (]: Began running node test.my_fraud_detection_project.not_null_go_real_time_fraud_detection_TransactionID.5d4065ee6d
+[0m14:39:01.993091 [info ] [Thread-1 (]: 17 of 38 START test not_null_go_real_time_fraud_detection_AnomalyScore ......... [RUN]
+[0m14:39:01.995097 [info ] [Thread-2 (]: 18 of 38 START test not_null_go_real_time_fraud_detection_TransactionID ........ [RUN]
+[0m14:39:01.997097 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.my_fraud_detection_project.not_null_go_merchant_risk_assessment_total_fraud_transactions.164f1571ff, now test.my_fraud_detection_project.not_null_go_real_time_fraud_detection_AnomalyScore.e846dc175a)
+[0m14:39:01.998096 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.my_fraud_detection_project.not_null_go_merchant_risk_assessment_total_transactions.a46a941912, now test.my_fraud_detection_project.not_null_go_real_time_fraud_detection_TransactionID.5d4065ee6d)
+[0m14:39:01.999110 [debug] [Thread-1 (]: Began compiling node test.my_fraud_detection_project.not_null_go_real_time_fraud_detection_AnomalyScore.e846dc175a
+[0m14:39:01.999110 [debug] [Thread-2 (]: Began compiling node test.my_fraud_detection_project.not_null_go_real_time_fraud_detection_TransactionID.5d4065ee6d
+[0m14:39:02.007173 [debug] [Thread-1 (]: Writing injected SQL for node "test.my_fraud_detection_project.not_null_go_real_time_fraud_detection_AnomalyScore.e846dc175a"
+[0m14:39:02.012093 [debug] [Thread-2 (]: Writing injected SQL for node "test.my_fraud_detection_project.not_null_go_real_time_fraud_detection_TransactionID.5d4065ee6d"
+[0m14:39:02.013873 [debug] [Thread-1 (]: Began executing node test.my_fraud_detection_project.not_null_go_real_time_fraud_detection_AnomalyScore.e846dc175a
+[0m14:39:02.018864 [debug] [Thread-1 (]: Writing runtime sql for node "test.my_fraud_detection_project.not_null_go_real_time_fraud_detection_AnomalyScore.e846dc175a"
+[0m14:39:02.019868 [debug] [Thread-2 (]: Began executing node test.my_fraud_detection_project.not_null_go_real_time_fraud_detection_TransactionID.5d4065ee6d
+[0m14:39:02.025866 [debug] [Thread-2 (]: Writing runtime sql for node "test.my_fraud_detection_project.not_null_go_real_time_fraud_detection_TransactionID.5d4065ee6d"
+[0m14:39:02.026863 [debug] [Thread-1 (]: Using snowflake connection "test.my_fraud_detection_project.not_null_go_real_time_fraud_detection_AnomalyScore.e846dc175a"
+[0m14:39:02.027863 [debug] [Thread-1 (]: On test.my_fraud_detection_project.not_null_go_real_time_fraud_detection_AnomalyScore.e846dc175a: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "my_fraud_detection_project", "target_name": "dev", "node_id": "test.my_fraud_detection_project.not_null_go_real_time_fraud_detection_AnomalyScore.e846dc175a"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select AnomalyScore
+from DEV_EMEKA_FRAUD_DETECTION.PUBLIC.go_real_time_fraud_detection
+where AnomalyScore is null
+
+
+
+      
+    ) dbt_internal_test
+[0m14:39:02.029865 [debug] [Thread-2 (]: Using snowflake connection "test.my_fraud_detection_project.not_null_go_real_time_fraud_detection_TransactionID.5d4065ee6d"
+[0m14:39:02.029865 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:39:02.030879 [debug] [Thread-2 (]: On test.my_fraud_detection_project.not_null_go_real_time_fraud_detection_TransactionID.5d4065ee6d: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "my_fraud_detection_project", "target_name": "dev", "node_id": "test.my_fraud_detection_project.not_null_go_real_time_fraud_detection_TransactionID.5d4065ee6d"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select TransactionID
+from DEV_EMEKA_FRAUD_DETECTION.PUBLIC.go_real_time_fraud_detection
+where TransactionID is null
+
+
+
+      
+    ) dbt_internal_test
+[0m14:39:02.033863 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m14:39:02.827076 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.793 seconds
+[0m14:39:02.831064 [debug] [Thread-2 (]: On test.my_fraud_detection_project.not_null_go_real_time_fraud_detection_TransactionID.5d4065ee6d: Close
+[0m14:39:02.864683 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.834 seconds
+[0m14:39:02.866775 [debug] [Thread-1 (]: On test.my_fraud_detection_project.not_null_go_real_time_fraud_detection_AnomalyScore.e846dc175a: Close
+[0m14:39:02.972895 [info ] [Thread-2 (]: 18 of 38 PASS not_null_go_real_time_fraud_detection_TransactionID .............. [[32mPASS[0m in 0.97s]
+[0m14:39:02.974853 [debug] [Thread-2 (]: Finished running node test.my_fraud_detection_project.not_null_go_real_time_fraud_detection_TransactionID.5d4065ee6d
+[0m14:39:02.976790 [debug] [Thread-2 (]: Began running node test.my_fraud_detection_project.not_null_go_user_behavior_metrics_UserID.3c6df2c04e
+[0m14:39:02.977790 [info ] [Thread-2 (]: 19 of 38 START test not_null_go_user_behavior_metrics_UserID ................... [RUN]
+[0m14:39:02.978789 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.my_fraud_detection_project.not_null_go_real_time_fraud_detection_TransactionID.5d4065ee6d, now test.my_fraud_detection_project.not_null_go_user_behavior_metrics_UserID.3c6df2c04e)
+[0m14:39:02.979789 [debug] [Thread-2 (]: Began compiling node test.my_fraud_detection_project.not_null_go_user_behavior_metrics_UserID.3c6df2c04e
+[0m14:39:02.984789 [debug] [Thread-2 (]: Writing injected SQL for node "test.my_fraud_detection_project.not_null_go_user_behavior_metrics_UserID.3c6df2c04e"
+[0m14:39:02.986294 [debug] [Thread-2 (]: Began executing node test.my_fraud_detection_project.not_null_go_user_behavior_metrics_UserID.3c6df2c04e
+[0m14:39:02.990301 [debug] [Thread-2 (]: Writing runtime sql for node "test.my_fraud_detection_project.not_null_go_user_behavior_metrics_UserID.3c6df2c04e"
+[0m14:39:02.993617 [debug] [Thread-2 (]: Using snowflake connection "test.my_fraud_detection_project.not_null_go_user_behavior_metrics_UserID.3c6df2c04e"
+[0m14:39:02.994617 [debug] [Thread-2 (]: On test.my_fraud_detection_project.not_null_go_user_behavior_metrics_UserID.3c6df2c04e: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "my_fraud_detection_project", "target_name": "dev", "node_id": "test.my_fraud_detection_project.not_null_go_user_behavior_metrics_UserID.3c6df2c04e"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select UserID
+from DEV_EMEKA_FRAUD_DETECTION.PUBLIC.go_user_behavior_metrics
+where UserID is null
+
+
+
+      
+    ) dbt_internal_test
+[0m14:39:02.994617 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m14:39:03.001622 [info ] [Thread-1 (]: 17 of 38 PASS not_null_go_real_time_fraud_detection_AnomalyScore ............... [[32mPASS[0m in 1.01s]
+[0m14:39:03.003617 [debug] [Thread-1 (]: Finished running node test.my_fraud_detection_project.not_null_go_real_time_fraud_detection_AnomalyScore.e846dc175a
+[0m14:39:03.004620 [debug] [Thread-1 (]: Began running node test.my_fraud_detection_project.not_null_go_user_behavior_metrics_total_fraud_transactions.8f4937fb5c
+[0m14:39:03.005619 [info ] [Thread-1 (]: 20 of 38 START test not_null_go_user_behavior_metrics_total_fraud_transactions . [RUN]
+[0m14:39:03.006618 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.my_fraud_detection_project.not_null_go_real_time_fraud_detection_AnomalyScore.e846dc175a, now test.my_fraud_detection_project.not_null_go_user_behavior_metrics_total_fraud_transactions.8f4937fb5c)
+[0m14:39:03.007622 [debug] [Thread-1 (]: Began compiling node test.my_fraud_detection_project.not_null_go_user_behavior_metrics_total_fraud_transactions.8f4937fb5c
+[0m14:39:03.012619 [debug] [Thread-1 (]: Writing injected SQL for node "test.my_fraud_detection_project.not_null_go_user_behavior_metrics_total_fraud_transactions.8f4937fb5c"
+[0m14:39:03.013619 [debug] [Thread-1 (]: Began executing node test.my_fraud_detection_project.not_null_go_user_behavior_metrics_total_fraud_transactions.8f4937fb5c
+[0m14:39:03.016616 [debug] [Thread-1 (]: Writing runtime sql for node "test.my_fraud_detection_project.not_null_go_user_behavior_metrics_total_fraud_transactions.8f4937fb5c"
+[0m14:39:03.018618 [debug] [Thread-1 (]: Using snowflake connection "test.my_fraud_detection_project.not_null_go_user_behavior_metrics_total_fraud_transactions.8f4937fb5c"
+[0m14:39:03.020620 [debug] [Thread-1 (]: On test.my_fraud_detection_project.not_null_go_user_behavior_metrics_total_fraud_transactions.8f4937fb5c: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "my_fraud_detection_project", "target_name": "dev", "node_id": "test.my_fraud_detection_project.not_null_go_user_behavior_metrics_total_fraud_transactions.8f4937fb5c"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select total_fraud_transactions
+from DEV_EMEKA_FRAUD_DETECTION.PUBLIC.go_user_behavior_metrics
+where total_fraud_transactions is null
+
+
+
+      
+    ) dbt_internal_test
+[0m14:39:03.020620 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:39:03.769940 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.775 seconds
+[0m14:39:03.774955 [debug] [Thread-2 (]: On test.my_fraud_detection_project.not_null_go_user_behavior_metrics_UserID.3c6df2c04e: Close
+[0m14:39:03.906907 [info ] [Thread-2 (]: 19 of 38 PASS not_null_go_user_behavior_metrics_UserID ......................... [[32mPASS[0m in 0.93s]
+[0m14:39:03.908889 [debug] [Thread-2 (]: Finished running node test.my_fraud_detection_project.not_null_go_user_behavior_metrics_UserID.3c6df2c04e
+[0m14:39:03.909896 [debug] [Thread-2 (]: Began running node test.my_fraud_detection_project.not_null_go_user_behavior_metrics_total_transactions.96e54e9a87
+[0m14:39:03.909896 [info ] [Thread-2 (]: 21 of 38 START test not_null_go_user_behavior_metrics_total_transactions ....... [RUN]
+[0m14:39:03.910912 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.my_fraud_detection_project.not_null_go_user_behavior_metrics_UserID.3c6df2c04e, now test.my_fraud_detection_project.not_null_go_user_behavior_metrics_total_transactions.96e54e9a87)
+[0m14:39:03.911891 [debug] [Thread-2 (]: Began compiling node test.my_fraud_detection_project.not_null_go_user_behavior_metrics_total_transactions.96e54e9a87
+[0m14:39:03.916891 [debug] [Thread-2 (]: Writing injected SQL for node "test.my_fraud_detection_project.not_null_go_user_behavior_metrics_total_transactions.96e54e9a87"
+[0m14:39:03.918903 [debug] [Thread-2 (]: Began executing node test.my_fraud_detection_project.not_null_go_user_behavior_metrics_total_transactions.96e54e9a87
+[0m14:39:03.924892 [debug] [Thread-2 (]: Writing runtime sql for node "test.my_fraud_detection_project.not_null_go_user_behavior_metrics_total_transactions.96e54e9a87"
+[0m14:39:03.927894 [debug] [Thread-2 (]: Using snowflake connection "test.my_fraud_detection_project.not_null_go_user_behavior_metrics_total_transactions.96e54e9a87"
+[0m14:39:03.927894 [debug] [Thread-2 (]: On test.my_fraud_detection_project.not_null_go_user_behavior_metrics_total_transactions.96e54e9a87: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "my_fraud_detection_project", "target_name": "dev", "node_id": "test.my_fraud_detection_project.not_null_go_user_behavior_metrics_total_transactions.96e54e9a87"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select total_transactions
+from DEV_EMEKA_FRAUD_DETECTION.PUBLIC.go_user_behavior_metrics
+where total_transactions is null
+
+
+
+      
+    ) dbt_internal_test
+[0m14:39:03.928902 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m14:39:03.945668 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.924 seconds
+[0m14:39:03.948573 [debug] [Thread-1 (]: On test.my_fraud_detection_project.not_null_go_user_behavior_metrics_total_fraud_transactions.8f4937fb5c: Close
+[0m14:39:04.066308 [info ] [Thread-1 (]: 20 of 38 PASS not_null_go_user_behavior_metrics_total_fraud_transactions ....... [[32mPASS[0m in 1.06s]
+[0m14:39:04.067309 [debug] [Thread-1 (]: Finished running node test.my_fraud_detection_project.not_null_go_user_behavior_metrics_total_fraud_transactions.8f4937fb5c
+[0m14:39:04.068308 [debug] [Thread-1 (]: Began running node test.my_fraud_detection_project.not_null_si_devices_dimension_DeviceID.b8e8066b8f
+[0m14:39:04.069309 [info ] [Thread-1 (]: 22 of 38 START test not_null_si_devices_dimension_DeviceID ..................... [RUN]
+[0m14:39:04.070307 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.my_fraud_detection_project.not_null_go_user_behavior_metrics_total_fraud_transactions.8f4937fb5c, now test.my_fraud_detection_project.not_null_si_devices_dimension_DeviceID.b8e8066b8f)
+[0m14:39:04.071362 [debug] [Thread-1 (]: Began compiling node test.my_fraud_detection_project.not_null_si_devices_dimension_DeviceID.b8e8066b8f
+[0m14:39:04.077404 [debug] [Thread-1 (]: Writing injected SQL for node "test.my_fraud_detection_project.not_null_si_devices_dimension_DeviceID.b8e8066b8f"
+[0m14:39:04.078405 [debug] [Thread-1 (]: Began executing node test.my_fraud_detection_project.not_null_si_devices_dimension_DeviceID.b8e8066b8f
+[0m14:39:04.147835 [debug] [Thread-1 (]: Writing runtime sql for node "test.my_fraud_detection_project.not_null_si_devices_dimension_DeviceID.b8e8066b8f"
+[0m14:39:04.149832 [debug] [Thread-1 (]: Using snowflake connection "test.my_fraud_detection_project.not_null_si_devices_dimension_DeviceID.b8e8066b8f"
+[0m14:39:04.150832 [debug] [Thread-1 (]: On test.my_fraud_detection_project.not_null_si_devices_dimension_DeviceID.b8e8066b8f: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "my_fraud_detection_project", "target_name": "dev", "node_id": "test.my_fraud_detection_project.not_null_si_devices_dimension_DeviceID.b8e8066b8f"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select DeviceID
+from DEV_EMEKA_FRAUD_DETECTION.PUBLIC.si_devices_dimension
+where DeviceID is null
+
+
+
+      
+    ) dbt_internal_test
+[0m14:39:04.151834 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:39:04.756221 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.827 seconds
+[0m14:39:04.760230 [debug] [Thread-2 (]: On test.my_fraud_detection_project.not_null_go_user_behavior_metrics_total_transactions.96e54e9a87: Close
+[0m14:39:04.864236 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.713 seconds
+[0m14:39:04.869327 [debug] [Thread-1 (]: On test.my_fraud_detection_project.not_null_si_devices_dimension_DeviceID.b8e8066b8f: Close
+[0m14:39:04.895017 [info ] [Thread-2 (]: 21 of 38 PASS not_null_go_user_behavior_metrics_total_transactions ............. [[32mPASS[0m in 0.98s]
+[0m14:39:04.896217 [debug] [Thread-2 (]: Finished running node test.my_fraud_detection_project.not_null_go_user_behavior_metrics_total_transactions.96e54e9a87
+[0m14:39:04.897228 [debug] [Thread-2 (]: Began running node test.my_fraud_detection_project.not_null_si_devices_dimension_DeviceType.e5c582fcda
+[0m14:39:04.898227 [info ] [Thread-2 (]: 23 of 38 START test not_null_si_devices_dimension_DeviceType ................... [RUN]
+[0m14:39:04.899228 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.my_fraud_detection_project.not_null_go_user_behavior_metrics_total_transactions.96e54e9a87, now test.my_fraud_detection_project.not_null_si_devices_dimension_DeviceType.e5c582fcda)
+[0m14:39:04.900231 [debug] [Thread-2 (]: Began compiling node test.my_fraud_detection_project.not_null_si_devices_dimension_DeviceType.e5c582fcda
+[0m14:39:04.905248 [debug] [Thread-2 (]: Writing injected SQL for node "test.my_fraud_detection_project.not_null_si_devices_dimension_DeviceType.e5c582fcda"
+[0m14:39:04.906247 [debug] [Thread-2 (]: Began executing node test.my_fraud_detection_project.not_null_si_devices_dimension_DeviceType.e5c582fcda
+[0m14:39:04.910231 [debug] [Thread-2 (]: Writing runtime sql for node "test.my_fraud_detection_project.not_null_si_devices_dimension_DeviceType.e5c582fcda"
+[0m14:39:04.912226 [debug] [Thread-2 (]: Using snowflake connection "test.my_fraud_detection_project.not_null_si_devices_dimension_DeviceType.e5c582fcda"
+[0m14:39:04.913228 [debug] [Thread-2 (]: On test.my_fraud_detection_project.not_null_si_devices_dimension_DeviceType.e5c582fcda: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "my_fraud_detection_project", "target_name": "dev", "node_id": "test.my_fraud_detection_project.not_null_si_devices_dimension_DeviceType.e5c582fcda"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select DeviceType
+from DEV_EMEKA_FRAUD_DETECTION.PUBLIC.si_devices_dimension
+where DeviceType is null
+
+
+
+      
+    ) dbt_internal_test
+[0m14:39:04.913228 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m14:39:04.988185 [info ] [Thread-1 (]: 22 of 38 PASS not_null_si_devices_dimension_DeviceID ........................... [[32mPASS[0m in 0.92s]
+[0m14:39:04.990693 [debug] [Thread-1 (]: Finished running node test.my_fraud_detection_project.not_null_si_devices_dimension_DeviceID.b8e8066b8f
+[0m14:39:04.991694 [debug] [Thread-1 (]: Began running node test.my_fraud_detection_project.not_null_si_devices_dimension_IP_Address.00d75346e3
+[0m14:39:04.992691 [info ] [Thread-1 (]: 24 of 38 START test not_null_si_devices_dimension_IP_Address ................... [RUN]
+[0m14:39:04.993689 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.my_fraud_detection_project.not_null_si_devices_dimension_DeviceID.b8e8066b8f, now test.my_fraud_detection_project.not_null_si_devices_dimension_IP_Address.00d75346e3)
+[0m14:39:04.993689 [debug] [Thread-1 (]: Began compiling node test.my_fraud_detection_project.not_null_si_devices_dimension_IP_Address.00d75346e3
+[0m14:39:04.998689 [debug] [Thread-1 (]: Writing injected SQL for node "test.my_fraud_detection_project.not_null_si_devices_dimension_IP_Address.00d75346e3"
+[0m14:39:04.999689 [debug] [Thread-1 (]: Began executing node test.my_fraud_detection_project.not_null_si_devices_dimension_IP_Address.00d75346e3
+[0m14:39:05.004691 [debug] [Thread-1 (]: Writing runtime sql for node "test.my_fraud_detection_project.not_null_si_devices_dimension_IP_Address.00d75346e3"
+[0m14:39:05.007697 [debug] [Thread-1 (]: Using snowflake connection "test.my_fraud_detection_project.not_null_si_devices_dimension_IP_Address.00d75346e3"
+[0m14:39:05.009694 [debug] [Thread-1 (]: On test.my_fraud_detection_project.not_null_si_devices_dimension_IP_Address.00d75346e3: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "my_fraud_detection_project", "target_name": "dev", "node_id": "test.my_fraud_detection_project.not_null_si_devices_dimension_IP_Address.00d75346e3"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select IP_Address
+from DEV_EMEKA_FRAUD_DETECTION.PUBLIC.si_devices_dimension
+where IP_Address is null
+
+
+
+      
+    ) dbt_internal_test
+[0m14:39:05.010802 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:39:05.831395 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.918 seconds
+[0m14:39:05.833384 [debug] [Thread-2 (]: On test.my_fraud_detection_project.not_null_si_devices_dimension_DeviceType.e5c582fcda: Close
+[0m14:39:05.843612 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.833 seconds
+[0m14:39:05.845552 [debug] [Thread-1 (]: On test.my_fraud_detection_project.not_null_si_devices_dimension_IP_Address.00d75346e3: Close
+[0m14:39:05.962572 [info ] [Thread-2 (]: 23 of 38 PASS not_null_si_devices_dimension_DeviceType ......................... [[32mPASS[0m in 1.06s]
+[0m14:39:05.964575 [debug] [Thread-2 (]: Finished running node test.my_fraud_detection_project.not_null_si_devices_dimension_DeviceType.e5c582fcda
+[0m14:39:05.965653 [debug] [Thread-2 (]: Began running node test.my_fraud_detection_project.not_null_si_transactions_fact_Currency.5bd49c0510
+[0m14:39:05.966572 [info ] [Thread-2 (]: 25 of 38 START test not_null_si_transactions_fact_Currency ..................... [RUN]
+[0m14:39:05.968579 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.my_fraud_detection_project.not_null_si_devices_dimension_DeviceType.e5c582fcda, now test.my_fraud_detection_project.not_null_si_transactions_fact_Currency.5bd49c0510)
+[0m14:39:05.969587 [debug] [Thread-2 (]: Began compiling node test.my_fraud_detection_project.not_null_si_transactions_fact_Currency.5bd49c0510
+[0m14:39:05.973577 [debug] [Thread-2 (]: Writing injected SQL for node "test.my_fraud_detection_project.not_null_si_transactions_fact_Currency.5bd49c0510"
+[0m14:39:05.975580 [debug] [Thread-2 (]: Began executing node test.my_fraud_detection_project.not_null_si_transactions_fact_Currency.5bd49c0510
+[0m14:39:05.978590 [debug] [Thread-2 (]: Writing runtime sql for node "test.my_fraud_detection_project.not_null_si_transactions_fact_Currency.5bd49c0510"
+[0m14:39:05.980590 [debug] [Thread-2 (]: Using snowflake connection "test.my_fraud_detection_project.not_null_si_transactions_fact_Currency.5bd49c0510"
+[0m14:39:05.981589 [debug] [Thread-2 (]: On test.my_fraud_detection_project.not_null_si_transactions_fact_Currency.5bd49c0510: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "my_fraud_detection_project", "target_name": "dev", "node_id": "test.my_fraud_detection_project.not_null_si_transactions_fact_Currency.5bd49c0510"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select Currency
+from DEV_EMEKA_FRAUD_DETECTION.PUBLIC.si_transactions_fact
+where Currency is null
+
+
+
+      
+    ) dbt_internal_test
+[0m14:39:05.982658 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m14:39:05.984586 [info ] [Thread-1 (]: 24 of 38 PASS not_null_si_devices_dimension_IP_Address ......................... [[32mPASS[0m in 0.99s]
+[0m14:39:05.987634 [debug] [Thread-1 (]: Finished running node test.my_fraud_detection_project.not_null_si_devices_dimension_IP_Address.00d75346e3
+[0m14:39:05.988591 [debug] [Thread-1 (]: Began running node test.my_fraud_detection_project.not_null_si_transactions_fact_IsFraud.d9ff404b94
+[0m14:39:05.989379 [info ] [Thread-1 (]: 26 of 38 START test not_null_si_transactions_fact_IsFraud ...................... [RUN]
+[0m14:39:05.990888 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.my_fraud_detection_project.not_null_si_devices_dimension_IP_Address.00d75346e3, now test.my_fraud_detection_project.not_null_si_transactions_fact_IsFraud.d9ff404b94)
+[0m14:39:05.990888 [debug] [Thread-1 (]: Began compiling node test.my_fraud_detection_project.not_null_si_transactions_fact_IsFraud.d9ff404b94
+[0m14:39:05.995989 [debug] [Thread-1 (]: Writing injected SQL for node "test.my_fraud_detection_project.not_null_si_transactions_fact_IsFraud.d9ff404b94"
+[0m14:39:05.996982 [debug] [Thread-1 (]: Began executing node test.my_fraud_detection_project.not_null_si_transactions_fact_IsFraud.d9ff404b94
+[0m14:39:06.000983 [debug] [Thread-1 (]: Writing runtime sql for node "test.my_fraud_detection_project.not_null_si_transactions_fact_IsFraud.d9ff404b94"
+[0m14:39:06.002895 [debug] [Thread-1 (]: Using snowflake connection "test.my_fraud_detection_project.not_null_si_transactions_fact_IsFraud.d9ff404b94"
+[0m14:39:06.003895 [debug] [Thread-1 (]: On test.my_fraud_detection_project.not_null_si_transactions_fact_IsFraud.d9ff404b94: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "my_fraud_detection_project", "target_name": "dev", "node_id": "test.my_fraud_detection_project.not_null_si_transactions_fact_IsFraud.d9ff404b94"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select IsFraud
+from DEV_EMEKA_FRAUD_DETECTION.PUBLIC.si_transactions_fact
+where IsFraud is null
+
+
+
+      
+    ) dbt_internal_test
+[0m14:39:06.003895 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:39:06.799146 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.794 seconds
+[0m14:39:06.804145 [debug] [Thread-1 (]: On test.my_fraud_detection_project.not_null_si_transactions_fact_IsFraud.d9ff404b94: Close
+[0m14:39:06.940047 [info ] [Thread-1 (]: 26 of 38 PASS not_null_si_transactions_fact_IsFraud ............................ [[32mPASS[0m in 0.95s]
+[0m14:39:06.941026 [debug] [Thread-1 (]: Finished running node test.my_fraud_detection_project.not_null_si_transactions_fact_IsFraud.d9ff404b94
+[0m14:39:06.942025 [debug] [Thread-1 (]: Began running node test.my_fraud_detection_project.not_null_si_transactions_fact_MerchantID.137d73e00a
+[0m14:39:06.942654 [info ] [Thread-1 (]: 27 of 38 START test not_null_si_transactions_fact_MerchantID ................... [RUN]
+[0m14:39:06.943319 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.my_fraud_detection_project.not_null_si_transactions_fact_IsFraud.d9ff404b94, now test.my_fraud_detection_project.not_null_si_transactions_fact_MerchantID.137d73e00a)
+[0m14:39:06.944376 [debug] [Thread-1 (]: Began compiling node test.my_fraud_detection_project.not_null_si_transactions_fact_MerchantID.137d73e00a
+[0m14:39:06.948421 [debug] [Thread-1 (]: Writing injected SQL for node "test.my_fraud_detection_project.not_null_si_transactions_fact_MerchantID.137d73e00a"
+[0m14:39:06.950343 [debug] [Thread-1 (]: Began executing node test.my_fraud_detection_project.not_null_si_transactions_fact_MerchantID.137d73e00a
+[0m14:39:06.955338 [debug] [Thread-1 (]: Writing runtime sql for node "test.my_fraud_detection_project.not_null_si_transactions_fact_MerchantID.137d73e00a"
+[0m14:39:06.957353 [debug] [Thread-1 (]: Using snowflake connection "test.my_fraud_detection_project.not_null_si_transactions_fact_MerchantID.137d73e00a"
+[0m14:39:06.958330 [debug] [Thread-1 (]: On test.my_fraud_detection_project.not_null_si_transactions_fact_MerchantID.137d73e00a: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "my_fraud_detection_project", "target_name": "dev", "node_id": "test.my_fraud_detection_project.not_null_si_transactions_fact_MerchantID.137d73e00a"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select MerchantID
+from DEV_EMEKA_FRAUD_DETECTION.PUBLIC.si_transactions_fact
+where MerchantID is null
+
+
+
+      
+    ) dbt_internal_test
+[0m14:39:06.959330 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:39:07.097310 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 1.115 seconds
+[0m14:39:07.099311 [debug] [Thread-2 (]: On test.my_fraud_detection_project.not_null_si_transactions_fact_Currency.5bd49c0510: Close
+[0m14:39:07.266747 [info ] [Thread-2 (]: 25 of 38 PASS not_null_si_transactions_fact_Currency ........................... [[32mPASS[0m in 1.30s]
+[0m14:39:07.268747 [debug] [Thread-2 (]: Finished running node test.my_fraud_detection_project.not_null_si_transactions_fact_Currency.5bd49c0510
+[0m14:39:07.269754 [debug] [Thread-2 (]: Began running node test.my_fraud_detection_project.not_null_si_transactions_fact_TransactionAmount.7e3143fdc4
+[0m14:39:07.270747 [info ] [Thread-2 (]: 28 of 38 START test not_null_si_transactions_fact_TransactionAmount ............ [RUN]
+[0m14:39:07.271754 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.my_fraud_detection_project.not_null_si_transactions_fact_Currency.5bd49c0510, now test.my_fraud_detection_project.not_null_si_transactions_fact_TransactionAmount.7e3143fdc4)
+[0m14:39:07.272835 [debug] [Thread-2 (]: Began compiling node test.my_fraud_detection_project.not_null_si_transactions_fact_TransactionAmount.7e3143fdc4
+[0m14:39:07.276832 [debug] [Thread-2 (]: Writing injected SQL for node "test.my_fraud_detection_project.not_null_si_transactions_fact_TransactionAmount.7e3143fdc4"
+[0m14:39:07.277837 [debug] [Thread-2 (]: Began executing node test.my_fraud_detection_project.not_null_si_transactions_fact_TransactionAmount.7e3143fdc4
+[0m14:39:07.281919 [debug] [Thread-2 (]: Writing runtime sql for node "test.my_fraud_detection_project.not_null_si_transactions_fact_TransactionAmount.7e3143fdc4"
+[0m14:39:07.283846 [debug] [Thread-2 (]: Using snowflake connection "test.my_fraud_detection_project.not_null_si_transactions_fact_TransactionAmount.7e3143fdc4"
+[0m14:39:07.285859 [debug] [Thread-2 (]: On test.my_fraud_detection_project.not_null_si_transactions_fact_TransactionAmount.7e3143fdc4: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "my_fraud_detection_project", "target_name": "dev", "node_id": "test.my_fraud_detection_project.not_null_si_transactions_fact_TransactionAmount.7e3143fdc4"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select TransactionAmount
+from DEV_EMEKA_FRAUD_DETECTION.PUBLIC.si_transactions_fact
+where TransactionAmount is null
+
+
+
+      
+    ) dbt_internal_test
+[0m14:39:07.287848 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m14:39:07.608455 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.650 seconds
+[0m14:39:07.612513 [debug] [Thread-1 (]: On test.my_fraud_detection_project.not_null_si_transactions_fact_MerchantID.137d73e00a: Close
+[0m14:39:07.821238 [info ] [Thread-1 (]: 27 of 38 PASS not_null_si_transactions_fact_MerchantID ......................... [[32mPASS[0m in 0.88s]
+[0m14:39:07.822078 [debug] [Thread-1 (]: Finished running node test.my_fraud_detection_project.not_null_si_transactions_fact_MerchantID.137d73e00a
+[0m14:39:07.823087 [debug] [Thread-1 (]: Began running node test.my_fraud_detection_project.not_null_si_transactions_fact_TransactionDate.a650103d86
+[0m14:39:07.824088 [info ] [Thread-1 (]: 29 of 38 START test not_null_si_transactions_fact_TransactionDate .............. [RUN]
+[0m14:39:07.826089 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.my_fraud_detection_project.not_null_si_transactions_fact_MerchantID.137d73e00a, now test.my_fraud_detection_project.not_null_si_transactions_fact_TransactionDate.a650103d86)
+[0m14:39:07.826089 [debug] [Thread-1 (]: Began compiling node test.my_fraud_detection_project.not_null_si_transactions_fact_TransactionDate.a650103d86
+[0m14:39:07.831177 [debug] [Thread-1 (]: Writing injected SQL for node "test.my_fraud_detection_project.not_null_si_transactions_fact_TransactionDate.a650103d86"
+[0m14:39:07.833092 [debug] [Thread-1 (]: Began executing node test.my_fraud_detection_project.not_null_si_transactions_fact_TransactionDate.a650103d86
+[0m14:39:07.837190 [debug] [Thread-1 (]: Writing runtime sql for node "test.my_fraud_detection_project.not_null_si_transactions_fact_TransactionDate.a650103d86"
+[0m14:39:07.839098 [debug] [Thread-1 (]: Using snowflake connection "test.my_fraud_detection_project.not_null_si_transactions_fact_TransactionDate.a650103d86"
+[0m14:39:07.840101 [debug] [Thread-1 (]: On test.my_fraud_detection_project.not_null_si_transactions_fact_TransactionDate.a650103d86: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "my_fraud_detection_project", "target_name": "dev", "node_id": "test.my_fraud_detection_project.not_null_si_transactions_fact_TransactionDate.a650103d86"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select TransactionDate
+from DEV_EMEKA_FRAUD_DETECTION.PUBLIC.si_transactions_fact
+where TransactionDate is null
+
+
+
+      
+    ) dbt_internal_test
+[0m14:39:07.840101 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:39:07.968879 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.682 seconds
+[0m14:39:07.971878 [debug] [Thread-2 (]: On test.my_fraud_detection_project.not_null_si_transactions_fact_TransactionAmount.7e3143fdc4: Close
+[0m14:39:08.110229 [info ] [Thread-2 (]: 28 of 38 PASS not_null_si_transactions_fact_TransactionAmount .................. [[32mPASS[0m in 0.84s]
+[0m14:39:08.111228 [debug] [Thread-2 (]: Finished running node test.my_fraud_detection_project.not_null_si_transactions_fact_TransactionAmount.7e3143fdc4
+[0m14:39:08.112230 [debug] [Thread-2 (]: Began running node test.my_fraud_detection_project.not_null_si_transactions_fact_TransactionID.83ad3efd2f
+[0m14:39:08.113227 [info ] [Thread-2 (]: 30 of 38 START test not_null_si_transactions_fact_TransactionID ................ [RUN]
+[0m14:39:08.114227 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.my_fraud_detection_project.not_null_si_transactions_fact_TransactionAmount.7e3143fdc4, now test.my_fraud_detection_project.not_null_si_transactions_fact_TransactionID.83ad3efd2f)
+[0m14:39:08.115230 [debug] [Thread-2 (]: Began compiling node test.my_fraud_detection_project.not_null_si_transactions_fact_TransactionID.83ad3efd2f
+[0m14:39:08.120227 [debug] [Thread-2 (]: Writing injected SQL for node "test.my_fraud_detection_project.not_null_si_transactions_fact_TransactionID.83ad3efd2f"
+[0m14:39:08.121228 [debug] [Thread-2 (]: Began executing node test.my_fraud_detection_project.not_null_si_transactions_fact_TransactionID.83ad3efd2f
+[0m14:39:08.126506 [debug] [Thread-2 (]: Writing runtime sql for node "test.my_fraud_detection_project.not_null_si_transactions_fact_TransactionID.83ad3efd2f"
+[0m14:39:08.129507 [debug] [Thread-2 (]: Using snowflake connection "test.my_fraud_detection_project.not_null_si_transactions_fact_TransactionID.83ad3efd2f"
+[0m14:39:08.131510 [debug] [Thread-2 (]: On test.my_fraud_detection_project.not_null_si_transactions_fact_TransactionID.83ad3efd2f: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "my_fraud_detection_project", "target_name": "dev", "node_id": "test.my_fraud_detection_project.not_null_si_transactions_fact_TransactionID.83ad3efd2f"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select TransactionID
+from DEV_EMEKA_FRAUD_DETECTION.PUBLIC.si_transactions_fact
+where TransactionID is null
+
+
+
+      
+    ) dbt_internal_test
+[0m14:39:08.132506 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m14:39:08.500958 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.660 seconds
+[0m14:39:08.503973 [debug] [Thread-1 (]: On test.my_fraud_detection_project.not_null_si_transactions_fact_TransactionDate.a650103d86: Close
+[0m14:39:08.678731 [info ] [Thread-1 (]: 29 of 38 PASS not_null_si_transactions_fact_TransactionDate .................... [[32mPASS[0m in 0.85s]
+[0m14:39:08.680779 [debug] [Thread-1 (]: Finished running node test.my_fraud_detection_project.not_null_si_transactions_fact_TransactionDate.a650103d86
+[0m14:39:08.682747 [debug] [Thread-1 (]: Began running node test.my_fraud_detection_project.not_null_si_transactions_fact_UserID.abb407b073
+[0m14:39:08.683739 [info ] [Thread-1 (]: 31 of 38 START test not_null_si_transactions_fact_UserID ....................... [RUN]
+[0m14:39:08.685747 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.my_fraud_detection_project.not_null_si_transactions_fact_TransactionDate.a650103d86, now test.my_fraud_detection_project.not_null_si_transactions_fact_UserID.abb407b073)
+[0m14:39:08.686743 [debug] [Thread-1 (]: Began compiling node test.my_fraud_detection_project.not_null_si_transactions_fact_UserID.abb407b073
+[0m14:39:08.691740 [debug] [Thread-1 (]: Writing injected SQL for node "test.my_fraud_detection_project.not_null_si_transactions_fact_UserID.abb407b073"
+[0m14:39:08.692740 [debug] [Thread-1 (]: Began executing node test.my_fraud_detection_project.not_null_si_transactions_fact_UserID.abb407b073
+[0m14:39:08.696960 [debug] [Thread-1 (]: Writing runtime sql for node "test.my_fraud_detection_project.not_null_si_transactions_fact_UserID.abb407b073"
+[0m14:39:08.697964 [debug] [Thread-1 (]: Using snowflake connection "test.my_fraud_detection_project.not_null_si_transactions_fact_UserID.abb407b073"
+[0m14:39:08.698966 [debug] [Thread-1 (]: On test.my_fraud_detection_project.not_null_si_transactions_fact_UserID.abb407b073: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "my_fraud_detection_project", "target_name": "dev", "node_id": "test.my_fraud_detection_project.not_null_si_transactions_fact_UserID.abb407b073"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select UserID
+from DEV_EMEKA_FRAUD_DETECTION.PUBLIC.si_transactions_fact
+where UserID is null
+
+
+
+      
+    ) dbt_internal_test
+[0m14:39:08.699959 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:39:08.731190 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.599 seconds
+[0m14:39:08.734194 [debug] [Thread-2 (]: On test.my_fraud_detection_project.not_null_si_transactions_fact_TransactionID.83ad3efd2f: Close
+[0m14:39:08.874154 [info ] [Thread-2 (]: 30 of 38 PASS not_null_si_transactions_fact_TransactionID ...................... [[32mPASS[0m in 0.76s]
+[0m14:39:08.876154 [debug] [Thread-2 (]: Finished running node test.my_fraud_detection_project.not_null_si_transactions_fact_TransactionID.83ad3efd2f
+[0m14:39:08.876154 [debug] [Thread-2 (]: Began running node test.my_fraud_detection_project.not_null_si_users_dimension_AccountStatus.bae8e4bc20
+[0m14:39:08.877153 [info ] [Thread-2 (]: 32 of 38 START test not_null_si_users_dimension_AccountStatus .................. [RUN]
+[0m14:39:08.879154 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.my_fraud_detection_project.not_null_si_transactions_fact_TransactionID.83ad3efd2f, now test.my_fraud_detection_project.not_null_si_users_dimension_AccountStatus.bae8e4bc20)
+[0m14:39:08.879154 [debug] [Thread-2 (]: Began compiling node test.my_fraud_detection_project.not_null_si_users_dimension_AccountStatus.bae8e4bc20
+[0m14:39:08.884158 [debug] [Thread-2 (]: Writing injected SQL for node "test.my_fraud_detection_project.not_null_si_users_dimension_AccountStatus.bae8e4bc20"
+[0m14:39:08.885157 [debug] [Thread-2 (]: Began executing node test.my_fraud_detection_project.not_null_si_users_dimension_AccountStatus.bae8e4bc20
+[0m14:39:08.890299 [debug] [Thread-2 (]: Writing runtime sql for node "test.my_fraud_detection_project.not_null_si_users_dimension_AccountStatus.bae8e4bc20"
+[0m14:39:08.892298 [debug] [Thread-2 (]: Using snowflake connection "test.my_fraud_detection_project.not_null_si_users_dimension_AccountStatus.bae8e4bc20"
+[0m14:39:08.893298 [debug] [Thread-2 (]: On test.my_fraud_detection_project.not_null_si_users_dimension_AccountStatus.bae8e4bc20: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "my_fraud_detection_project", "target_name": "dev", "node_id": "test.my_fraud_detection_project.not_null_si_users_dimension_AccountStatus.bae8e4bc20"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select AccountStatus
+from DEV_EMEKA_FRAUD_DETECTION.PUBLIC.si_users_dimension
+where AccountStatus is null
+
+
+
+      
+    ) dbt_internal_test
+[0m14:39:08.895834 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m14:39:09.332642 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.633 seconds
+[0m14:39:09.337641 [debug] [Thread-1 (]: On test.my_fraud_detection_project.not_null_si_transactions_fact_UserID.abb407b073: Close
+[0m14:39:09.455387 [info ] [Thread-1 (]: 31 of 38 PASS not_null_si_transactions_fact_UserID ............................. [[32mPASS[0m in 0.77s]
+[0m14:39:09.457364 [debug] [Thread-1 (]: Finished running node test.my_fraud_detection_project.not_null_si_transactions_fact_UserID.abb407b073
+[0m14:39:09.458304 [debug] [Thread-1 (]: Began running node test.my_fraud_detection_project.not_null_si_users_dimension_Age.5778570df0
+[0m14:39:09.459289 [info ] [Thread-1 (]: 33 of 38 START test not_null_si_users_dimension_Age ............................ [RUN]
+[0m14:39:09.460297 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.my_fraud_detection_project.not_null_si_transactions_fact_UserID.abb407b073, now test.my_fraud_detection_project.not_null_si_users_dimension_Age.5778570df0)
+[0m14:39:09.461388 [debug] [Thread-1 (]: Began compiling node test.my_fraud_detection_project.not_null_si_users_dimension_Age.5778570df0
+[0m14:39:09.465366 [debug] [Thread-1 (]: Writing injected SQL for node "test.my_fraud_detection_project.not_null_si_users_dimension_Age.5778570df0"
+[0m14:39:09.466366 [debug] [Thread-1 (]: Began executing node test.my_fraud_detection_project.not_null_si_users_dimension_Age.5778570df0
+[0m14:39:09.470364 [debug] [Thread-1 (]: Writing runtime sql for node "test.my_fraud_detection_project.not_null_si_users_dimension_Age.5778570df0"
+[0m14:39:09.471284 [debug] [Thread-1 (]: Using snowflake connection "test.my_fraud_detection_project.not_null_si_users_dimension_Age.5778570df0"
+[0m14:39:09.472284 [debug] [Thread-1 (]: On test.my_fraud_detection_project.not_null_si_users_dimension_Age.5778570df0: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "my_fraud_detection_project", "target_name": "dev", "node_id": "test.my_fraud_detection_project.not_null_si_users_dimension_Age.5778570df0"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select Age
+from DEV_EMEKA_FRAUD_DETECTION.PUBLIC.si_users_dimension
+where Age is null
+
+
+
+      
+    ) dbt_internal_test
+[0m14:39:09.472284 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:39:09.524187 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.628 seconds
+[0m14:39:09.528185 [debug] [Thread-2 (]: On test.my_fraud_detection_project.not_null_si_users_dimension_AccountStatus.bae8e4bc20: Close
+[0m14:39:09.647448 [info ] [Thread-2 (]: 32 of 38 PASS not_null_si_users_dimension_AccountStatus ........................ [[32mPASS[0m in 0.77s]
+[0m14:39:09.649338 [debug] [Thread-2 (]: Finished running node test.my_fraud_detection_project.not_null_si_users_dimension_AccountStatus.bae8e4bc20
+[0m14:39:09.650356 [debug] [Thread-2 (]: Began running node test.my_fraud_detection_project.not_null_si_users_dimension_UserID.c39f750dc7
+[0m14:39:09.650356 [info ] [Thread-2 (]: 34 of 38 START test not_null_si_users_dimension_UserID ......................... [RUN]
+[0m14:39:09.652355 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.my_fraud_detection_project.not_null_si_users_dimension_AccountStatus.bae8e4bc20, now test.my_fraud_detection_project.not_null_si_users_dimension_UserID.c39f750dc7)
+[0m14:39:09.652355 [debug] [Thread-2 (]: Began compiling node test.my_fraud_detection_project.not_null_si_users_dimension_UserID.c39f750dc7
+[0m14:39:09.657430 [debug] [Thread-2 (]: Writing injected SQL for node "test.my_fraud_detection_project.not_null_si_users_dimension_UserID.c39f750dc7"
+[0m14:39:09.659340 [debug] [Thread-2 (]: Began executing node test.my_fraud_detection_project.not_null_si_users_dimension_UserID.c39f750dc7
+[0m14:39:09.665783 [debug] [Thread-2 (]: Writing runtime sql for node "test.my_fraud_detection_project.not_null_si_users_dimension_UserID.c39f750dc7"
+[0m14:39:09.668756 [debug] [Thread-2 (]: Using snowflake connection "test.my_fraud_detection_project.not_null_si_users_dimension_UserID.c39f750dc7"
+[0m14:39:09.670770 [debug] [Thread-2 (]: On test.my_fraud_detection_project.not_null_si_users_dimension_UserID.c39f750dc7: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "my_fraud_detection_project", "target_name": "dev", "node_id": "test.my_fraud_detection_project.not_null_si_users_dimension_UserID.c39f750dc7"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select UserID
+from DEV_EMEKA_FRAUD_DETECTION.PUBLIC.si_users_dimension
+where UserID is null
+
+
+
+      
+    ) dbt_internal_test
+[0m14:39:09.670770 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m14:39:10.159515 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.687 seconds
+[0m14:39:10.164507 [debug] [Thread-1 (]: On test.my_fraud_detection_project.not_null_si_users_dimension_Age.5778570df0: Close
+[0m14:39:10.304635 [info ] [Thread-1 (]: 33 of 38 PASS not_null_si_users_dimension_Age .................................. [[32mPASS[0m in 0.84s]
+[0m14:39:10.306527 [debug] [Thread-1 (]: Finished running node test.my_fraud_detection_project.not_null_si_users_dimension_Age.5778570df0
+[0m14:39:10.308520 [debug] [Thread-1 (]: Began running node test.my_fraud_detection_project.unique_br_fraud_detection_raw_data_historical_TransactionID.1d61bd3cba
+[0m14:39:10.309526 [info ] [Thread-1 (]: 35 of 38 START test unique_br_fraud_detection_raw_data_historical_TransactionID  [RUN]
+[0m14:39:10.310518 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.my_fraud_detection_project.not_null_si_users_dimension_Age.5778570df0, now test.my_fraud_detection_project.unique_br_fraud_detection_raw_data_historical_TransactionID.1d61bd3cba)
+[0m14:39:10.311613 [debug] [Thread-1 (]: Began compiling node test.my_fraud_detection_project.unique_br_fraud_detection_raw_data_historical_TransactionID.1d61bd3cba
+[0m14:39:10.318630 [debug] [Thread-1 (]: Writing injected SQL for node "test.my_fraud_detection_project.unique_br_fraud_detection_raw_data_historical_TransactionID.1d61bd3cba"
+[0m14:39:10.319616 [debug] [Thread-1 (]: Began executing node test.my_fraud_detection_project.unique_br_fraud_detection_raw_data_historical_TransactionID.1d61bd3cba
+[0m14:39:10.323829 [debug] [Thread-1 (]: Writing runtime sql for node "test.my_fraud_detection_project.unique_br_fraud_detection_raw_data_historical_TransactionID.1d61bd3cba"
+[0m14:39:10.325723 [debug] [Thread-1 (]: Using snowflake connection "test.my_fraud_detection_project.unique_br_fraud_detection_raw_data_historical_TransactionID.1d61bd3cba"
+[0m14:39:10.326725 [debug] [Thread-1 (]: On test.my_fraud_detection_project.unique_br_fraud_detection_raw_data_historical_TransactionID.1d61bd3cba: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "my_fraud_detection_project", "target_name": "dev", "node_id": "test.my_fraud_detection_project.unique_br_fraud_detection_raw_data_historical_TransactionID.1d61bd3cba"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    TransactionID as unique_field,
+    count(*) as n_records
+
+from DEV_EMEKA_FRAUD_DETECTION.PUBLIC.br_fraud_detection_raw_data_historical
+where TransactionID is not null
+group by TransactionID
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m14:39:10.328825 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:39:10.605914 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.935 seconds
+[0m14:39:10.608005 [debug] [Thread-2 (]: On test.my_fraud_detection_project.not_null_si_users_dimension_UserID.c39f750dc7: Close
+[0m14:39:10.727540 [info ] [Thread-2 (]: 34 of 38 PASS not_null_si_users_dimension_UserID ............................... [[32mPASS[0m in 1.08s]
+[0m14:39:10.729454 [debug] [Thread-2 (]: Finished running node test.my_fraud_detection_project.not_null_si_users_dimension_UserID.c39f750dc7
+[0m14:39:10.730452 [debug] [Thread-2 (]: Began running node test.my_fraud_detection_project.unique_si_devices_dimension_DeviceID.d2678142c0
+[0m14:39:10.731457 [info ] [Thread-2 (]: 36 of 38 START test unique_si_devices_dimension_DeviceID ....................... [RUN]
+[0m14:39:10.732459 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.my_fraud_detection_project.not_null_si_users_dimension_UserID.c39f750dc7, now test.my_fraud_detection_project.unique_si_devices_dimension_DeviceID.d2678142c0)
+[0m14:39:10.733555 [debug] [Thread-2 (]: Began compiling node test.my_fraud_detection_project.unique_si_devices_dimension_DeviceID.d2678142c0
+[0m14:39:10.737554 [debug] [Thread-2 (]: Writing injected SQL for node "test.my_fraud_detection_project.unique_si_devices_dimension_DeviceID.d2678142c0"
+[0m14:39:10.739457 [debug] [Thread-2 (]: Began executing node test.my_fraud_detection_project.unique_si_devices_dimension_DeviceID.d2678142c0
+[0m14:39:10.744456 [debug] [Thread-2 (]: Writing runtime sql for node "test.my_fraud_detection_project.unique_si_devices_dimension_DeviceID.d2678142c0"
+[0m14:39:10.746554 [debug] [Thread-2 (]: Using snowflake connection "test.my_fraud_detection_project.unique_si_devices_dimension_DeviceID.d2678142c0"
+[0m14:39:10.747568 [debug] [Thread-2 (]: On test.my_fraud_detection_project.unique_si_devices_dimension_DeviceID.d2678142c0: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "my_fraud_detection_project", "target_name": "dev", "node_id": "test.my_fraud_detection_project.unique_si_devices_dimension_DeviceID.d2678142c0"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    DeviceID as unique_field,
+    count(*) as n_records
+
+from DEV_EMEKA_FRAUD_DETECTION.PUBLIC.si_devices_dimension
+where DeviceID is not null
+group by DeviceID
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m14:39:10.748560 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m14:39:10.962619 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.634 seconds
+[0m14:39:10.964526 [debug] [Thread-1 (]: On test.my_fraud_detection_project.unique_br_fraud_detection_raw_data_historical_TransactionID.1d61bd3cba: Close
+[0m14:39:11.085906 [info ] [Thread-1 (]: 35 of 38 PASS unique_br_fraud_detection_raw_data_historical_TransactionID ...... [[32mPASS[0m in 0.78s]
+[0m14:39:11.087901 [debug] [Thread-1 (]: Finished running node test.my_fraud_detection_project.unique_br_fraud_detection_raw_data_historical_TransactionID.1d61bd3cba
+[0m14:39:11.087901 [debug] [Thread-1 (]: Began running node test.my_fraud_detection_project.unique_si_transactions_fact_TransactionID.abbe1e44fb
+[0m14:39:11.088899 [info ] [Thread-1 (]: 37 of 38 START test unique_si_transactions_fact_TransactionID .................. [RUN]
+[0m14:39:11.091438 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.my_fraud_detection_project.unique_br_fraud_detection_raw_data_historical_TransactionID.1d61bd3cba, now test.my_fraud_detection_project.unique_si_transactions_fact_TransactionID.abbe1e44fb)
+[0m14:39:11.091438 [debug] [Thread-1 (]: Began compiling node test.my_fraud_detection_project.unique_si_transactions_fact_TransactionID.abbe1e44fb
+[0m14:39:11.097438 [debug] [Thread-1 (]: Writing injected SQL for node "test.my_fraud_detection_project.unique_si_transactions_fact_TransactionID.abbe1e44fb"
+[0m14:39:11.098961 [debug] [Thread-1 (]: Began executing node test.my_fraud_detection_project.unique_si_transactions_fact_TransactionID.abbe1e44fb
+[0m14:39:11.102424 [debug] [Thread-1 (]: Writing runtime sql for node "test.my_fraud_detection_project.unique_si_transactions_fact_TransactionID.abbe1e44fb"
+[0m14:39:11.104406 [debug] [Thread-1 (]: Using snowflake connection "test.my_fraud_detection_project.unique_si_transactions_fact_TransactionID.abbe1e44fb"
+[0m14:39:11.105398 [debug] [Thread-1 (]: On test.my_fraud_detection_project.unique_si_transactions_fact_TransactionID.abbe1e44fb: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "my_fraud_detection_project", "target_name": "dev", "node_id": "test.my_fraud_detection_project.unique_si_transactions_fact_TransactionID.abbe1e44fb"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    TransactionID as unique_field,
+    count(*) as n_records
+
+from DEV_EMEKA_FRAUD_DETECTION.PUBLIC.si_transactions_fact
+where TransactionID is not null
+group by TransactionID
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m14:39:11.106840 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:39:11.630977 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.882 seconds
+[0m14:39:11.635980 [debug] [Thread-2 (]: On test.my_fraud_detection_project.unique_si_devices_dimension_DeviceID.d2678142c0: Close
+[0m14:39:11.771458 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.665 seconds
+[0m14:39:11.778006 [debug] [Thread-1 (]: On test.my_fraud_detection_project.unique_si_transactions_fact_TransactionID.abbe1e44fb: Close
+[0m14:39:11.797060 [info ] [Thread-2 (]: 36 of 38 PASS unique_si_devices_dimension_DeviceID ............................. [[32mPASS[0m in 1.06s]
+[0m14:39:11.799301 [debug] [Thread-2 (]: Finished running node test.my_fraud_detection_project.unique_si_devices_dimension_DeviceID.d2678142c0
+[0m14:39:11.800371 [debug] [Thread-2 (]: Began running node test.my_fraud_detection_project.unique_si_users_dimension_UserID.e329fed97e
+[0m14:39:11.801292 [info ] [Thread-2 (]: 38 of 38 START test unique_si_users_dimension_UserID ........................... [RUN]
+[0m14:39:11.802327 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.my_fraud_detection_project.unique_si_devices_dimension_DeviceID.d2678142c0, now test.my_fraud_detection_project.unique_si_users_dimension_UserID.e329fed97e)
+[0m14:39:11.803291 [debug] [Thread-2 (]: Began compiling node test.my_fraud_detection_project.unique_si_users_dimension_UserID.e329fed97e
+[0m14:39:11.810301 [debug] [Thread-2 (]: Writing injected SQL for node "test.my_fraud_detection_project.unique_si_users_dimension_UserID.e329fed97e"
+[0m14:39:11.812294 [debug] [Thread-2 (]: Began executing node test.my_fraud_detection_project.unique_si_users_dimension_UserID.e329fed97e
+[0m14:39:11.816287 [debug] [Thread-2 (]: Writing runtime sql for node "test.my_fraud_detection_project.unique_si_users_dimension_UserID.e329fed97e"
+[0m14:39:11.818297 [debug] [Thread-2 (]: Using snowflake connection "test.my_fraud_detection_project.unique_si_users_dimension_UserID.e329fed97e"
+[0m14:39:11.818297 [debug] [Thread-2 (]: On test.my_fraud_detection_project.unique_si_users_dimension_UserID.e329fed97e: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "my_fraud_detection_project", "target_name": "dev", "node_id": "test.my_fraud_detection_project.unique_si_users_dimension_UserID.e329fed97e"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    UserID as unique_field,
+    count(*) as n_records
+
+from DEV_EMEKA_FRAUD_DETECTION.PUBLIC.si_users_dimension
+where UserID is not null
+group by UserID
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m14:39:11.819288 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m14:39:11.924234 [info ] [Thread-1 (]: 37 of 38 PASS unique_si_transactions_fact_TransactionID ........................ [[32mPASS[0m in 0.83s]
+[0m14:39:11.925234 [debug] [Thread-1 (]: Finished running node test.my_fraud_detection_project.unique_si_transactions_fact_TransactionID.abbe1e44fb
+[0m14:39:12.538379 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.719 seconds
+[0m14:39:12.541370 [debug] [Thread-2 (]: On test.my_fraud_detection_project.unique_si_users_dimension_UserID.e329fed97e: Close
+[0m14:39:12.653587 [info ] [Thread-2 (]: 38 of 38 PASS unique_si_users_dimension_UserID ................................. [[32mPASS[0m in 0.85s]
+[0m14:39:12.654497 [debug] [Thread-2 (]: Finished running node test.my_fraud_detection_project.unique_si_users_dimension_UserID.e329fed97e
+[0m14:39:12.656494 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m14:39:12.656494 [debug] [MainThread]: Connection 'list_DEV_EMEKA_FRAUD_DETECTION_PUBLIC' was properly closed.
+[0m14:39:12.657495 [debug] [MainThread]: Connection 'test.my_fraud_detection_project.unique_si_transactions_fact_TransactionID.abbe1e44fb' was properly closed.
+[0m14:39:12.657495 [debug] [MainThread]: Connection 'test.my_fraud_detection_project.unique_si_users_dimension_UserID.e329fed97e' was properly closed.
+[0m14:39:12.658495 [info ] [MainThread]: 
+[0m14:39:12.659397 [info ] [MainThread]: Finished running 38 data tests in 0 hours 0 minutes and 20.69 seconds (20.69s).
+[0m14:39:12.668406 [debug] [MainThread]: Command end result
+[0m14:39:12.708139 [info ] [MainThread]: 
+[0m14:39:12.710625 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m14:39:12.711636 [info ] [MainThread]: 
+[0m14:39:12.712267 [info ] [MainThread]: Done. PASS=38 WARN=0 ERROR=0 SKIP=0 TOTAL=38
+[0m14:39:12.714274 [debug] [MainThread]: Command `dbt test` succeeded at 14:39:12.714274 after 23.10 seconds
+[0m14:39:12.715358 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000225AC49C340>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000225AFAC7E20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000225AFCB9EA0>]}
+[0m14:39:12.715358 [debug] [MainThread]: Flushing usage events
