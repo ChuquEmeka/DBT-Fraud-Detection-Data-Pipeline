@@ -1,132 +1,132 @@
 name: CI/CD for dbt Project
 
 on:
-  push:
-    branches:
-      - dev  # Run CI/CD on dev branch pushes
-      - master  # Deploy on master branch pushes
   pull_request:
     branches:
-      - master  # Ensure CI tests run on PRs to master
+      - master  # Run tests when a PR targets master
+  push:
+    branches:
+      - dev  # Run tests on dev branch pushes
+      - master  # Deploy to production when pushing to master
 
 jobs:
   test:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-    - name: Set up Python
-      uses: actions/setup-python@v2
-      with:
-        python-version: '3.8'
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.8'
 
-    - name: Install dependencies
-      run: |
-        python -m venv dbt-env
-        source dbt-env/bin/activate
-        pip install dbt-core dbt-snowflake
+      - name: Install dependencies
+        run: |
+          python -m venv dbt-env
+          source dbt-env/bin/activate
+          pip install dbt-core dbt-snowflake
 
-    - name: Set up Snowflake credentials
-      run: |
-        echo "SNOWFLAKE_USER=${{ secrets.SNOWFLAKE_USER }}" >> $GITHUB_ENV
-        echo "SNOWFLAKE_PASSWORD=${{ secrets.SNOWFLAKE_PASSWORD }}" >> $GITHUB_ENV
-        echo "SNOWFLAKE_ACCOUNT=${{ secrets.SNOWFLAKE_ACCOUNT }}" >> $GITHUB_ENV
-        echo "SNOWFLAKE_WAREHOUSE=MY_DBT_WAREHOUSE" >> $GITHUB_ENV
+      - name: Set up Snowflake credentials
+        run: |
+          echo "SNOWFLAKE_USER=${{ secrets.SNOWFLAKE_USER }}" >> $GITHUB_ENV
+          echo "SNOWFLAKE_PASSWORD=${{ secrets.SNOWFLAKE_PASSWORD }}" >> $GITHUB_ENV
+          echo "SNOWFLAKE_ACCOUNT=${{ secrets.SNOWFLAKE_ACCOUNT }}" >> $GITHUB_ENV
+          echo "SNOWFLAKE_WAREHOUSE=MY_DBT_WAREHOUSE" >> $GITHUB_ENV
 
-    - name: Set up dbt profiles
-      run: |
-        mkdir -p ~/.dbt
-        echo "my_fraud_detection_project:" > ~/.dbt/profiles.yml
-        echo "  outputs:" >> ~/.dbt/profiles.yml
-        echo "    dev:" >> ~/.dbt/profiles.yml
-        echo "      account: ${{ secrets.SNOWFLAKE_ACCOUNT }}" >> ~/.dbt/profiles.yml
-        echo "      database: DEV_EMEKA_FRAUD_DETECTION" >> ~/.dbt/profiles.yml
-        echo "      password: ${{ secrets.SNOWFLAKE_PASSWORD }}" >> ~/.dbt/profiles.yml
-        echo "      role: ACCOUNTADMIN" >> ~/.dbt/profiles.yml
-        echo "      schema: PUBLIC" >> ~/.dbt/profiles.yml
-        echo "      threads: 2" >> ~/.dbt/profiles.yml
-        echo "      type: snowflake" >> ~/.dbt/profiles.yml
-        echo "      user: ${{ secrets.SNOWFLAKE_USER }}" >> ~/.dbt/profiles.yml
-        echo "      warehouse: $SNOWFLAKE_WAREHOUSE" >> ~/.dbt/profiles.yml
-        echo "    prod:" >> ~/.dbt/profiles.yml
-        echo "      account: ${{ secrets.SNOWFLAKE_ACCOUNT }}" >> ~/.dbt/profiles.yml
-        echo "      database: PROD_EMEKA_FRAUD_DETECTION2" >> ~/.dbt/profiles.yml
-        echo "      password: ${{ secrets.SNOWFLAKE_PASSWORD }}" >> ~/.dbt/profiles.yml
-        echo "      role: ACCOUNTADMIN" >> ~/.dbt/profiles.yml
-        echo "      schema: PUBLIC" >> ~/.dbt/profiles.yml
-        echo "      threads: 2" >> ~/.dbt/profiles.yml
-        echo "      type: snowflake" >> ~/.dbt/profiles.yml
-        echo "      user: ${{ secrets.SNOWFLAKE_USER }}" >> ~/.dbt/profiles.yml
-        echo "      warehouse: $SNOWFLAKE_WAREHOUSE" >> ~/.dbt/profiles.yml
-        echo "  target: dev" >> ~/.dbt/profiles.yml
+      - name: Set up dbt profiles
+        run: |
+          mkdir -p ~/.dbt
+          echo "my_fraud_detection_project:" > ~/.dbt/profiles.yml
+          echo "  outputs:" >> ~/.dbt/profiles.yml
+          echo "    dev:" >> ~/.dbt/profiles.yml
+          echo "      account: ${{ secrets.SNOWFLAKE_ACCOUNT }}" >> ~/.dbt/profiles.yml
+          echo "      database: DEV_EMEKA_FRAUD_DETECTION" >> ~/.dbt/profiles.yml
+          echo "      password: ${{ secrets.SNOWFLAKE_PASSWORD }}" >> ~/.dbt/profiles.yml
+          echo "      role: ACCOUNTADMIN" >> ~/.dbt/profiles.yml
+          echo "      schema: PUBLIC" >> ~/.dbt/profiles.yml
+          echo "      threads: 2" >> ~/.dbt/profiles.yml
+          echo "      type: snowflake" >> ~/.dbt/profiles.yml
+          echo "      user: ${{ secrets.SNOWFLAKE_USER }}" >> ~/.dbt/profiles.yml
+          echo "      warehouse: MY_DBT_WAREHOUSE" >> ~/.dbt/profiles.yml
+          echo "    prod:" >> ~/.dbt/profiles.yml
+          echo "      account: ${{ secrets.SNOWFLAKE_ACCOUNT }}" >> ~/.dbt/profiles.yml
+          echo "      database: PROD_EMEKA_FRAUD_DETECTION2" >> ~/.dbt/profiles.yml
+          echo "      password: ${{ secrets.SNOWFLAKE_PASSWORD }}" >> ~/.dbt/profiles.yml
+          echo "      role: ACCOUNTADMIN" >> ~/.dbt/profiles.yml
+          echo "      schema: PUBLIC" >> ~/.dbt/profiles.yml
+          echo "      threads: 2" >> ~/.dbt/profiles.yml
+          echo "      type: snowflake" >> ~/.dbt/profiles.yml
+          echo "      user: ${{ secrets.SNOWFLAKE_USER }}" >> ~/.dbt/profiles.yml
+          echo "      warehouse: MY_DBT_WAREHOUSE" >> ~/.dbt/profiles.yml
+          echo "  target: dev" >> ~/.dbt/profiles.yml
 
-    - name: Run dbt deps
-      run: |
-        source dbt-env/bin/activate
-        dbt deps
+      - name: Run dbt deps
+        run: |
+          source dbt-env/bin/activate
+          dbt deps
 
-    - name: Run dbt test
-      run: |
-        source dbt-env/bin/activate
-        dbt test --target dev  # Run tests on the dev environment
+      - name: Run dbt test
+        run: |
+          source dbt-env/bin/activate
+          dbt test --target dev  # Run tests on the dev environment
 
   deploy:
     needs: test  # Only run if tests pass
     runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/master'
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-    - name: Set up Python
-      uses: actions/setup-python@v2
-      with:
-        python-version: '3.8'
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.8'
 
-    - name: Install dependencies
-      run: |
-        python -m venv dbt-env
-        source dbt-env/bin/activate
-        pip install dbt-core dbt-snowflake
+      - name: Install dependencies
+        run: |
+          python -m venv dbt-env
+          source dbt-env/bin/activate
+          pip install dbt-core dbt-snowflake
 
-    - name: Set up Snowflake credentials
-      run: |
-        echo "SNOWFLAKE_USER=${{ secrets.SNOWFLAKE_USER }}" >> $GITHUB_ENV
-        echo "SNOWFLAKE_PASSWORD=${{ secrets.SNOWFLAKE_PASSWORD }}" >> $GITHUB_ENV
-        echo "SNOWFLAKE_ACCOUNT=${{ secrets.SNOWFLAKE_ACCOUNT }}" >> $GITHUB_ENV
-        echo "SNOWFLAKE_WAREHOUSE=MY_DBT_WAREHOUSE" >> $GITHUB_ENV
+      - name: Set up Snowflake credentials
+        run: |
+          echo "SNOWFLAKE_USER=${{ secrets.SNOWFLAKE_USER }}" >> $GITHUB_ENV
+          echo "SNOWFLAKE_PASSWORD=${{ secrets.SNOWFLAKE_PASSWORD }}" >> $GITHUB_ENV
+          echo "SNOWFLAKE_ACCOUNT=${{ secrets.SNOWFLAKE_ACCOUNT }}" >> $GITHUB_ENV
+          echo "SNOWFLAKE_WAREHOUSE=MY_DBT_WAREHOUSE" >> $GITHUB_ENV
 
-    - name: Set up dbt profiles for prod
-      run: |
-        mkdir -p ~/.dbt
-        echo "my_fraud_detection_project:" > ~/.dbt/profiles.yml
-        echo "  outputs:" >> ~/.dbt/profiles.yml
-        echo "    dev:" >> ~/.dbt/profiles.yml
-        echo "      account: ${{ secrets.SNOWFLAKE_ACCOUNT }}" >> ~/.dbt/profiles.yml
-        echo "      database: DEV_EMEKA_FRAUD_DETECTION" >> ~/.dbt/profiles.yml
-        echo "      password: ${{ secrets.SNOWFLAKE_PASSWORD }}" >> ~/.dbt/profiles.yml
-        echo "      role: ACCOUNTADMIN" >> ~/.dbt/profiles.yml
-        echo "      schema: PUBLIC" >> ~/.dbt/profiles.yml
-        echo "      threads: 2" >> ~/.dbt/profiles.yml
-        echo "      type: snowflake" >> ~/.dbt/profiles.yml
-        echo "      user: ${{ secrets.SNOWFLAKE_USER }}" >> ~/.dbt/profiles.yml
-        echo "      warehouse: $SNOWFLAKE_WAREHOUSE" >> ~/.dbt/profiles.yml
-        echo "    prod:" >> ~/.dbt/profiles.yml
-        echo "      account: ${{ secrets.SNOWFLAKE_ACCOUNT }}" >> ~/.dbt/profiles.yml
-        echo "      database: PROD_EMEKA_FRAUD_DETECTION2" >> ~/.dbt/profiles.yml
-        echo "      password: ${{ secrets.SNOWFLAKE_PASSWORD }}" >> ~/.dbt/profiles.yml
-        echo "      role: ACCOUNTADMIN" >> ~/.dbt/profiles.yml
-        echo "      schema: PUBLIC" >> ~/.dbt/profiles.yml
-        echo "      threads: 2" >> ~/.dbt/profiles.yml
-        echo "      type: snowflake" >> ~/.dbt/profiles.yml
-        echo "      user: ${{ secrets.SNOWFLAKE_USER }}" >> ~/.dbt/profiles.yml
-        echo "      warehouse: $SNOWFLAKE_WAREHOUSE" >> ~/.dbt/profiles.yml
-        echo "  target: prod" >> ~/.dbt/profiles.yml
+      - name: Set up dbt profiles for prod
+        run: |
+          mkdir -p ~/.dbt
+          echo "my_fraud_detection_project:" > ~/.dbt/profiles.yml
+          echo "  outputs:" >> ~/.dbt/profiles.yml
+          echo "    dev:" >> ~/.dbt/profiles.yml
+          echo "      account: ${{ secrets.SNOWFLAKE_ACCOUNT }}" >> ~/.dbt/profiles.yml
+          echo "      database: DEV_EMEKA_FRAUD_DETECTION" >> ~/.dbt/profiles.yml
+          echo "      password: ${{ secrets.SNOWFLAKE_PASSWORD }}" >> ~/.dbt/profiles.yml
+          echo "      role: ACCOUNTADMIN" >> ~/.dbt/profiles.yml
+          echo "      schema: PUBLIC" >> ~/.dbt/profiles.yml
+          echo "      threads: 2" >> ~/.dbt/profiles.yml
+          echo "      type: snowflake" >> ~/.dbt/profiles.yml
+          echo "      user: ${{ secrets.SNOWFLAKE_USER }}" >> ~/.dbt/profiles.yml
+          echo "      warehouse: MY_DBT_WAREHOUSE" >> ~/.dbt/profiles.yml
+          echo "    prod:" >> ~/.dbt/profiles.yml
+          echo "      account: ${{ secrets.SNOWFLAKE_ACCOUNT }}" >> ~/.dbt/profiles.yml
+          echo "      database: PROD_EMEKA_FRAUD_DETECTION2" >> ~/.dbt/profiles.yml
+          echo "      password: ${{ secrets.SNOWFLAKE_PASSWORD }}" >> ~/.dbt/profiles.yml
+          echo "      role: ACCOUNTADMIN" >> ~/.dbt/profiles.yml
+          echo "      schema: PUBLIC" >> ~/.dbt/profiles.yml
+          echo "      threads: 2" >> ~/.dbt/profiles.yml
+          echo "      type: snowflake" >> ~/.dbt/profiles.yml
+          echo "      user: ${{ secrets.SNOWFLAKE_USER }}" >> ~/.dbt/profiles.yml
+          echo "      warehouse: MY_DBT_WAREHOUSE" >> ~/.dbt/profiles.yml
+          echo "  target: prod" >> ~/.dbt/profiles.yml
 
-    - name: Run dbt models for production
-      if: github.ref == 'refs/heads/master'  # Only run on master branch push
-      run: |
-        source dbt-env/bin/activate
-        dbt run --target prod  # Run models in production after tests pass
+      - name: Run dbt models for production
+        run: |
+          source dbt-env/bin/activate
+          dbt run --target prod  # Run models in production after tests pass
