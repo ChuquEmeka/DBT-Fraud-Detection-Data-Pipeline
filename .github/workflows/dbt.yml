@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - dev  # Run CI/CD on dev branch pushes
+      - master  # Deploy on master branch pushes
   pull_request:
     branches:
       - master  # Ensure CI tests run on PRs to master
@@ -48,7 +49,7 @@ jobs:
         echo "      threads: 2" >> ~/.dbt/profiles.yml
         echo "      type: snowflake" >> ~/.dbt/profiles.yml
         echo "      user: ${{ secrets.SNOWFLAKE_USER }}" >> ~/.dbt/profiles.yml
-        echo "      warehouse: $GITHUB_ENV" >> ~/.dbt/profiles.yml
+        echo "      warehouse: $SNOWFLAKE_WAREHOUSE" >> ~/.dbt/profiles.yml
         echo "    prod:" >> ~/.dbt/profiles.yml
         echo "      account: ${{ secrets.SNOWFLAKE_ACCOUNT }}" >> ~/.dbt/profiles.yml
         echo "      database: PROD_EMEKA_FRAUD_DETECTION2" >> ~/.dbt/profiles.yml
@@ -58,7 +59,7 @@ jobs:
         echo "      threads: 2" >> ~/.dbt/profiles.yml
         echo "      type: snowflake" >> ~/.dbt/profiles.yml
         echo "      user: ${{ secrets.SNOWFLAKE_USER }}" >> ~/.dbt/profiles.yml
-        echo "      warehouse: $GITHUB_ENV" >> ~/.dbt/profiles.yml
+        echo "      warehouse: $SNOWFLAKE_WAREHOUSE" >> ~/.dbt/profiles.yml
         echo "  target: dev" >> ~/.dbt/profiles.yml
 
     - name: Run dbt deps
@@ -111,7 +112,7 @@ jobs:
         echo "      threads: 2" >> ~/.dbt/profiles.yml
         echo "      type: snowflake" >> ~/.dbt/profiles.yml
         echo "      user: ${{ secrets.SNOWFLAKE_USER }}" >> ~/.dbt/profiles.yml
-        echo "      warehouse: $GITHUB_ENV" >> ~/.dbt/profiles.yml
+        echo "      warehouse: $SNOWFLAKE_WAREHOUSE" >> ~/.dbt/profiles.yml
         echo "    prod:" >> ~/.dbt/profiles.yml
         echo "      account: ${{ secrets.SNOWFLAKE_ACCOUNT }}" >> ~/.dbt/profiles.yml
         echo "      database: PROD_EMEKA_FRAUD_DETECTION2" >> ~/.dbt/profiles.yml
@@ -121,11 +122,11 @@ jobs:
         echo "      threads: 2" >> ~/.dbt/profiles.yml
         echo "      type: snowflake" >> ~/.dbt/profiles.yml
         echo "      user: ${{ secrets.SNOWFLAKE_USER }}" >> ~/.dbt/profiles.yml
-        echo "      warehouse: $GITHUB_ENV" >> ~/.dbt/profiles.yml
+        echo "      warehouse: $SNOWFLAKE_WAREHOUSE" >> ~/.dbt/profiles.yml
         echo "  target: prod" >> ~/.dbt/profiles.yml
 
     - name: Run dbt models for production
-      if: github.ref == 'refs/heads/master'
+      if: github.ref == 'refs/heads/master'  # Only run on master branch push
       run: |
         source dbt-env/bin/activate
         dbt run --target prod  # Run models in production after tests pass
