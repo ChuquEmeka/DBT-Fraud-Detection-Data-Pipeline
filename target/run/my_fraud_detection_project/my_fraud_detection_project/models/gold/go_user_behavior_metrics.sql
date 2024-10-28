@@ -1,25 +1,30 @@
-
+-- back compat for old kwarg name
   
+  begin;
+    
+        
+            
+            
+        
     
 
-        create or replace transient table PROD_EMEKA_FRAUD_DETECTION2.PUBLIC.go_user_behavior_metrics
-         as
-        (
+    
 
-WITH user_behavior_metrics AS (
-    SELECT
-        UserID,
-        COUNT(TransactionID) AS total_transactions,
-        AVG(TransactionAmount) AS avg_transaction_amount,
-        COUNT(CASE WHEN IsFraud = 1 THEN 1 END) AS total_fraud_transactions,
-        COUNT(DISTINCT DeviceID) AS unique_devices,
-        MAX(TransactionDate) AS last_transaction_date,
-        MIN(TransactionDate) AS first_transaction_date
-    FROM PROD_EMEKA_FRAUD_DETECTION2.PUBLIC.si_transactions_fact
-    GROUP BY UserID
-)
+    merge into DEV_EMEKA_FRAUD_DETECTION.PUBLIC.go_user_behavior_metrics as DBT_INTERNAL_DEST
+        using DEV_EMEKA_FRAUD_DETECTION.PUBLIC.go_user_behavior_metrics__dbt_tmp as DBT_INTERNAL_SOURCE
+        on (
+                DBT_INTERNAL_SOURCE.UserID = DBT_INTERNAL_DEST.UserID
+            )
 
-SELECT DISTINCT * FROM user_behavior_metrics
-        );
-      
-  
+    
+    when matched then update set
+        "USERID" = DBT_INTERNAL_SOURCE."USERID","TOTAL_TRANSACTIONS" = DBT_INTERNAL_SOURCE."TOTAL_TRANSACTIONS","AVG_TRANSACTION_AMOUNT" = DBT_INTERNAL_SOURCE."AVG_TRANSACTION_AMOUNT","TOTAL_FRAUD_TRANSACTIONS" = DBT_INTERNAL_SOURCE."TOTAL_FRAUD_TRANSACTIONS","UNIQUE_DEVICES" = DBT_INTERNAL_SOURCE."UNIQUE_DEVICES","LAST_TRANSACTION_DATE" = DBT_INTERNAL_SOURCE."LAST_TRANSACTION_DATE","FIRST_TRANSACTION_DATE" = DBT_INTERNAL_SOURCE."FIRST_TRANSACTION_DATE"
+    
+
+    when not matched then insert
+        ("USERID", "TOTAL_TRANSACTIONS", "AVG_TRANSACTION_AMOUNT", "TOTAL_FRAUD_TRANSACTIONS", "UNIQUE_DEVICES", "LAST_TRANSACTION_DATE", "FIRST_TRANSACTION_DATE")
+    values
+        ("USERID", "TOTAL_TRANSACTIONS", "AVG_TRANSACTION_AMOUNT", "TOTAL_FRAUD_TRANSACTIONS", "UNIQUE_DEVICES", "LAST_TRANSACTION_DATE", "FIRST_TRANSACTION_DATE")
+
+;
+    commit;

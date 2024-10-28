@@ -9,7 +9,7 @@ WITH user_behavior_metrics AS (
         COUNT(DISTINCT DeviceID) AS unique_devices,
         MAX(TransactionDate) AS last_transaction_date,
         MIN(TransactionDate) AS first_transaction_date
-    FROM PROD_EMEKA_FRAUD_DETECTION2.PUBLIC.si_transactions_fact
+    FROM DEV_EMEKA_FRAUD_DETECTION.PUBLIC.si_transactions_fact
     GROUP BY UserID
 )
 

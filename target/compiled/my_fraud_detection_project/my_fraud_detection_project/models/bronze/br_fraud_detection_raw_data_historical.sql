@@ -27,7 +27,9 @@ WITH raw_data AS (
         DeviceID::string AS DeviceID,
         UserProfileCompleteness::float AS UserProfileCompleteness,
         PreviousFraudAttempts::int AS PreviousFraudAttempts
-    FROM PROD_EMEKA_FRAUD_DETECTION2.PUBLIC.transactions_staging
+    FROM DEV_EMEKA_FRAUD_DETECTION.PUBLIC.transactions_staging
+    
+        WHERE TransactionID::string > (SELECT MAX(TransactionID) FROM DEV_EMEKA_FRAUD_DETECTION.PUBLIC.br_fraud_detection_raw_data_historical)
     
 )
 
