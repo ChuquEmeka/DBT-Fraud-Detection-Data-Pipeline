@@ -1,26 +1,30 @@
-
+-- back compat for old kwarg name
   
+  begin;
+    
+        
+            
+            
+        
     
 
-        create or replace transient table PROD_EMEKA_FRAUD_DETECTION2.PUBLIC.si_users_dimension
-         as
-        (
-
-WITH users_dimension AS (
-    SELECT
-        UserID,
-        FIRST_VALUE(Age) OVER (PARTITION BY UserID ORDER BY TransactionDate) AS Age,
-        FIRST_VALUE(Gender) OVER (PARTITION BY UserID ORDER BY TransactionDate) AS Gender,
-        FIRST_VALUE(AccountCreationDate) OVER (PARTITION BY UserID ORDER BY TransactionDate) AS AccountCreationDate,
-        FIRST_VALUE(AccountStatus) OVER (PARTITION BY UserID ORDER BY TransactionDate) AS AccountStatus,
-        FIRST_VALUE(UserProfileCompleteness) OVER (PARTITION BY UserID ORDER BY TransactionDate) AS UserProfileCompleteness,
-        FIRST_VALUE(PreviousFraudAttempts) OVER (PARTITION BY UserID ORDER BY TransactionDate) AS PreviousFraudAttempts,
-        FIRST_VALUE(Location) OVER (PARTITION BY UserID ORDER BY TransactionDate) AS UserLocation
-    FROM PROD_EMEKA_FRAUD_DETECTION2.PUBLIC.br_fraud_detection_raw_data_historical
     
-)
 
-SELECT DISTINCT * FROM users_dimension
-        );
-      
-  
+    merge into DEV_EMEKA_FRAUD_DETECTION.PUBLIC.si_users_dimension as DBT_INTERNAL_DEST
+        using DEV_EMEKA_FRAUD_DETECTION.PUBLIC.si_users_dimension__dbt_tmp as DBT_INTERNAL_SOURCE
+        on (
+                DBT_INTERNAL_SOURCE.UserID = DBT_INTERNAL_DEST.UserID
+            )
+
+    
+    when matched then update set
+        "USERID" = DBT_INTERNAL_SOURCE."USERID","AGE" = DBT_INTERNAL_SOURCE."AGE","GENDER" = DBT_INTERNAL_SOURCE."GENDER","ACCOUNTCREATIONDATE" = DBT_INTERNAL_SOURCE."ACCOUNTCREATIONDATE","ACCOUNTSTATUS" = DBT_INTERNAL_SOURCE."ACCOUNTSTATUS","USERPROFILECOMPLETENESS" = DBT_INTERNAL_SOURCE."USERPROFILECOMPLETENESS","PREVIOUSFRAUDATTEMPTS" = DBT_INTERNAL_SOURCE."PREVIOUSFRAUDATTEMPTS","USERLOCATION" = DBT_INTERNAL_SOURCE."USERLOCATION"
+    
+
+    when not matched then insert
+        ("USERID", "AGE", "GENDER", "ACCOUNTCREATIONDATE", "ACCOUNTSTATUS", "USERPROFILECOMPLETENESS", "PREVIOUSFRAUDATTEMPTS", "USERLOCATION")
+    values
+        ("USERID", "AGE", "GENDER", "ACCOUNTCREATIONDATE", "ACCOUNTSTATUS", "USERPROFILECOMPLETENESS", "PREVIOUSFRAUDATTEMPTS", "USERLOCATION")
+
+;
+    commit;

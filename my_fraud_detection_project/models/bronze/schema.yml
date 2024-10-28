@@ -32,9 +32,9 @@ models:
       - name: IsFraud
         tests:
           - accepted_values:
-              values: [0, 1]  # Values are 0 (not fraud) and 1 (fraud)
+              values: [0, 1]  
 
       - name: SuspiciousFlag
         tests:
           - accepted_values:
-              values: [0, 1]  # Values are 0 (not suspicious) and 1 (suspicious)
+              values: [0, 1]  

@@ -109,19 +109,19 @@ for i in range(num_records):
     transaction_data['AnomalyScore'].append(anomaly_score)
     transaction_data['TransactionTime'].append(transaction_date.strftime('%H:%M:%S'))
 
-# Create a DataFrame for transactions
+# Creatimg a DataFrame for transactions
 transaction_df = pd.DataFrame(transaction_data)
 
-# Merge user and transaction data in bulk (avoiding the loop)
+# Merging user and transaction data in bulk (avoiding the loop)
 merged_df = transaction_df.merge(user_df, on='UserID')
 
-# Convert the DataFrame to a list of records for partitioned uploads
+# Converting the DataFrame to a list of records for partitioned uploads
 nested_data = merged_df.to_dict(orient='records')
 
-# Group data by year for batch uploading
+# Grouping data by year for batch uploading
 data_by_year = {}
 for record in nested_data:
-    year = record['TransactionDate'][:4]  # Extract year from the transaction date
+    year = record['TransactionDate'][:4]  # Extracting year from the transaction date
     if year not in data_by_year:
         data_by_year[year] = []
     data_by_year[year].append(record)
