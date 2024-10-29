@@ -6,7 +6,7 @@ on:
       - master  # Run tests when a PR targets master
   push:
     branches:
-      - dev  # Run tests on dev branch pushes
+      - dev  # Run tests on dev branch pushes  
       - master  # Deploy to production when pushing to master
 
 jobs:
