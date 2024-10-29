@@ -7,10 +7,10 @@ from faker import Faker
 import boto3
 import os
 
-# Initialize Faker for realistic data generation
+# Initializing Faker for realistic data generation
 fake = Faker()
 
-# Constants
+
 num_records = 5000
 end_date = datetime.today()  # End date is today
 start_date = end_date - timedelta(days=730)  # Start date is two years back
