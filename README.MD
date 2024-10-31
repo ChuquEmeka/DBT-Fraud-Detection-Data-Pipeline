@@ -124,7 +124,7 @@ The pipeline follows a **star schema** design, creating efficient connections be
 
 The lineage graph visually shows data flow from raw ingestion to final transformation outputs. It includes paths for each model, with upstream sources feeding into downstream tables. You can add a screenshot of the lineage graph here for better understanding.
 
-**Screenshot Placeholder**: ![Lineage Graph](images/Lineage_Graph.png)
+**Lineage Graph**: ![Lineage Graph](images/Lineage_Graph.png)
 
 - **Source Table**: `fraud_detection.transactions_staging`
   - **Bronze Model**: `br_fraud_detection_raw_data_historical` cleans the raw data and serves as a base for silver models.
@@ -191,7 +191,7 @@ In the development database, only data from the year 2024 is accessible. This is
 - **Database**: `DEV_EMEKA_FRAUD_DETECTION`
 - **Tables and Structure**:
   - Sample tables include `BR_FRAUD_DETECTION_RAW_DATA_HISTORICAL`, `SI_USERS_DIMENSION`, `SI_TRANSACTIONS_FACT`, and others.
-- **Screenshot Placeholder**: ![Dev Database Screenshot](images/Dev_Database_Snowflake.png)
+- **Dev Database**: ![Dev Database Screenshot](images/Dev_Database_Snowflake.png)
 
 ### Production Database (`PROD_EMEKA_FRAUD_DETECTION2`)
 
@@ -200,7 +200,7 @@ The production database contains the full dataset across multiple years, enablin
 - **Database**: `PROD_EMEKA_FRAUD_DETECTION2`
 - **Tables and Structure**:
   - Sample tables include `BR_FRAUD_DETECTION_RAW_DATA_HISTORICAL`, `SI_USERS_DIMENSION`, `SI_TRANSACTIONS_FACT`, and others.
-- **Screenshot Placeholder**: ![Prod Database Screenshot](images/Prod_Database_Snowflake.png)
+- **Prod Database**: ![Prod Database Screenshot](images/Prod_Database_Snowflake.png)
 
 ---
 
