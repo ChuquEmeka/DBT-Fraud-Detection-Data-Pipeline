@@ -149,6 +149,7 @@ This CI/CD workflow is designed to automate testing and deployment for a dbt pro
 - **Pull Request to master**: When a pull request targets the master branch, the workflow runs the test job to ensure code integrity.
 - **Push to dev Branch**: When code is pushed to the dev branch, the workflow also runs the test job to validate code changes.
 - **Push to master Branch**: When code is pushed directly to master (e.g., after merging a PR), the deploy job runs automatically, promoting the code to production by executing `dbt run --target prod`.  
+![workflow](./images/merge_pull_request.png)  
 ![workflow](./images/workflowss.png)
 
 **Jobs**
