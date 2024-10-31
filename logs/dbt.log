@@ -38381,3 +38381,601 @@ having count(*) > 1
 [0m15:41:11.329817 [debug] [MainThread]: Command `dbt test` succeeded at 15:41:11.328513 after 36.54 seconds
 [0m15:41:11.336507 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000287E94DC310>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000287ECC33910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000287EB425D80>]}
 [0m15:41:11.340611 [debug] [MainThread]: Flushing usage events
+[0m16:41:01.063877 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028C1493C370>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028C1730A530>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028C1730A350>]}
+
+
+============================== 16:41:01.081493 | 8a201541-4349-4ee6-bb75-f30e59e67724 ==============================
+[0m16:41:01.081493 [info ] [MainThread]: Running with dbt=1.8.8
+[0m16:41:01.085864 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'C:\\Users\\User\\Desktop\\Projects\\DBT-Fraud-Detection-Data-Pipeline\\logs', 'version_check': 'True', 'profiles_dir': 'C:\\Users\\User\\.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt docs generate', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m16:41:11.553138 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '8a201541-4349-4ee6-bb75-f30e59e67724', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028C17F66620>]}
+[0m16:41:11.751116 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '8a201541-4349-4ee6-bb75-f30e59e67724', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028C172D1840>]}
+[0m16:41:11.757132 [info ] [MainThread]: Registered adapter: snowflake=1.8.4
+[0m16:41:11.842002 [debug] [MainThread]: checksum: ec53e341a936509427e16df1c646386a84befec52c1957e3f4359fbc36fc93f5, vars: {}, profile: , target: , version: 1.8.8
+[0m16:41:16.897958 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m16:41:16.898953 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m16:41:17.038170 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '8a201541-4349-4ee6-bb75-f30e59e67724', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028C182BAAD0>]}
+[0m16:41:17.240977 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '8a201541-4349-4ee6-bb75-f30e59e67724', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028C17F877F0>]}
+[0m16:41:17.241958 [info ] [MainThread]: Found 9 models, 38 data tests, 1 source, 454 macros
+[0m16:41:17.242958 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '8a201541-4349-4ee6-bb75-f30e59e67724', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028C17F86500>]}
+[0m16:41:17.250308 [info ] [MainThread]: 
+[0m16:41:17.258970 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m16:41:17.277990 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_DEV_EMEKA_FRAUD_DETECTION_PUBLIC'
+[0m16:41:17.329523 [debug] [ThreadPool]: Using snowflake connection "list_DEV_EMEKA_FRAUD_DETECTION_PUBLIC"
+[0m16:41:17.332522 [debug] [ThreadPool]: On list_DEV_EMEKA_FRAUD_DETECTION_PUBLIC: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "my_fraud_detection_project", "target_name": "dev", "connection_name": "list_DEV_EMEKA_FRAUD_DETECTION_PUBLIC"} */
+show objects in DEV_EMEKA_FRAUD_DETECTION.PUBLIC limit 10000
+[0m16:41:17.334526 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:41:18.699816 [debug] [ThreadPool]: SQL status: SUCCESS 10 in 1.365 seconds
+[0m16:41:18.704826 [debug] [ThreadPool]: On list_DEV_EMEKA_FRAUD_DETECTION_PUBLIC: Close
+[0m16:41:18.853701 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '8a201541-4349-4ee6-bb75-f30e59e67724', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028C17FC4640>]}
+[0m16:41:18.857704 [info ] [MainThread]: Concurrency: 2 threads (target='dev')
+[0m16:41:18.859709 [info ] [MainThread]: 
+[0m16:41:18.867702 [debug] [Thread-1 (]: Began running node model.my_fraud_detection_project.br_fraud_detection_raw_data_historical
+[0m16:41:18.871246 [debug] [Thread-1 (]: Acquiring new snowflake connection 'model.my_fraud_detection_project.br_fraud_detection_raw_data_historical'
+[0m16:41:18.873253 [debug] [Thread-1 (]: Began compiling node model.my_fraud_detection_project.br_fraud_detection_raw_data_historical
+[0m16:41:18.915832 [debug] [Thread-1 (]: Writing injected SQL for node "model.my_fraud_detection_project.br_fraud_detection_raw_data_historical"
+[0m16:41:18.920868 [debug] [Thread-1 (]: Began executing node model.my_fraud_detection_project.br_fraud_detection_raw_data_historical
+[0m16:41:18.923856 [debug] [Thread-1 (]: Finished running node model.my_fraud_detection_project.br_fraud_detection_raw_data_historical
+[0m16:41:18.925857 [debug] [Thread-2 (]: Began running node model.my_fraud_detection_project.si_devices_dimension
+[0m16:41:18.927858 [debug] [Thread-1 (]: Began running node model.my_fraud_detection_project.si_transactions_fact
+[0m16:41:18.929861 [debug] [Thread-2 (]: Acquiring new snowflake connection 'model.my_fraud_detection_project.si_devices_dimension'
+[0m16:41:18.931381 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.my_fraud_detection_project.br_fraud_detection_raw_data_historical, now model.my_fraud_detection_project.si_transactions_fact)
+[0m16:41:18.932380 [debug] [Thread-2 (]: Began compiling node model.my_fraud_detection_project.si_devices_dimension
+[0m16:41:18.936444 [debug] [Thread-1 (]: Began compiling node model.my_fraud_detection_project.si_transactions_fact
+[0m16:41:18.944988 [debug] [Thread-2 (]: Writing injected SQL for node "model.my_fraud_detection_project.si_devices_dimension"
+[0m16:41:18.959872 [debug] [Thread-1 (]: Writing injected SQL for node "model.my_fraud_detection_project.si_transactions_fact"
+[0m16:41:18.961884 [debug] [Thread-2 (]: Began executing node model.my_fraud_detection_project.si_devices_dimension
+[0m16:41:18.965107 [debug] [Thread-2 (]: Finished running node model.my_fraud_detection_project.si_devices_dimension
+[0m16:41:18.966097 [debug] [Thread-1 (]: Began executing node model.my_fraud_detection_project.si_transactions_fact
+[0m16:41:18.967106 [debug] [Thread-2 (]: Began running node model.my_fraud_detection_project.si_users_dimension
+[0m16:41:18.971642 [debug] [Thread-1 (]: Finished running node model.my_fraud_detection_project.si_transactions_fact
+[0m16:41:18.973649 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.my_fraud_detection_project.si_devices_dimension, now model.my_fraud_detection_project.si_users_dimension)
+[0m16:41:18.975656 [debug] [Thread-1 (]: Began running node test.my_fraud_detection_project.accepted_values_br_fraud_detection_raw_data_historical_IsFraud__0__1.a202484024
+[0m16:41:18.979779 [debug] [Thread-2 (]: Began compiling node model.my_fraud_detection_project.si_users_dimension
+[0m16:41:18.981757 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.my_fraud_detection_project.si_transactions_fact, now test.my_fraud_detection_project.accepted_values_br_fraud_detection_raw_data_historical_IsFraud__0__1.a202484024)
+[0m16:41:19.000533 [debug] [Thread-2 (]: Writing injected SQL for node "model.my_fraud_detection_project.si_users_dimension"
+[0m16:41:19.001544 [debug] [Thread-1 (]: Began compiling node test.my_fraud_detection_project.accepted_values_br_fraud_detection_raw_data_historical_IsFraud__0__1.a202484024
+[0m16:41:19.031696 [debug] [Thread-2 (]: Began executing node model.my_fraud_detection_project.si_users_dimension
+[0m16:41:19.034689 [debug] [Thread-1 (]: Writing injected SQL for node "test.my_fraud_detection_project.accepted_values_br_fraud_detection_raw_data_historical_IsFraud__0__1.a202484024"
+[0m16:41:19.039699 [debug] [Thread-2 (]: Finished running node model.my_fraud_detection_project.si_users_dimension
+[0m16:41:19.041688 [debug] [Thread-2 (]: Began running node test.my_fraud_detection_project.accepted_values_br_fraud_detection_raw_data_historical_SuspiciousFlag__0__1.ab717c9346
+[0m16:41:19.044975 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.my_fraud_detection_project.si_users_dimension, now test.my_fraud_detection_project.accepted_values_br_fraud_detection_raw_data_historical_SuspiciousFlag__0__1.ab717c9346)
+[0m16:41:19.045989 [debug] [Thread-1 (]: Began executing node test.my_fraud_detection_project.accepted_values_br_fraud_detection_raw_data_historical_IsFraud__0__1.a202484024
+[0m16:41:19.046989 [debug] [Thread-2 (]: Began compiling node test.my_fraud_detection_project.accepted_values_br_fraud_detection_raw_data_historical_SuspiciousFlag__0__1.ab717c9346
+[0m16:41:19.049881 [debug] [Thread-1 (]: Finished running node test.my_fraud_detection_project.accepted_values_br_fraud_detection_raw_data_historical_IsFraud__0__1.a202484024
+[0m16:41:19.062407 [debug] [Thread-2 (]: Writing injected SQL for node "test.my_fraud_detection_project.accepted_values_br_fraud_detection_raw_data_historical_SuspiciousFlag__0__1.ab717c9346"
+[0m16:41:19.065408 [debug] [Thread-1 (]: Began running node test.my_fraud_detection_project.not_null_br_fraud_detection_raw_data_historical_Currency.b2938579ac
+[0m16:41:19.068836 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.my_fraud_detection_project.accepted_values_br_fraud_detection_raw_data_historical_IsFraud__0__1.a202484024, now test.my_fraud_detection_project.not_null_br_fraud_detection_raw_data_historical_Currency.b2938579ac)
+[0m16:41:19.072854 [debug] [Thread-1 (]: Began compiling node test.my_fraud_detection_project.not_null_br_fraud_detection_raw_data_historical_Currency.b2938579ac
+[0m16:41:19.074847 [debug] [Thread-2 (]: Began executing node test.my_fraud_detection_project.accepted_values_br_fraud_detection_raw_data_historical_SuspiciousFlag__0__1.ab717c9346
+[0m16:41:19.093092 [debug] [Thread-1 (]: Writing injected SQL for node "test.my_fraud_detection_project.not_null_br_fraud_detection_raw_data_historical_Currency.b2938579ac"
+[0m16:41:19.095093 [debug] [Thread-2 (]: Finished running node test.my_fraud_detection_project.accepted_values_br_fraud_detection_raw_data_historical_SuspiciousFlag__0__1.ab717c9346
+[0m16:41:19.099088 [debug] [Thread-2 (]: Began running node test.my_fraud_detection_project.not_null_br_fraud_detection_raw_data_historical_MerchantID.5faee685b7
+[0m16:41:19.101099 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.my_fraud_detection_project.accepted_values_br_fraud_detection_raw_data_historical_SuspiciousFlag__0__1.ab717c9346, now test.my_fraud_detection_project.not_null_br_fraud_detection_raw_data_historical_MerchantID.5faee685b7)
+[0m16:41:19.103107 [debug] [Thread-1 (]: Began executing node test.my_fraud_detection_project.not_null_br_fraud_detection_raw_data_historical_Currency.b2938579ac
+[0m16:41:19.105117 [debug] [Thread-2 (]: Began compiling node test.my_fraud_detection_project.not_null_br_fraud_detection_raw_data_historical_MerchantID.5faee685b7
+[0m16:41:19.107359 [debug] [Thread-1 (]: Finished running node test.my_fraud_detection_project.not_null_br_fraud_detection_raw_data_historical_Currency.b2938579ac
+[0m16:41:19.120416 [debug] [Thread-2 (]: Writing injected SQL for node "test.my_fraud_detection_project.not_null_br_fraud_detection_raw_data_historical_MerchantID.5faee685b7"
+[0m16:41:19.123943 [debug] [Thread-1 (]: Began running node test.my_fraud_detection_project.not_null_br_fraud_detection_raw_data_historical_TransactionAmount.cfc887ace8
+[0m16:41:19.125945 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.my_fraud_detection_project.not_null_br_fraud_detection_raw_data_historical_Currency.b2938579ac, now test.my_fraud_detection_project.not_null_br_fraud_detection_raw_data_historical_TransactionAmount.cfc887ace8)
+[0m16:41:19.127128 [debug] [Thread-1 (]: Began compiling node test.my_fraud_detection_project.not_null_br_fraud_detection_raw_data_historical_TransactionAmount.cfc887ace8
+[0m16:41:19.130099 [debug] [Thread-2 (]: Began executing node test.my_fraud_detection_project.not_null_br_fraud_detection_raw_data_historical_MerchantID.5faee685b7
+[0m16:41:19.142694 [debug] [Thread-1 (]: Writing injected SQL for node "test.my_fraud_detection_project.not_null_br_fraud_detection_raw_data_historical_TransactionAmount.cfc887ace8"
+[0m16:41:19.145714 [debug] [Thread-2 (]: Finished running node test.my_fraud_detection_project.not_null_br_fraud_detection_raw_data_historical_MerchantID.5faee685b7
+[0m16:41:19.149977 [debug] [Thread-2 (]: Began running node test.my_fraud_detection_project.not_null_br_fraud_detection_raw_data_historical_TransactionDate.67574b8909
+[0m16:41:19.154481 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.my_fraud_detection_project.not_null_br_fraud_detection_raw_data_historical_MerchantID.5faee685b7, now test.my_fraud_detection_project.not_null_br_fraud_detection_raw_data_historical_TransactionDate.67574b8909)
+[0m16:41:19.158446 [debug] [Thread-1 (]: Began executing node test.my_fraud_detection_project.not_null_br_fraud_detection_raw_data_historical_TransactionAmount.cfc887ace8
+[0m16:41:19.159956 [debug] [Thread-2 (]: Began compiling node test.my_fraud_detection_project.not_null_br_fraud_detection_raw_data_historical_TransactionDate.67574b8909
+[0m16:41:19.160965 [debug] [Thread-1 (]: Finished running node test.my_fraud_detection_project.not_null_br_fraud_detection_raw_data_historical_TransactionAmount.cfc887ace8
+[0m16:41:19.171500 [debug] [Thread-2 (]: Writing injected SQL for node "test.my_fraud_detection_project.not_null_br_fraud_detection_raw_data_historical_TransactionDate.67574b8909"
+[0m16:41:19.173499 [debug] [Thread-1 (]: Began running node test.my_fraud_detection_project.not_null_br_fraud_detection_raw_data_historical_TransactionID.38dbce4d83
+[0m16:41:19.175500 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.my_fraud_detection_project.not_null_br_fraud_detection_raw_data_historical_TransactionAmount.cfc887ace8, now test.my_fraud_detection_project.not_null_br_fraud_detection_raw_data_historical_TransactionID.38dbce4d83)
+[0m16:41:19.177497 [debug] [Thread-1 (]: Began compiling node test.my_fraud_detection_project.not_null_br_fraud_detection_raw_data_historical_TransactionID.38dbce4d83
+[0m16:41:19.180017 [debug] [Thread-2 (]: Began executing node test.my_fraud_detection_project.not_null_br_fraud_detection_raw_data_historical_TransactionDate.67574b8909
+[0m16:41:19.196049 [debug] [Thread-1 (]: Writing injected SQL for node "test.my_fraud_detection_project.not_null_br_fraud_detection_raw_data_historical_TransactionID.38dbce4d83"
+[0m16:41:19.199053 [debug] [Thread-2 (]: Finished running node test.my_fraud_detection_project.not_null_br_fraud_detection_raw_data_historical_TransactionDate.67574b8909
+[0m16:41:19.201600 [debug] [Thread-2 (]: Began running node test.my_fraud_detection_project.not_null_br_fraud_detection_raw_data_historical_UserID.ee36a3cf3e
+[0m16:41:19.205934 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.my_fraud_detection_project.not_null_br_fraud_detection_raw_data_historical_TransactionDate.67574b8909, now test.my_fraud_detection_project.not_null_br_fraud_detection_raw_data_historical_UserID.ee36a3cf3e)
+[0m16:41:19.206935 [debug] [Thread-1 (]: Began executing node test.my_fraud_detection_project.not_null_br_fraud_detection_raw_data_historical_TransactionID.38dbce4d83
+[0m16:41:19.208930 [debug] [Thread-2 (]: Began compiling node test.my_fraud_detection_project.not_null_br_fraud_detection_raw_data_historical_UserID.ee36a3cf3e
+[0m16:41:19.211658 [debug] [Thread-1 (]: Finished running node test.my_fraud_detection_project.not_null_br_fraud_detection_raw_data_historical_TransactionID.38dbce4d83
+[0m16:41:19.226707 [debug] [Thread-2 (]: Writing injected SQL for node "test.my_fraud_detection_project.not_null_br_fraud_detection_raw_data_historical_UserID.ee36a3cf3e"
+[0m16:41:19.227979 [debug] [Thread-1 (]: Began running node test.my_fraud_detection_project.unique_br_fraud_detection_raw_data_historical_TransactionID.1d61bd3cba
+[0m16:41:19.231021 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.my_fraud_detection_project.not_null_br_fraud_detection_raw_data_historical_TransactionID.38dbce4d83, now test.my_fraud_detection_project.unique_br_fraud_detection_raw_data_historical_TransactionID.1d61bd3cba)
+[0m16:41:19.234048 [debug] [Thread-2 (]: Began executing node test.my_fraud_detection_project.not_null_br_fraud_detection_raw_data_historical_UserID.ee36a3cf3e
+[0m16:41:19.236032 [debug] [Thread-1 (]: Began compiling node test.my_fraud_detection_project.unique_br_fraud_detection_raw_data_historical_TransactionID.1d61bd3cba
+[0m16:41:19.240038 [debug] [Thread-2 (]: Finished running node test.my_fraud_detection_project.not_null_br_fraud_detection_raw_data_historical_UserID.ee36a3cf3e
+[0m16:41:19.256513 [debug] [Thread-1 (]: Writing injected SQL for node "test.my_fraud_detection_project.unique_br_fraud_detection_raw_data_historical_TransactionID.1d61bd3cba"
+[0m16:41:19.258514 [debug] [Thread-2 (]: Began running node test.my_fraud_detection_project.not_null_si_devices_dimension_DeviceID.b8e8066b8f
+[0m16:41:19.262079 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.my_fraud_detection_project.not_null_br_fraud_detection_raw_data_historical_UserID.ee36a3cf3e, now test.my_fraud_detection_project.not_null_si_devices_dimension_DeviceID.b8e8066b8f)
+[0m16:41:19.264072 [debug] [Thread-2 (]: Began compiling node test.my_fraud_detection_project.not_null_si_devices_dimension_DeviceID.b8e8066b8f
+[0m16:41:19.265068 [debug] [Thread-1 (]: Began executing node test.my_fraud_detection_project.unique_br_fraud_detection_raw_data_historical_TransactionID.1d61bd3cba
+[0m16:41:19.277714 [debug] [Thread-2 (]: Writing injected SQL for node "test.my_fraud_detection_project.not_null_si_devices_dimension_DeviceID.b8e8066b8f"
+[0m16:41:19.280744 [debug] [Thread-1 (]: Finished running node test.my_fraud_detection_project.unique_br_fraud_detection_raw_data_historical_TransactionID.1d61bd3cba
+[0m16:41:19.285202 [debug] [Thread-1 (]: Began running node test.my_fraud_detection_project.not_null_si_devices_dimension_DeviceType.e5c582fcda
+[0m16:41:19.288214 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.my_fraud_detection_project.unique_br_fraud_detection_raw_data_historical_TransactionID.1d61bd3cba, now test.my_fraud_detection_project.not_null_si_devices_dimension_DeviceType.e5c582fcda)
+[0m16:41:19.289728 [debug] [Thread-2 (]: Began executing node test.my_fraud_detection_project.not_null_si_devices_dimension_DeviceID.b8e8066b8f
+[0m16:41:19.290742 [debug] [Thread-1 (]: Began compiling node test.my_fraud_detection_project.not_null_si_devices_dimension_DeviceType.e5c582fcda
+[0m16:41:19.293741 [debug] [Thread-2 (]: Finished running node test.my_fraud_detection_project.not_null_si_devices_dimension_DeviceID.b8e8066b8f
+[0m16:41:19.306305 [debug] [Thread-1 (]: Writing injected SQL for node "test.my_fraud_detection_project.not_null_si_devices_dimension_DeviceType.e5c582fcda"
+[0m16:41:19.307300 [debug] [Thread-2 (]: Began running node test.my_fraud_detection_project.not_null_si_devices_dimension_IP_Address.00d75346e3
+[0m16:41:19.310792 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.my_fraud_detection_project.not_null_si_devices_dimension_DeviceID.b8e8066b8f, now test.my_fraud_detection_project.not_null_si_devices_dimension_IP_Address.00d75346e3)
+[0m16:41:19.314250 [debug] [Thread-2 (]: Began compiling node test.my_fraud_detection_project.not_null_si_devices_dimension_IP_Address.00d75346e3
+[0m16:41:19.315246 [debug] [Thread-1 (]: Began executing node test.my_fraud_detection_project.not_null_si_devices_dimension_DeviceType.e5c582fcda
+[0m16:41:19.328790 [debug] [Thread-2 (]: Writing injected SQL for node "test.my_fraud_detection_project.not_null_si_devices_dimension_IP_Address.00d75346e3"
+[0m16:41:19.330307 [debug] [Thread-1 (]: Finished running node test.my_fraud_detection_project.not_null_si_devices_dimension_DeviceType.e5c582fcda
+[0m16:41:19.332325 [debug] [Thread-1 (]: Began running node test.my_fraud_detection_project.unique_si_devices_dimension_DeviceID.d2678142c0
+[0m16:41:19.335045 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.my_fraud_detection_project.not_null_si_devices_dimension_DeviceType.e5c582fcda, now test.my_fraud_detection_project.unique_si_devices_dimension_DeviceID.d2678142c0)
+[0m16:41:19.336224 [debug] [Thread-2 (]: Began executing node test.my_fraud_detection_project.not_null_si_devices_dimension_IP_Address.00d75346e3
+[0m16:41:19.338233 [debug] [Thread-1 (]: Began compiling node test.my_fraud_detection_project.unique_si_devices_dimension_DeviceID.d2678142c0
+[0m16:41:19.342495 [debug] [Thread-2 (]: Finished running node test.my_fraud_detection_project.not_null_si_devices_dimension_IP_Address.00d75346e3
+[0m16:41:19.360251 [debug] [Thread-1 (]: Writing injected SQL for node "test.my_fraud_detection_project.unique_si_devices_dimension_DeviceID.d2678142c0"
+[0m16:41:19.363382 [debug] [Thread-2 (]: Began running node model.my_fraud_detection_project.go_fraud_detection_dashboard_metrics
+[0m16:41:19.366368 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.my_fraud_detection_project.not_null_si_devices_dimension_IP_Address.00d75346e3, now model.my_fraud_detection_project.go_fraud_detection_dashboard_metrics)
+[0m16:41:19.367368 [debug] [Thread-2 (]: Began compiling node model.my_fraud_detection_project.go_fraud_detection_dashboard_metrics
+[0m16:41:19.369248 [debug] [Thread-1 (]: Began executing node test.my_fraud_detection_project.unique_si_devices_dimension_DeviceID.d2678142c0
+[0m16:41:19.377680 [debug] [Thread-2 (]: Writing injected SQL for node "model.my_fraud_detection_project.go_fraud_detection_dashboard_metrics"
+[0m16:41:19.381238 [debug] [Thread-1 (]: Finished running node test.my_fraud_detection_project.unique_si_devices_dimension_DeviceID.d2678142c0
+[0m16:41:19.383582 [debug] [Thread-1 (]: Began running node model.my_fraud_detection_project.go_merchant_risk_assessment
+[0m16:41:19.387203 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.my_fraud_detection_project.unique_si_devices_dimension_DeviceID.d2678142c0, now model.my_fraud_detection_project.go_merchant_risk_assessment)
+[0m16:41:19.389907 [debug] [Thread-2 (]: Began executing node model.my_fraud_detection_project.go_fraud_detection_dashboard_metrics
+[0m16:41:19.391987 [debug] [Thread-1 (]: Began compiling node model.my_fraud_detection_project.go_merchant_risk_assessment
+[0m16:41:19.397013 [debug] [Thread-2 (]: Finished running node model.my_fraud_detection_project.go_fraud_detection_dashboard_metrics
+[0m16:41:19.406018 [debug] [Thread-1 (]: Writing injected SQL for node "model.my_fraud_detection_project.go_merchant_risk_assessment"
+[0m16:41:19.407195 [debug] [Thread-2 (]: Began running node model.my_fraud_detection_project.go_real_time_fraud_detection
+[0m16:41:19.409786 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.my_fraud_detection_project.go_fraud_detection_dashboard_metrics, now model.my_fraud_detection_project.go_real_time_fraud_detection)
+[0m16:41:19.411774 [debug] [Thread-2 (]: Began compiling node model.my_fraud_detection_project.go_real_time_fraud_detection
+[0m16:41:19.413788 [debug] [Thread-1 (]: Began executing node model.my_fraud_detection_project.go_merchant_risk_assessment
+[0m16:41:19.423322 [debug] [Thread-2 (]: Writing injected SQL for node "model.my_fraud_detection_project.go_real_time_fraud_detection"
+[0m16:41:19.425314 [debug] [Thread-1 (]: Finished running node model.my_fraud_detection_project.go_merchant_risk_assessment
+[0m16:41:19.427309 [debug] [Thread-1 (]: Began running node model.my_fraud_detection_project.go_user_behavior_metrics
+[0m16:41:19.430591 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.my_fraud_detection_project.go_merchant_risk_assessment, now model.my_fraud_detection_project.go_user_behavior_metrics)
+[0m16:41:19.432592 [debug] [Thread-2 (]: Began executing node model.my_fraud_detection_project.go_real_time_fraud_detection
+[0m16:41:19.434599 [debug] [Thread-1 (]: Began compiling node model.my_fraud_detection_project.go_user_behavior_metrics
+[0m16:41:19.437595 [debug] [Thread-2 (]: Finished running node model.my_fraud_detection_project.go_real_time_fraud_detection
+[0m16:41:19.450275 [debug] [Thread-1 (]: Writing injected SQL for node "model.my_fraud_detection_project.go_user_behavior_metrics"
+[0m16:41:19.452222 [debug] [Thread-2 (]: Began running node test.my_fraud_detection_project.accepted_values_si_transactions_fact_IsFraud__0__1.7486fcede5
+[0m16:41:19.455992 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.my_fraud_detection_project.go_real_time_fraud_detection, now test.my_fraud_detection_project.accepted_values_si_transactions_fact_IsFraud__0__1.7486fcede5)
+[0m16:41:19.457003 [debug] [Thread-2 (]: Began compiling node test.my_fraud_detection_project.accepted_values_si_transactions_fact_IsFraud__0__1.7486fcede5
+[0m16:41:19.458000 [debug] [Thread-1 (]: Began executing node model.my_fraud_detection_project.go_user_behavior_metrics
+[0m16:41:19.472528 [debug] [Thread-2 (]: Writing injected SQL for node "test.my_fraud_detection_project.accepted_values_si_transactions_fact_IsFraud__0__1.7486fcede5"
+[0m16:41:19.475080 [debug] [Thread-1 (]: Finished running node model.my_fraud_detection_project.go_user_behavior_metrics
+[0m16:41:19.479092 [debug] [Thread-1 (]: Began running node test.my_fraud_detection_project.accepted_values_si_transactions_fact_SuspiciousFlag__0__1.b57ac3bec9
+[0m16:41:19.481638 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.my_fraud_detection_project.go_user_behavior_metrics, now test.my_fraud_detection_project.accepted_values_si_transactions_fact_SuspiciousFlag__0__1.b57ac3bec9)
+[0m16:41:19.482640 [debug] [Thread-2 (]: Began executing node test.my_fraud_detection_project.accepted_values_si_transactions_fact_IsFraud__0__1.7486fcede5
+[0m16:41:19.483638 [debug] [Thread-1 (]: Began compiling node test.my_fraud_detection_project.accepted_values_si_transactions_fact_SuspiciousFlag__0__1.b57ac3bec9
+[0m16:41:19.485637 [debug] [Thread-2 (]: Finished running node test.my_fraud_detection_project.accepted_values_si_transactions_fact_IsFraud__0__1.7486fcede5
+[0m16:41:19.497657 [debug] [Thread-1 (]: Writing injected SQL for node "test.my_fraud_detection_project.accepted_values_si_transactions_fact_SuspiciousFlag__0__1.b57ac3bec9"
+[0m16:41:19.498666 [debug] [Thread-2 (]: Began running node test.my_fraud_detection_project.not_null_si_transactions_fact_Currency.5bd49c0510
+[0m16:41:19.501213 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.my_fraud_detection_project.accepted_values_si_transactions_fact_IsFraud__0__1.7486fcede5, now test.my_fraud_detection_project.not_null_si_transactions_fact_Currency.5bd49c0510)
+[0m16:41:19.504220 [debug] [Thread-1 (]: Began executing node test.my_fraud_detection_project.accepted_values_si_transactions_fact_SuspiciousFlag__0__1.b57ac3bec9
+[0m16:41:19.506255 [debug] [Thread-2 (]: Began compiling node test.my_fraud_detection_project.not_null_si_transactions_fact_Currency.5bd49c0510
+[0m16:41:19.508239 [debug] [Thread-1 (]: Finished running node test.my_fraud_detection_project.accepted_values_si_transactions_fact_SuspiciousFlag__0__1.b57ac3bec9
+[0m16:41:19.523820 [debug] [Thread-2 (]: Writing injected SQL for node "test.my_fraud_detection_project.not_null_si_transactions_fact_Currency.5bd49c0510"
+[0m16:41:19.524824 [debug] [Thread-1 (]: Began running node test.my_fraud_detection_project.not_null_si_transactions_fact_IsFraud.d9ff404b94
+[0m16:41:19.527818 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.my_fraud_detection_project.accepted_values_si_transactions_fact_SuspiciousFlag__0__1.b57ac3bec9, now test.my_fraud_detection_project.not_null_si_transactions_fact_IsFraud.d9ff404b94)
+[0m16:41:19.528820 [debug] [Thread-1 (]: Began compiling node test.my_fraud_detection_project.not_null_si_transactions_fact_IsFraud.d9ff404b94
+[0m16:41:19.530328 [debug] [Thread-2 (]: Began executing node test.my_fraud_detection_project.not_null_si_transactions_fact_Currency.5bd49c0510
+[0m16:41:19.542891 [debug] [Thread-1 (]: Writing injected SQL for node "test.my_fraud_detection_project.not_null_si_transactions_fact_IsFraud.d9ff404b94"
+[0m16:41:19.544894 [debug] [Thread-2 (]: Finished running node test.my_fraud_detection_project.not_null_si_transactions_fact_Currency.5bd49c0510
+[0m16:41:19.548458 [debug] [Thread-2 (]: Began running node test.my_fraud_detection_project.not_null_si_transactions_fact_MerchantID.137d73e00a
+[0m16:41:19.551993 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.my_fraud_detection_project.not_null_si_transactions_fact_Currency.5bd49c0510, now test.my_fraud_detection_project.not_null_si_transactions_fact_MerchantID.137d73e00a)
+[0m16:41:19.554997 [debug] [Thread-1 (]: Began executing node test.my_fraud_detection_project.not_null_si_transactions_fact_IsFraud.d9ff404b94
+[0m16:41:19.557005 [debug] [Thread-2 (]: Began compiling node test.my_fraud_detection_project.not_null_si_transactions_fact_MerchantID.137d73e00a
+[0m16:41:19.560502 [debug] [Thread-1 (]: Finished running node test.my_fraud_detection_project.not_null_si_transactions_fact_IsFraud.d9ff404b94
+[0m16:41:19.567905 [debug] [Thread-2 (]: Writing injected SQL for node "test.my_fraud_detection_project.not_null_si_transactions_fact_MerchantID.137d73e00a"
+[0m16:41:19.569921 [debug] [Thread-1 (]: Began running node test.my_fraud_detection_project.not_null_si_transactions_fact_TransactionAmount.7e3143fdc4
+[0m16:41:19.574480 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.my_fraud_detection_project.not_null_si_transactions_fact_IsFraud.d9ff404b94, now test.my_fraud_detection_project.not_null_si_transactions_fact_TransactionAmount.7e3143fdc4)
+[0m16:41:19.575483 [debug] [Thread-1 (]: Began compiling node test.my_fraud_detection_project.not_null_si_transactions_fact_TransactionAmount.7e3143fdc4
+[0m16:41:19.576639 [debug] [Thread-2 (]: Began executing node test.my_fraud_detection_project.not_null_si_transactions_fact_MerchantID.137d73e00a
+[0m16:41:19.589667 [debug] [Thread-1 (]: Writing injected SQL for node "test.my_fraud_detection_project.not_null_si_transactions_fact_TransactionAmount.7e3143fdc4"
+[0m16:41:19.592880 [debug] [Thread-2 (]: Finished running node test.my_fraud_detection_project.not_null_si_transactions_fact_MerchantID.137d73e00a
+[0m16:41:19.595896 [debug] [Thread-2 (]: Began running node test.my_fraud_detection_project.not_null_si_transactions_fact_TransactionDate.a650103d86
+[0m16:41:19.597898 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.my_fraud_detection_project.not_null_si_transactions_fact_MerchantID.137d73e00a, now test.my_fraud_detection_project.not_null_si_transactions_fact_TransactionDate.a650103d86)
+[0m16:41:19.600423 [debug] [Thread-1 (]: Began executing node test.my_fraud_detection_project.not_null_si_transactions_fact_TransactionAmount.7e3143fdc4
+[0m16:41:19.602439 [debug] [Thread-2 (]: Began compiling node test.my_fraud_detection_project.not_null_si_transactions_fact_TransactionDate.a650103d86
+[0m16:41:19.605921 [debug] [Thread-1 (]: Finished running node test.my_fraud_detection_project.not_null_si_transactions_fact_TransactionAmount.7e3143fdc4
+[0m16:41:19.618860 [debug] [Thread-2 (]: Writing injected SQL for node "test.my_fraud_detection_project.not_null_si_transactions_fact_TransactionDate.a650103d86"
+[0m16:41:19.620378 [debug] [Thread-1 (]: Began running node test.my_fraud_detection_project.not_null_si_transactions_fact_TransactionID.83ad3efd2f
+[0m16:41:19.624805 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.my_fraud_detection_project.not_null_si_transactions_fact_TransactionAmount.7e3143fdc4, now test.my_fraud_detection_project.not_null_si_transactions_fact_TransactionID.83ad3efd2f)
+[0m16:41:19.628028 [debug] [Thread-1 (]: Began compiling node test.my_fraud_detection_project.not_null_si_transactions_fact_TransactionID.83ad3efd2f
+[0m16:41:19.630564 [debug] [Thread-2 (]: Began executing node test.my_fraud_detection_project.not_null_si_transactions_fact_TransactionDate.a650103d86
+[0m16:41:19.645150 [debug] [Thread-1 (]: Writing injected SQL for node "test.my_fraud_detection_project.not_null_si_transactions_fact_TransactionID.83ad3efd2f"
+[0m16:41:19.647661 [debug] [Thread-2 (]: Finished running node test.my_fraud_detection_project.not_null_si_transactions_fact_TransactionDate.a650103d86
+[0m16:41:19.650117 [debug] [Thread-2 (]: Began running node test.my_fraud_detection_project.not_null_si_transactions_fact_UserID.abb407b073
+[0m16:41:19.653139 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.my_fraud_detection_project.not_null_si_transactions_fact_TransactionDate.a650103d86, now test.my_fraud_detection_project.not_null_si_transactions_fact_UserID.abb407b073)
+[0m16:41:19.656169 [debug] [Thread-1 (]: Began executing node test.my_fraud_detection_project.not_null_si_transactions_fact_TransactionID.83ad3efd2f
+[0m16:41:19.657162 [debug] [Thread-2 (]: Began compiling node test.my_fraud_detection_project.not_null_si_transactions_fact_UserID.abb407b073
+[0m16:41:19.661598 [debug] [Thread-1 (]: Finished running node test.my_fraud_detection_project.not_null_si_transactions_fact_TransactionID.83ad3efd2f
+[0m16:41:19.678498 [debug] [Thread-2 (]: Writing injected SQL for node "test.my_fraud_detection_project.not_null_si_transactions_fact_UserID.abb407b073"
+[0m16:41:19.682066 [debug] [Thread-1 (]: Began running node test.my_fraud_detection_project.unique_si_transactions_fact_TransactionID.abbe1e44fb
+[0m16:41:19.688354 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.my_fraud_detection_project.not_null_si_transactions_fact_TransactionID.83ad3efd2f, now test.my_fraud_detection_project.unique_si_transactions_fact_TransactionID.abbe1e44fb)
+[0m16:41:19.690888 [debug] [Thread-2 (]: Began executing node test.my_fraud_detection_project.not_null_si_transactions_fact_UserID.abb407b073
+[0m16:41:19.692893 [debug] [Thread-1 (]: Began compiling node test.my_fraud_detection_project.unique_si_transactions_fact_TransactionID.abbe1e44fb
+[0m16:41:19.694887 [debug] [Thread-2 (]: Finished running node test.my_fraud_detection_project.not_null_si_transactions_fact_UserID.abb407b073
+[0m16:41:19.716023 [debug] [Thread-1 (]: Writing injected SQL for node "test.my_fraud_detection_project.unique_si_transactions_fact_TransactionID.abbe1e44fb"
+[0m16:41:19.718020 [debug] [Thread-2 (]: Began running node test.my_fraud_detection_project.accepted_values_si_users_dimension_AccountStatus__Active__Suspended__Closed.3a74a40b75
+[0m16:41:19.722580 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.my_fraud_detection_project.not_null_si_transactions_fact_UserID.abb407b073, now test.my_fraud_detection_project.accepted_values_si_users_dimension_AccountStatus__Active__Suspended__Closed.3a74a40b75)
+[0m16:41:19.723584 [debug] [Thread-2 (]: Began compiling node test.my_fraud_detection_project.accepted_values_si_users_dimension_AccountStatus__Active__Suspended__Closed.3a74a40b75
+[0m16:41:19.725119 [debug] [Thread-1 (]: Began executing node test.my_fraud_detection_project.unique_si_transactions_fact_TransactionID.abbe1e44fb
+[0m16:41:19.741694 [debug] [Thread-2 (]: Writing injected SQL for node "test.my_fraud_detection_project.accepted_values_si_users_dimension_AccountStatus__Active__Suspended__Closed.3a74a40b75"
+[0m16:41:19.745918 [debug] [Thread-1 (]: Finished running node test.my_fraud_detection_project.unique_si_transactions_fact_TransactionID.abbe1e44fb
+[0m16:41:19.748460 [debug] [Thread-1 (]: Began running node test.my_fraud_detection_project.not_null_si_users_dimension_AccountStatus.bae8e4bc20
+[0m16:41:19.750978 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.my_fraud_detection_project.unique_si_transactions_fact_TransactionID.abbe1e44fb, now test.my_fraud_detection_project.not_null_si_users_dimension_AccountStatus.bae8e4bc20)
+[0m16:41:19.754009 [debug] [Thread-2 (]: Began executing node test.my_fraud_detection_project.accepted_values_si_users_dimension_AccountStatus__Active__Suspended__Closed.3a74a40b75
+[0m16:41:19.755991 [debug] [Thread-1 (]: Began compiling node test.my_fraud_detection_project.not_null_si_users_dimension_AccountStatus.bae8e4bc20
+[0m16:41:19.758992 [debug] [Thread-2 (]: Finished running node test.my_fraud_detection_project.accepted_values_si_users_dimension_AccountStatus__Active__Suspended__Closed.3a74a40b75
+[0m16:41:19.774018 [debug] [Thread-1 (]: Writing injected SQL for node "test.my_fraud_detection_project.not_null_si_users_dimension_AccountStatus.bae8e4bc20"
+[0m16:41:19.775018 [debug] [Thread-2 (]: Began running node test.my_fraud_detection_project.not_null_si_users_dimension_Age.5778570df0
+[0m16:41:19.780016 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.my_fraud_detection_project.accepted_values_si_users_dimension_AccountStatus__Active__Suspended__Closed.3a74a40b75, now test.my_fraud_detection_project.not_null_si_users_dimension_Age.5778570df0)
+[0m16:41:19.783558 [debug] [Thread-2 (]: Began compiling node test.my_fraud_detection_project.not_null_si_users_dimension_Age.5778570df0
+[0m16:41:19.785561 [debug] [Thread-1 (]: Began executing node test.my_fraud_detection_project.not_null_si_users_dimension_AccountStatus.bae8e4bc20
+[0m16:41:19.804487 [debug] [Thread-2 (]: Writing injected SQL for node "test.my_fraud_detection_project.not_null_si_users_dimension_Age.5778570df0"
+[0m16:41:19.806471 [debug] [Thread-1 (]: Finished running node test.my_fraud_detection_project.not_null_si_users_dimension_AccountStatus.bae8e4bc20
+[0m16:41:19.808625 [debug] [Thread-1 (]: Began running node test.my_fraud_detection_project.not_null_si_users_dimension_UserID.c39f750dc7
+[0m16:41:19.810134 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.my_fraud_detection_project.not_null_si_users_dimension_AccountStatus.bae8e4bc20, now test.my_fraud_detection_project.not_null_si_users_dimension_UserID.c39f750dc7)
+[0m16:41:19.813163 [debug] [Thread-2 (]: Began executing node test.my_fraud_detection_project.not_null_si_users_dimension_Age.5778570df0
+[0m16:41:19.814158 [debug] [Thread-1 (]: Began compiling node test.my_fraud_detection_project.not_null_si_users_dimension_UserID.c39f750dc7
+[0m16:41:19.817159 [debug] [Thread-2 (]: Finished running node test.my_fraud_detection_project.not_null_si_users_dimension_Age.5778570df0
+[0m16:41:19.829776 [debug] [Thread-1 (]: Writing injected SQL for node "test.my_fraud_detection_project.not_null_si_users_dimension_UserID.c39f750dc7"
+[0m16:41:19.832753 [debug] [Thread-2 (]: Began running node test.my_fraud_detection_project.unique_si_users_dimension_UserID.e329fed97e
+[0m16:41:19.836740 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.my_fraud_detection_project.not_null_si_users_dimension_Age.5778570df0, now test.my_fraud_detection_project.unique_si_users_dimension_UserID.e329fed97e)
+[0m16:41:19.839734 [debug] [Thread-2 (]: Began compiling node test.my_fraud_detection_project.unique_si_users_dimension_UserID.e329fed97e
+[0m16:41:19.842277 [debug] [Thread-1 (]: Began executing node test.my_fraud_detection_project.not_null_si_users_dimension_UserID.c39f750dc7
+[0m16:41:19.856248 [debug] [Thread-2 (]: Writing injected SQL for node "test.my_fraud_detection_project.unique_si_users_dimension_UserID.e329fed97e"
+[0m16:41:19.858264 [debug] [Thread-1 (]: Finished running node test.my_fraud_detection_project.not_null_si_users_dimension_UserID.c39f750dc7
+[0m16:41:19.862118 [debug] [Thread-1 (]: Began running node test.my_fraud_detection_project.not_null_go_fraud_detection_dashboard_metrics_total_fraud_transactions.6e332b98c3
+[0m16:41:19.866139 [debug] [Thread-2 (]: Began executing node test.my_fraud_detection_project.unique_si_users_dimension_UserID.e329fed97e
+[0m16:41:19.868138 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.my_fraud_detection_project.not_null_si_users_dimension_UserID.c39f750dc7, now test.my_fraud_detection_project.not_null_go_fraud_detection_dashboard_metrics_total_fraud_transactions.6e332b98c3)
+[0m16:41:19.872679 [debug] [Thread-2 (]: Finished running node test.my_fraud_detection_project.unique_si_users_dimension_UserID.e329fed97e
+[0m16:41:19.875700 [debug] [Thread-1 (]: Began compiling node test.my_fraud_detection_project.not_null_go_fraud_detection_dashboard_metrics_total_fraud_transactions.6e332b98c3
+[0m16:41:19.879687 [debug] [Thread-2 (]: Began running node test.my_fraud_detection_project.not_null_go_fraud_detection_dashboard_metrics_total_transactions.4b7d45e49c
+[0m16:41:19.889690 [debug] [Thread-1 (]: Writing injected SQL for node "test.my_fraud_detection_project.not_null_go_fraud_detection_dashboard_metrics_total_fraud_transactions.6e332b98c3"
+[0m16:41:19.892149 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.my_fraud_detection_project.unique_si_users_dimension_UserID.e329fed97e, now test.my_fraud_detection_project.not_null_go_fraud_detection_dashboard_metrics_total_transactions.4b7d45e49c)
+[0m16:41:19.894295 [debug] [Thread-2 (]: Began compiling node test.my_fraud_detection_project.not_null_go_fraud_detection_dashboard_metrics_total_transactions.4b7d45e49c
+[0m16:41:19.900884 [debug] [Thread-1 (]: Began executing node test.my_fraud_detection_project.not_null_go_fraud_detection_dashboard_metrics_total_fraud_transactions.6e332b98c3
+[0m16:41:19.914877 [debug] [Thread-2 (]: Writing injected SQL for node "test.my_fraud_detection_project.not_null_go_fraud_detection_dashboard_metrics_total_transactions.4b7d45e49c"
+[0m16:41:19.916878 [debug] [Thread-1 (]: Finished running node test.my_fraud_detection_project.not_null_go_fraud_detection_dashboard_metrics_total_fraud_transactions.6e332b98c3
+[0m16:41:19.919895 [debug] [Thread-1 (]: Began running node test.my_fraud_detection_project.not_null_go_merchant_risk_assessment_MerchantID.352a0b3fbb
+[0m16:41:19.923418 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.my_fraud_detection_project.not_null_go_fraud_detection_dashboard_metrics_total_fraud_transactions.6e332b98c3, now test.my_fraud_detection_project.not_null_go_merchant_risk_assessment_MerchantID.352a0b3fbb)
+[0m16:41:19.926000 [debug] [Thread-1 (]: Began compiling node test.my_fraud_detection_project.not_null_go_merchant_risk_assessment_MerchantID.352a0b3fbb
+[0m16:41:19.928407 [debug] [Thread-2 (]: Began executing node test.my_fraud_detection_project.not_null_go_fraud_detection_dashboard_metrics_total_transactions.4b7d45e49c
+[0m16:41:19.943965 [debug] [Thread-1 (]: Writing injected SQL for node "test.my_fraud_detection_project.not_null_go_merchant_risk_assessment_MerchantID.352a0b3fbb"
+[0m16:41:19.948482 [debug] [Thread-2 (]: Finished running node test.my_fraud_detection_project.not_null_go_fraud_detection_dashboard_metrics_total_transactions.4b7d45e49c
+[0m16:41:19.954051 [debug] [Thread-2 (]: Began running node test.my_fraud_detection_project.not_null_go_merchant_risk_assessment_total_fraud_transactions.164f1571ff
+[0m16:41:19.956075 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.my_fraud_detection_project.not_null_go_fraud_detection_dashboard_metrics_total_transactions.4b7d45e49c, now test.my_fraud_detection_project.not_null_go_merchant_risk_assessment_total_fraud_transactions.164f1571ff)
+[0m16:41:19.959746 [debug] [Thread-1 (]: Began executing node test.my_fraud_detection_project.not_null_go_merchant_risk_assessment_MerchantID.352a0b3fbb
+[0m16:41:19.961764 [debug] [Thread-2 (]: Began compiling node test.my_fraud_detection_project.not_null_go_merchant_risk_assessment_total_fraud_transactions.164f1571ff
+[0m16:41:19.963764 [debug] [Thread-1 (]: Finished running node test.my_fraud_detection_project.not_null_go_merchant_risk_assessment_MerchantID.352a0b3fbb
+[0m16:41:19.974323 [debug] [Thread-2 (]: Writing injected SQL for node "test.my_fraud_detection_project.not_null_go_merchant_risk_assessment_total_fraud_transactions.164f1571ff"
+[0m16:41:19.976493 [debug] [Thread-1 (]: Began running node test.my_fraud_detection_project.not_null_go_merchant_risk_assessment_total_transactions.a46a941912
+[0m16:41:19.980882 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.my_fraud_detection_project.not_null_go_merchant_risk_assessment_MerchantID.352a0b3fbb, now test.my_fraud_detection_project.not_null_go_merchant_risk_assessment_total_transactions.a46a941912)
+[0m16:41:19.984918 [debug] [Thread-1 (]: Began compiling node test.my_fraud_detection_project.not_null_go_merchant_risk_assessment_total_transactions.a46a941912
+[0m16:41:19.987925 [debug] [Thread-2 (]: Began executing node test.my_fraud_detection_project.not_null_go_merchant_risk_assessment_total_fraud_transactions.164f1571ff
+[0m16:41:20.002928 [debug] [Thread-1 (]: Writing injected SQL for node "test.my_fraud_detection_project.not_null_go_merchant_risk_assessment_total_transactions.a46a941912"
+[0m16:41:20.006935 [debug] [Thread-2 (]: Finished running node test.my_fraud_detection_project.not_null_go_merchant_risk_assessment_total_fraud_transactions.164f1571ff
+[0m16:41:20.009931 [debug] [Thread-2 (]: Began running node test.my_fraud_detection_project.not_null_go_real_time_fraud_detection_AnomalyScore.e846dc175a
+[0m16:41:20.013447 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.my_fraud_detection_project.not_null_go_merchant_risk_assessment_total_fraud_transactions.164f1571ff, now test.my_fraud_detection_project.not_null_go_real_time_fraud_detection_AnomalyScore.e846dc175a)
+[0m16:41:20.014448 [debug] [Thread-1 (]: Began executing node test.my_fraud_detection_project.not_null_go_merchant_risk_assessment_total_transactions.a46a941912
+[0m16:41:20.016451 [debug] [Thread-2 (]: Began compiling node test.my_fraud_detection_project.not_null_go_real_time_fraud_detection_AnomalyScore.e846dc175a
+[0m16:41:20.018449 [debug] [Thread-1 (]: Finished running node test.my_fraud_detection_project.not_null_go_merchant_risk_assessment_total_transactions.a46a941912
+[0m16:41:20.042442 [debug] [Thread-2 (]: Writing injected SQL for node "test.my_fraud_detection_project.not_null_go_real_time_fraud_detection_AnomalyScore.e846dc175a"
+[0m16:41:20.044446 [debug] [Thread-1 (]: Began running node test.my_fraud_detection_project.not_null_go_real_time_fraud_detection_TransactionID.5d4065ee6d
+[0m16:41:20.046445 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.my_fraud_detection_project.not_null_go_merchant_risk_assessment_total_transactions.a46a941912, now test.my_fraud_detection_project.not_null_go_real_time_fraud_detection_TransactionID.5d4065ee6d)
+[0m16:41:20.048979 [debug] [Thread-1 (]: Began compiling node test.my_fraud_detection_project.not_null_go_real_time_fraud_detection_TransactionID.5d4065ee6d
+[0m16:41:20.049981 [debug] [Thread-2 (]: Began executing node test.my_fraud_detection_project.not_null_go_real_time_fraud_detection_AnomalyScore.e846dc175a
+[0m16:41:20.067517 [debug] [Thread-1 (]: Writing injected SQL for node "test.my_fraud_detection_project.not_null_go_real_time_fraud_detection_TransactionID.5d4065ee6d"
+[0m16:41:20.075468 [debug] [Thread-2 (]: Finished running node test.my_fraud_detection_project.not_null_go_real_time_fraud_detection_AnomalyScore.e846dc175a
+[0m16:41:20.081030 [debug] [Thread-2 (]: Began running node model.my_fraud_detection_project.go_predictive_model_features
+[0m16:41:20.086088 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.my_fraud_detection_project.not_null_go_real_time_fraud_detection_AnomalyScore.e846dc175a, now model.my_fraud_detection_project.go_predictive_model_features)
+[0m16:41:20.089096 [debug] [Thread-1 (]: Began executing node test.my_fraud_detection_project.not_null_go_real_time_fraud_detection_TransactionID.5d4065ee6d
+[0m16:41:20.091104 [debug] [Thread-2 (]: Began compiling node model.my_fraud_detection_project.go_predictive_model_features
+[0m16:41:20.094103 [debug] [Thread-1 (]: Finished running node test.my_fraud_detection_project.not_null_go_real_time_fraud_detection_TransactionID.5d4065ee6d
+[0m16:41:20.112626 [debug] [Thread-1 (]: Began running node test.my_fraud_detection_project.not_null_go_user_behavior_metrics_UserID.3c6df2c04e
+[0m16:41:20.115621 [debug] [Thread-2 (]: Writing injected SQL for node "model.my_fraud_detection_project.go_predictive_model_features"
+[0m16:41:20.121185 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.my_fraud_detection_project.not_null_go_real_time_fraud_detection_TransactionID.5d4065ee6d, now test.my_fraud_detection_project.not_null_go_user_behavior_metrics_UserID.3c6df2c04e)
+[0m16:41:20.123167 [debug] [Thread-1 (]: Began compiling node test.my_fraud_detection_project.not_null_go_user_behavior_metrics_UserID.3c6df2c04e
+[0m16:41:20.138099 [debug] [Thread-2 (]: Began executing node model.my_fraud_detection_project.go_predictive_model_features
+[0m16:41:20.144674 [debug] [Thread-1 (]: Writing injected SQL for node "test.my_fraud_detection_project.not_null_go_user_behavior_metrics_UserID.3c6df2c04e"
+[0m16:41:20.150245 [debug] [Thread-2 (]: Finished running node model.my_fraud_detection_project.go_predictive_model_features
+[0m16:41:20.160223 [debug] [Thread-2 (]: Began running node test.my_fraud_detection_project.not_null_go_user_behavior_metrics_total_fraud_transactions.8f4937fb5c
+[0m16:41:20.164252 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.my_fraud_detection_project.go_predictive_model_features, now test.my_fraud_detection_project.not_null_go_user_behavior_metrics_total_fraud_transactions.8f4937fb5c)
+[0m16:41:20.166288 [debug] [Thread-1 (]: Began executing node test.my_fraud_detection_project.not_null_go_user_behavior_metrics_UserID.3c6df2c04e
+[0m16:41:20.168268 [debug] [Thread-2 (]: Began compiling node test.my_fraud_detection_project.not_null_go_user_behavior_metrics_total_fraud_transactions.8f4937fb5c
+[0m16:41:20.172823 [debug] [Thread-1 (]: Finished running node test.my_fraud_detection_project.not_null_go_user_behavior_metrics_UserID.3c6df2c04e
+[0m16:41:20.191366 [debug] [Thread-2 (]: Writing injected SQL for node "test.my_fraud_detection_project.not_null_go_user_behavior_metrics_total_fraud_transactions.8f4937fb5c"
+[0m16:41:20.194227 [debug] [Thread-1 (]: Began running node test.my_fraud_detection_project.not_null_go_user_behavior_metrics_total_transactions.96e54e9a87
+[0m16:41:20.199995 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.my_fraud_detection_project.not_null_go_user_behavior_metrics_UserID.3c6df2c04e, now test.my_fraud_detection_project.not_null_go_user_behavior_metrics_total_transactions.96e54e9a87)
+[0m16:41:20.202922 [debug] [Thread-1 (]: Began compiling node test.my_fraud_detection_project.not_null_go_user_behavior_metrics_total_transactions.96e54e9a87
+[0m16:41:20.204936 [debug] [Thread-2 (]: Began executing node test.my_fraud_detection_project.not_null_go_user_behavior_metrics_total_fraud_transactions.8f4937fb5c
+[0m16:41:20.216411 [debug] [Thread-1 (]: Writing injected SQL for node "test.my_fraud_detection_project.not_null_go_user_behavior_metrics_total_transactions.96e54e9a87"
+[0m16:41:20.220005 [debug] [Thread-2 (]: Finished running node test.my_fraud_detection_project.not_null_go_user_behavior_metrics_total_fraud_transactions.8f4937fb5c
+[0m16:41:20.224983 [debug] [Thread-1 (]: Began executing node test.my_fraud_detection_project.not_null_go_user_behavior_metrics_total_transactions.96e54e9a87
+[0m16:41:20.227780 [debug] [Thread-1 (]: Finished running node test.my_fraud_detection_project.not_null_go_user_behavior_metrics_total_transactions.96e54e9a87
+[0m16:41:20.229775 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m16:41:20.232110 [debug] [MainThread]: Connection 'list_DEV_EMEKA_FRAUD_DETECTION_PUBLIC' was properly closed.
+[0m16:41:20.234130 [debug] [MainThread]: Connection 'test.my_fraud_detection_project.not_null_go_user_behavior_metrics_total_transactions.96e54e9a87' was properly closed.
+[0m16:41:20.235120 [debug] [MainThread]: Connection 'test.my_fraud_detection_project.not_null_go_user_behavior_metrics_total_fraud_transactions.8f4937fb5c' was properly closed.
+[0m16:41:20.254159 [debug] [MainThread]: Command end result
+[0m16:41:21.242114 [debug] [MainThread]: Acquiring new snowflake connection 'generate_catalog'
+[0m16:41:21.244106 [info ] [MainThread]: Building catalog
+[0m16:41:21.297987 [debug] [ThreadPool]: Acquiring new snowflake connection 'DEV_EMEKA_FRAUD_DETECTION.information_schema'
+[0m16:41:21.350609 [debug] [ThreadPool]: Using snowflake connection "DEV_EMEKA_FRAUD_DETECTION.information_schema"
+[0m16:41:21.352615 [debug] [ThreadPool]: On DEV_EMEKA_FRAUD_DETECTION.information_schema: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "my_fraud_detection_project", "target_name": "dev", "connection_name": "DEV_EMEKA_FRAUD_DETECTION.information_schema"} */
+with tables as (
+            select
+        table_catalog as "table_database",
+        table_schema as "table_schema",
+        table_name as "table_name",
+        case
+            when is_dynamic = 'YES' and table_type = 'BASE TABLE' THEN 'DYNAMIC TABLE'
+            else table_type
+        end as "table_type",
+        comment as "table_comment",
+
+        -- note: this is the _role_ that owns the table
+        table_owner as "table_owner",
+
+        'Clustering Key' as "stats:clustering_key:label",
+        clustering_key as "stats:clustering_key:value",
+        'The key used to cluster this table' as "stats:clustering_key:description",
+        (clustering_key is not null) as "stats:clustering_key:include",
+
+        'Row Count' as "stats:row_count:label",
+        row_count as "stats:row_count:value",
+        'An approximate count of rows in this table' as "stats:row_count:description",
+        (row_count is not null) as "stats:row_count:include",
+
+        'Approximate Size' as "stats:bytes:label",
+        bytes as "stats:bytes:value",
+        'Approximate size of the table as reported by Snowflake' as "stats:bytes:description",
+        (bytes is not null) as "stats:bytes:include",
+
+        'Last Modified' as "stats:last_modified:label",
+        to_varchar(convert_timezone('UTC', last_altered), 'yyyy-mm-dd HH24:MI'||'UTC') as "stats:last_modified:value",
+        'The timestamp for last update/change' as "stats:last_modified:description",
+        (last_altered is not null and table_type='BASE TABLE') as "stats:last_modified:include"
+    from DEV_EMEKA_FRAUD_DETECTION.INFORMATION_SCHEMA.tables
+            where (
+                (
+                    
+    "table_schema" ilike 'PUBLIC' and upper("table_schema") = upper('PUBLIC')
+
+                    and 
+    "table_name" ilike 'transactions_staging' and upper("table_name") = upper('transactions_staging')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'PUBLIC' and upper("table_schema") = upper('PUBLIC')
+
+                    and 
+    "table_name" ilike 'si_users_dimension' and upper("table_name") = upper('si_users_dimension')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'PUBLIC' and upper("table_schema") = upper('PUBLIC')
+
+                    and 
+    "table_name" ilike 'go_real_time_fraud_detection' and upper("table_name") = upper('go_real_time_fraud_detection')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'PUBLIC' and upper("table_schema") = upper('PUBLIC')
+
+                    and 
+    "table_name" ilike 'go_fraud_detection_dashboard_metrics' and upper("table_name") = upper('go_fraud_detection_dashboard_metrics')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'PUBLIC' and upper("table_schema") = upper('PUBLIC')
+
+                    and 
+    "table_name" ilike 'si_devices_dimension' and upper("table_name") = upper('si_devices_dimension')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'PUBLIC' and upper("table_schema") = upper('PUBLIC')
+
+                    and 
+    "table_name" ilike 'si_transactions_fact' and upper("table_name") = upper('si_transactions_fact')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'PUBLIC' and upper("table_schema") = upper('PUBLIC')
+
+                    and 
+    "table_name" ilike 'go_user_behavior_metrics' and upper("table_name") = upper('go_user_behavior_metrics')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'PUBLIC' and upper("table_schema") = upper('PUBLIC')
+
+                    and 
+    "table_name" ilike 'go_merchant_risk_assessment' and upper("table_name") = upper('go_merchant_risk_assessment')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'PUBLIC' and upper("table_schema") = upper('PUBLIC')
+
+                    and 
+    "table_name" ilike 'br_fraud_detection_raw_data_historical' and upper("table_name") = upper('br_fraud_detection_raw_data_historical')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'PUBLIC' and upper("table_schema") = upper('PUBLIC')
+
+                    and 
+    "table_name" ilike 'go_predictive_model_features' and upper("table_name") = upper('go_predictive_model_features')
+
+                )
+            )
+        ),
+        columns as (
+            select
+        table_catalog as "table_database",
+        table_schema as "table_schema",
+        table_name as "table_name",
+
+        column_name as "column_name",
+        ordinal_position as "column_index",
+        data_type as "column_type",
+        comment as "column_comment"
+    from DEV_EMEKA_FRAUD_DETECTION.INFORMATION_SCHEMA.columns
+            where (
+                (
+                    
+    "table_schema" ilike 'PUBLIC' and upper("table_schema") = upper('PUBLIC')
+
+                    and 
+    "table_name" ilike 'transactions_staging' and upper("table_name") = upper('transactions_staging')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'PUBLIC' and upper("table_schema") = upper('PUBLIC')
+
+                    and 
+    "table_name" ilike 'si_users_dimension' and upper("table_name") = upper('si_users_dimension')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'PUBLIC' and upper("table_schema") = upper('PUBLIC')
+
+                    and 
+    "table_name" ilike 'go_real_time_fraud_detection' and upper("table_name") = upper('go_real_time_fraud_detection')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'PUBLIC' and upper("table_schema") = upper('PUBLIC')
+
+                    and 
+    "table_name" ilike 'go_fraud_detection_dashboard_metrics' and upper("table_name") = upper('go_fraud_detection_dashboard_metrics')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'PUBLIC' and upper("table_schema") = upper('PUBLIC')
+
+                    and 
+    "table_name" ilike 'si_devices_dimension' and upper("table_name") = upper('si_devices_dimension')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'PUBLIC' and upper("table_schema") = upper('PUBLIC')
+
+                    and 
+    "table_name" ilike 'si_transactions_fact' and upper("table_name") = upper('si_transactions_fact')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'PUBLIC' and upper("table_schema") = upper('PUBLIC')
+
+                    and 
+    "table_name" ilike 'go_user_behavior_metrics' and upper("table_name") = upper('go_user_behavior_metrics')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'PUBLIC' and upper("table_schema") = upper('PUBLIC')
+
+                    and 
+    "table_name" ilike 'go_merchant_risk_assessment' and upper("table_name") = upper('go_merchant_risk_assessment')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'PUBLIC' and upper("table_schema") = upper('PUBLIC')
+
+                    and 
+    "table_name" ilike 'br_fraud_detection_raw_data_historical' and upper("table_name") = upper('br_fraud_detection_raw_data_historical')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'PUBLIC' and upper("table_schema") = upper('PUBLIC')
+
+                    and 
+    "table_name" ilike 'go_predictive_model_features' and upper("table_name") = upper('go_predictive_model_features')
+
+                )
+            )
+        )
+        select *
+    from tables
+    join columns using ("table_database", "table_schema", "table_name")
+    order by "column_index"
+[0m16:41:21.358103 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:41:26.576134 [debug] [ThreadPool]: SQL status: SUCCESS 125 in 5.218 seconds
+[0m16:41:26.606410 [debug] [ThreadPool]: On DEV_EMEKA_FRAUD_DETECTION.information_schema: Close
+[0m16:41:26.846857 [info ] [MainThread]: Catalog written to C:\Users\User\Desktop\Projects\DBT-Fraud-Detection-Data-Pipeline\target\catalog.json
+[0m16:41:26.853590 [debug] [MainThread]: Command `dbt docs generate` succeeded at 16:41:26.852591 after 26.26 seconds
+[0m16:41:26.856597 [debug] [MainThread]: Connection 'generate_catalog' was properly closed.
+[0m16:41:26.858152 [debug] [MainThread]: Connection 'DEV_EMEKA_FRAUD_DETECTION.information_schema' was properly closed.
+[0m16:41:26.859141 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028C1493C370>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028C17F66620>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028C15120A00>]}
+[0m16:41:26.860143 [debug] [MainThread]: Flushing usage events
+[0m16:41:52.137650 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002DF5005C370>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002DF52A29C00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002DF52A29DE0>]}
+
+
+============================== 16:41:52.148507 | 2ee08a8e-3c32-4480-ad61-58392f3fac7b ==============================
+[0m16:41:52.148507 [info ] [MainThread]: Running with dbt=1.8.8
+[0m16:41:52.151025 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'debug': 'False', 'log_path': 'C:\\Users\\User\\Desktop\\Projects\\DBT-Fraud-Detection-Data-Pipeline\\logs', 'profiles_dir': 'C:\\Users\\User\\.dbt', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'log_format': 'default', 'invocation_command': 'dbt docs serve', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m16:41:54.131836 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '2ee08a8e-3c32-4480-ad61-58392f3fac7b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002DF536A74F0>]}
+[0m16:41:54.403081 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '2ee08a8e-3c32-4480-ad61-58392f3fac7b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002DF529E50F0>]}
+[0m10:17:15.427475 [error] [MainThread]: Encountered an error:
+
+[0m10:17:15.635488 [error] [MainThread]: Traceback (most recent call last):
+  File "C:\Users\User\Desktop\Projects\DBT-Fraud-Detection-Data-Pipeline\dbt-env\lib\site-packages\dbt\cli\requires.py", line 138, in wrapper
+    result, success = func(*args, **kwargs)
+  File "C:\Users\User\Desktop\Projects\DBT-Fraud-Detection-Data-Pipeline\dbt-env\lib\site-packages\dbt\cli\requires.py", line 101, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\User\Desktop\Projects\DBT-Fraud-Detection-Data-Pipeline\dbt-env\lib\site-packages\dbt\cli\requires.py", line 218, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\User\Desktop\Projects\DBT-Fraud-Detection-Data-Pipeline\dbt-env\lib\site-packages\dbt\cli\requires.py", line 247, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\User\Desktop\Projects\DBT-Fraud-Detection-Data-Pipeline\dbt-env\lib\site-packages\dbt\cli\requires.py", line 294, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\User\Desktop\Projects\DBT-Fraud-Detection-Data-Pipeline\dbt-env\lib\site-packages\dbt\cli\main.py", line 303, in docs_serve
+    results = task.run()
+  File "C:\Users\User\Desktop\Projects\DBT-Fraud-Detection-Data-Pipeline\dbt-env\lib\site-packages\dbt\task\docs\serve.py", line 29, in run
+    httpd.serve_forever()
+  File "C:\Users\User\AppData\Local\Programs\Python\Python310\lib\socketserver.py", line 232, in serve_forever
+    ready = selector.select(poll_interval)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python310\lib\selectors.py", line 324, in select
+    r, w, _ = self._select(self._readers, self._writers, [], timeout)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python310\lib\selectors.py", line 315, in _select
+    r, w, x = select.select(r, w, w, timeout)
+KeyboardInterrupt
+
+[0m10:17:15.684085 [debug] [MainThread]: Command `dbt docs serve` failed at 10:17:15.681573 after 63324.96 seconds
+[0m10:17:15.699185 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002DF5005C370>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002DF5387C940>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002DF5387C880>]}
+[0m10:17:15.713377 [debug] [MainThread]: Flushing usage events

@@ -149,7 +149,7 @@ This CI/CD workflow is designed to automate testing and deployment for a dbt pro
 - **Pull Request to master**: When a pull request targets the master branch, the workflow runs the test job to ensure code integrity.
 - **Push to dev Branch**: When code is pushed to the dev branch, the workflow also runs the test job to validate code changes.
 - **Push to master Branch**: When code is pushed directly to master (e.g., after merging a PR), the deploy job runs automatically, promoting the code to production by executing `dbt run --target prod`.  
-![workflow](images/workflowss.png)
+![workflow](./images/workflowss.png)
 
 **Jobs**
 
@@ -176,11 +176,11 @@ This CI/CD workflow is designed to automate testing and deployment for a dbt pro
      - **Set up Snowflake credentials**: Loads credentials from GitHub secrets.
      - **Set up dbt profiles**: Recreates profiles.yml with connections to both dev and prod databases, setting the target to prod.
      - **Run dbt models for production**: Executes `dbt run --target prod`, promoting all validated models to production in the `PROD_EMEKA_FRAUD_DETECTION2` database.
-The workflow setup can be viewed in [The github action path](./.github/workflows/dbt.yml)  
-The bronze layer testing logic can be viewed in [Bronze test](./my_fraud_detection_project\models\bronze\schema.yml)  
-The silver layer testing logic can be viewed in [Silver test](./my_fraud_detection_project\models\silver\schema.yml) 
-The gold layer testing logic can be viewed in [Gold test](./my_fraud_detection_project\models\gold\schema.yml)   
----
+The workflow setup can be viewed in [The github action path](./.github/workflows/dbt.yml)    
+The testing logic for each layer can be viewed in the following files:  
+- **Bronze Layer**: [Bronze Test file](my_fraud_detection_project/models/bronze/schema.yml)  
+- **Silver Layer**: [Silver Test file](my_fraud_detection_project/models/silver/schema.yml)  
+- **Gold Layer**: [Gold Test file](my_fraud_detection_project/models/gold/schema.yml)  
 
 ## Final Output in Snowflake
 
