@@ -1,9 +1,12 @@
 # Fraud Detection Data Pipeline Project  
 
-[![Project Demonstration Video](https://img.shields.io/badge/YouTube-Project_Demonstration-red?logo=youtube&logoColor=white)](https://youtu.be/lVTS2xPSuB0)
+## Project Demonstration Videos
 
-Watch the complete **project demonstration** on [YouTube](https://youtu.be/lVTS2xPSuB0) for an in-depth overview of the fraud detection pipeline and its components.  
+[![Project Demonstration Video](https://img.youtube.com/vi/lVTS2xPSuB0/0.jpg)](https://youtu.be/lVTS2xPSuB0)
 
+Click the image above image to watch the full video for an in-depth overview of the fraud detection pipeline and its components. This video covers the entire pipeline from data ingestion to fraud detection analysis.  
+    
+  
 [![Power BI Fraud Detection Dashboards Walkthrough](https://img.youtube.com/vi/6wO0Jr1IsmI/0.jpg)](https://youtu.be/6wO0Jr1IsmI)  
 
 Click the image above to watch the full video walkthrough of the Power BI Fraud Detection Dashboards.  
