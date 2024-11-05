@@ -4,7 +4,11 @@
 
 Watch the complete **project demonstration** on [YouTube](https://youtu.be/lVTS2xPSuB0) for an in-depth overview of the fraud detection pipeline and its components.  
 
+[![Power BI Fraud Detection Dashboards Walkthrough](https://img.youtube.com/vi/6wO0Jr1IsmI/0.jpg)](https://youtu.be/6wO0Jr1IsmI)  
 
+Click the image above to watch the full video walkthrough of the Power BI Fraud Detection Dashboards.  
+
+  
 ## Table of Contents
 
 1. [Project Overview](#project-overview)  
@@ -16,7 +20,8 @@ Watch the complete **project demonstration** on [YouTube](https://youtu.be/lVTS2
    - [Data Modeling and Lineage](#data-modeling-and-lineage)  
    - [Automation with GitHub Actions for CI/CD](#automation-with-github-actions-for-cicd)  
 4. [Final Output in Snowflake](#final-output-in-snowflake)  
-5. [Conclusion](#conclusion)  
+5. [Power BI Dashboard Overview](#Power-BI-Dashboard-Overview)  
+6. [Conclusion](#conclusion)  
 
 ---
 
@@ -203,7 +208,24 @@ The production database contains the full dataset across multiple years, enablin
   - Sample tables include `BR_FRAUD_DETECTION_RAW_DATA_HISTORICAL`, `SI_USERS_DIMENSION`, `SI_TRANSACTIONS_FACT`, and others.
 - **Prod Database**: ![Prod Database Screenshot](images/Prod_Database_Snowflake.png)
 
----
+---  
+
+## Power BI Dashboard Overview
+
+![Fraud Detection Dashboard](images/Power_BI_Fraud_Detection_Dashboard.png)  
+![Fraud Detection Dashboard](images/Power_BI_User_Insight.png)  
+
+The Fraud Detection Dashboard provides a comprehensive view of transaction data, highlighting key metrics and trends related to fraud. This dashboard connects to the production database in Snowflake, delivering real-time insights through Power BI. 
+
+### Key Sections:
+- **Fraud Overview**: KPIs showing the total number of transactions, total fraud transactions, total transaction amount, total loss due to fraud, and various fraud rates.
+- **Fraudulent Transaction Amount Over Time**: A line chart tracking fraudulent transaction amounts over time, helping to identify patterns and anomalies.
+- **Fraudulent Transaction Count by User**: A bar chart displaying the count of transactions per user, highlighting high-risk users with fraudulent activities.
+- **Fraudulent Transaction Count by Payment Method**: A pie chart breaking down fraudulent transactions by payment method, helping to spot trends across different payment types.
+- **Drill-through Insight**: A button labeled "User Insight" that allows you to drill through to a detailed user view, providing individual transaction insights.
+
+This dashboard is designed to facilitate fraud analysis and assist in identifying potential fraud patterns and high-risk users.
+
 
 ## Conclusion
 
